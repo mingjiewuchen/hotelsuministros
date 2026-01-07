@@ -124,35 +124,31 @@
         Airbnb y uso institucional.
       </p>
 
-      <div class="option">
-  <label>Medida</label>
-  <select>
-    <option value="45x70">45 × 70 cm</option>
-    <option value="50x75">50 × 75 cm</option>
+ <div class="option">
+  <label for="size">Medida</label>
+  <select id="size">
+    <option value="45x70 cm">45 x 70 cm</option>
+    <option value="50x75 cm">50 x 75 cm</option>
   </select>
 </div>
 
 <div class="option">
-  <label>Color</label>
-  <select>
-    <option value="blanco">Blanco</option>
-    <option value="gris">Gris</option>
+  <label for="color">Color</label>
+  <select id="color">
+    <option value="Blanco">Blanco</option>
+    <option value="Gris">Gris</option>
   </select>
 </div>
 
 <div class="option">
-  <label>Cantidad</label>
-  <input type="number" min="1" max="1000" value="1">
+  <label for="qty">Cantidad</label>
+  <input type="number" id="qty" value="1" min="1" max="1000">
 </div>
 
-
-    <a 
-  class="btn"
-  href="https://wa.me/50685664622?text=Hola%20quisiera%20una%20cotización%20para%20almohadas%20hoteleras.%0A%0AProducto:%20Almohada%20Microfibra%20Siliconizada"
-  target="_blank"
->
+<button class="btn" onclick="sendWhatsApp()">
   Solicitar cotización por WhatsApp
-</a>
+</button>
+
 
 
     </div>
