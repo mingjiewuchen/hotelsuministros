@@ -156,6 +156,27 @@
   </div>
 
 </div>
+<script>
+function sendWhatsApp() {
+  const size = document.getElementById("size").value;
+  const color = document.getElementById("color").value;
+  const qty = document.getElementById("qty").value;
+
+  const phone = "50688887777"; // ← 换成你的 WhatsApp（不加 +）
+
+  let message = 
+    "Hola, quisiera una cotización:%0A%0A" +
+    "Producto: Almohada Microfibra Siliconizada%0A" +
+    "Medida: " + size + "%0A" +
+    "Color: " + color + "%0A" +
+    "Cantidad: " + qty + "%0A%0A" +
+    "Gracias.";
+
+  let url = "https://wa.me/" + phone + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
