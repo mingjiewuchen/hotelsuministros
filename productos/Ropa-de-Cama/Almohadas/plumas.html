@@ -1,1 +1,185 @@
-123
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Almohada de Plumas | Hotel Suministros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 40px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: #2563eb;
+      font-size: 14px;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .option {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    select,
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 22px;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="../../../index.html">Inicio</a>
+    <a href="../../../productos.html">Productos</a>
+    <a href="../almohadas.html">Almohadas</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <a class="back" href="../almohadas.html">← Volver a Almohadas</a>
+
+  <div class="product">
+
+    <!-- Imagen -->
+    <img src="almohada-plumas.jpg" alt="Almohada de Plumas">
+
+    <!-- Información -->
+    <div>
+      <h1>Almohada – Relleno Plumas</h1>
+
+      <p>
+        Almohada premium con relleno natural de plumas.
+        Ideal para hoteles de alta gama que buscan máximo confort y suavidad.
+      </p>
+
+      <!-- Medida -->
+      <div class="option">
+        <label for="size">Medida</label>
+        <select id="size">
+          <option value="45x70 cm">45 x 70 cm</option>
+          <option value="50x75 cm">50 x 75 cm</option>
+        </select>
+      </div>
+
+      <!-- Color -->
+      <div class="option">
+        <label for="color">Color</label>
+        <select id="color">
+          <option value="Blanco">Blanco</option>
+          <option value="Gris">Gris</option>
+        </select>
+      </div>
+
+      <!-- Cantidad -->
+      <div class="option">
+        <label for="qty">Cantidad</label>
+        <input type="number" id="qty" value="1" min="1" max="1000">
+      </div>
+
+      <!-- Botón -->
+      <button class="btn" onclick="sendWhatsApp()">
+        Solicitar cotización por WhatsApp
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function sendWhatsApp() {
+  const size = document.getElementById("size").value;
+  const color = document.getElementById("color").value;
+  const qty = document.getElementById("qty").value;
+
+  const phone = "50685664622"; 
+
+  const message =
+    "Hola, quisiera una cotización:%0A%0A" +
+    "Producto: Almohada – Relleno Plumas%0A" +
+    "Medida: " + size + "%0A" +
+    "Color: " + color + "%0A" +
+    "Cantidad: " + qty + "%0A%0A" +
+    "Gracias.";
+
+  const url = "https://wa.me/" + phone + "?text=" + message;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
