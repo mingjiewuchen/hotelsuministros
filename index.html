@@ -7,139 +7,55 @@
   <title>Suministros Hoteleros en Costa Rica</title>
   <meta name="description" content="Suministros hoteleros para hoteles, resorts y Airbnb. Ropa de cama, toallas, amenidades y accesorios." />
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      color: #333;
-      background: #fafafa;
-    }
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 20px 40px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #e5e7eb;
-      margin-right: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .hero {
-      background: #f3f4f6;
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .hero h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #1f2937;
-  text-align: center;
-  line-height: 1.2;
-}
-
-    }
-    .hero p {
-      font-size: 16px;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .section {
-      padding: 50px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .section h3 {
-      font-size: 24px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #1f2937;
-      color: #d1d5db;
-      padding: 30px 40px;
-      text-align: center;
-      font-size: 14px;
-    }
-    /* =========================
-   Mobile Optimization
-   ========================= */
-@media (max-width: 768px) {
-
   header {
-    padding: 15px 20px;
-    text-align: center;
+    background: #111827; /* 深灰蓝 */
+    padding: 16px 40px;
   }
 
-  header h1 {
-    font-size: 22px;
+  .nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  nav {
-    margin-top: 10px;
+  .nav-logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 8px 10px;
+  .nav-links a {
+    color: #e5e7eb;
+    margin-left: 28px;
+    text-decoration: none;
     font-size: 14px;
+    position: relative;
   }
 
-  .hero {
-    padding: 40px 20px;
+  .nav-links a:hover {
+    color: #ffffff;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #25d366;
+    transition: width 0.25s ease;
   }
 
-  .hero p {
-    font-size: 15px;
+  .nav-links a:hover::after {
+    width: 100%;
   }
+</style>
 
-  .section {
-    padding: 40px 20px;
-  }
-
-  .section h3 {
-    font-size: 22px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    padding: 20px;
-    font-size: 13px;
-  }
-}
-  </style>
 </head>
 <body>
 
@@ -258,6 +174,7 @@ Productos estándar y ecológicos, diseñados para durabilidad, comodidad y una 
 
 </body>
 </html>
+
 
 
 
