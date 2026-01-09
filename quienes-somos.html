@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Quiénes Somos | Hotel Suministros</title>
-  <meta name="description" content="Proveedor profesional de suministros hoteleros en Costa Rica. Calidad, confiabilidad y soluciones para hoteles y Airbnb." />
+  <meta name="description" content="Conoce a Hotel Suministros, proveedores profesionales de ropa de cama y suministros hoteleros en Costa Rica." />
 
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       background: #fafafa;
       color: #333;
     }
 
-    /* Header */
+    /* ===== HEADER ===== */
     header {
       background: #1f2937;
-      padding: 20px 40px;
+      padding: 18px 40px;
     }
 
     nav a {
@@ -27,42 +28,52 @@
       font-size: 14px;
     }
 
-    /* Hero */
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO ===== */
     .hero {
-      background: url("images/hero-quienes-somos.jpg") center/cover no-repeat;
-      padding: 100px 30px;
-      text-align: center;
-      color: white;
+      height: 60vh;
+      background-image: url("images/hero-quienes-somos.jpg");
+      background-size: cover;
+      background-position: center;
       position: relative;
     }
 
-    .hero::after {
-      content: "";
+    .hero-overlay {
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: auto;
+    .hero-text {
+      position: absolute;
+      top: 70%;                 /* 🔥 文字下移关键点 */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      max-width: 800px;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.45);
+      border-radius: 12px;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .hero-text h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
     }
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.6;
+    .hero-text p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    /* Section */
+    /* ===== CONTENT ===== */
     .section {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
       padding: 60px 40px;
     }
@@ -71,49 +82,48 @@
       text-align: center;
       max-width: 800px;
       margin: 0 auto 50px;
-      color: #555;
       font-size: 16px;
+      color: #555;
+      line-height: 1.6;
     }
 
-    /* Cards */
+    /* ===== CARDS ===== */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 30px;
     }
 
     .card {
-      background: #fff;
+      background: #ffffff;
       border-radius: 12px;
       padding: 30px 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .card h3 {
+      margin-top: 0;
       margin-bottom: 12px;
-      font-size: 18px;
       color: #1f2937;
+      font-size: 18px;
     }
 
     .card p {
       font-size: 14px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
-    /* Mobile */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 30px;
+      .hero-text {
+        top: 72%;
+        padding: 16px 20px;
       }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      .section {
-        padding: 50px 20px;
+      .hero-text h1 {
+        font-size: 26px;
       }
     }
   </style>
@@ -131,62 +141,58 @@
   </nav>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
     <h1>Quiénes Somos</h1>
     <p>
       Somos un proveedor especializado en suministros hoteleros,
-      enfocados en ofrecer soluciones confiables y eficientes
-      para hoteles, resorts y alojamientos Airbnb en Costa Rica.
+      comprometidos con la calidad, la durabilidad y el servicio profesional.
     </p>
   </div>
 </section>
 
-<!-- Content -->
+<!-- CONTENT -->
 <section class="section">
 
   <p class="intro">
-    Entendemos las necesidades reales del sector hotelero.
-    Nuestro objetivo es simplificar el abastecimiento,
-    manteniendo estándares profesionales de calidad,
-    logística y servicio.
+    En <strong>Hotel Suministros</strong> trabajamos con hoteles, resorts y
+    alojamientos turísticos ofreciendo soluciones confiables en ropa de cama
+    y productos diseñados para uso intensivo profesional.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <h3>Experiencia en Hospitalidad</h3>
+      <h3>Experiencia Hotelera</h3>
       <p>
-        Trabajamos con productos diseñados específicamente
-        para el uso intensivo del sector hotelero,
-        priorizando durabilidad y confort.
+        Conocemos las necesidades reales del sector hotelero:
+        resistencia, fácil mantenimiento y confort constante.
       </p>
     </div>
 
     <div class="card">
-      <h3>Soluciones Adaptadas</h3>
+      <h3>Calidad Seleccionada</h3>
       <p>
-        Ofrecemos opciones estándar y personalizadas
-        para hoteles, resorts y propiedades Airbnb,
-        adaptándonos a distintos niveles de presupuesto.
+        Trabajamos con materiales cuidadosamente seleccionados
+        para garantizar larga vida útil y excelente presentación.
       </p>
     </div>
 
     <div class="card">
-      <h3>Respuesta Rápida</h3>
+      <h3>Atención Profesional</h3>
       <p>
-        Sabemos que el tiempo es clave en la operación hotelera.
-        Respondemos con rapidez y claridad a cada solicitud.
+        Asesoramos de forma personalizada para ayudarte a elegir
+        el producto adecuado según tu tipo de alojamiento.
       </p>
     </div>
 
     <div class="card">
-      <h3>Compromiso con la Calidad</h3>
+      <h3>Compromiso y Confianza</h3>
       <p>
-        Seleccionamos cuidadosamente cada producto
-        para asegurar una experiencia consistente
-        para el huésped final.
+        Construimos relaciones a largo plazo con nuestros clientes,
+        basadas en seriedad, cumplimiento y servicio.
       </p>
     </div>
 
