@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Hotel Suministros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #fafafa;
+    }
+
+    /* NAV */
+    header {
+      background: #1f2937;
+      padding: 18px 40px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 24px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 420px;
+      background: url("imagenes/hero-contacto.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      width: 100%;
+      padding: 40px;
+      color: white;
+    }
+
+    .hero-content h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .hero-content p {
+      margin-top: 10px;
+      font-size: 16px;
+      max-width: 600px;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 40px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      font-size: 16px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #25d366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn:hover {
+      opacity: 0.9;
+    }
+
+    .note {
+      background: #f1f5f9;
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    .note h3 {
+      margin-top: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        height: 360px;
+      }
+
+      .hero-content h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Contáctanos</h1>
+    <p>Estamos listos para ayudarte con cotizaciones, productos y soluciones para hoteles y alojamientos.</p>
+  </div>
+</section>
+
+<section class="container">
+  <div class="contact-grid">
+
+    <!-- CONTACT INFO -->
+    <div class="contact-box">
+      <h2>Información de contacto</h2>
+
+      <div class="contact-item">
+        <strong>Teléfono</strong>
+        +506 6407 0896
+      </div>
+
+      <div class="contact-item">
+        <strong>WhatsApp</strong>
+        +506 8566 4622
+      </div>
+
+      <div class="contact-item">
+        <strong>Email</strong>
+        junting0416@gmail.com
+      </div>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/50685664622?text=Hola%20Hotel%20Suministros,%20me%20gustaría%20recibir%20una%20cotización."
+         target="_blank">
+        Solicitar cotización por WhatsApp
+      </a>
+    </div>
+
+    <!-- NOTE -->
+    <div class="note">
+      <h3>¿Cómo podemos ayudarte?</h3>
+      <p>
+        Atendemos hoteles, Airbnb, hostales y proyectos turísticos en Costa Rica.
+        Ofrecemos productos confiables, entregas coordinadas y atención profesional.
+      </p>
+      <p>
+        Escríbenos por WhatsApp y recibe una respuesta rápida con opciones según tu necesidad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
