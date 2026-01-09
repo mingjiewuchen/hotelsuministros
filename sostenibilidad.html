@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sostenibilidad | Hotel Suministros</title>
-  <meta name="description" content="Compromiso con la sostenibilidad en productos hoteleros durables y responsables." />
+  <meta name="description" content="Nuestro compromiso con la sostenibilidad y el uso responsable de materiales en suministros hoteleros." />
 
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       background: #fafafa;
       color: #333;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: #1f2937;
-      padding: 20px 40px;
+      padding: 18px 40px;
     }
 
     nav a {
@@ -26,57 +28,103 @@
       font-size: 14px;
     }
 
-    /* HERO */
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO ===== */
     .hero {
-      height: 340px;
+      height: 60vh;
       background-image: url("images/hero-sostenibilidad.jpg");
       background-size: cover;
       background-position: center;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .hero::before {
-      content: "";
+    .hero-overlay {
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
     }
 
     .hero-text {
-      position: relative;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: #fff;
       text-align: center;
-      max-width: 900px;
-      padding: 0 20px;
+      max-width: 820px;
+      padding: 20px 30px;
+      background: rgba(0,0,0,0.45);
+      border-radius: 12px;
     }
 
     .hero-text h1 {
+      margin: 0 0 10px;
       font-size: 36px;
-      margin-bottom: 10px;
     }
 
     .hero-text p {
+      margin: 0;
       font-size: 16px;
+      line-height: 1.5;
     }
 
-    /* CONTENT */
+    /* ===== CONTENT ===== */
     .section {
       max-width: 1100px;
       margin: auto;
       padding: 60px 40px;
     }
 
-    .section h2 {
-      margin-bottom: 15px;
+    .intro {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 50px;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
     }
 
-    .section p {
-      line-height: 1.7;
+    /* ===== CARDS ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #1f2937;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
       color: #555;
-      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-text {
+        top: 72%;
+        padding: 16px 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -93,30 +141,64 @@
   </nav>
 </header>
 
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
     <h1>Sostenibilidad</h1>
-    <p>Productos durables, operación responsable</p>
+    <p>
+      Comprometidos con prácticas responsables, materiales duraderos
+      y un enfoque consciente para el sector hotelero.
+    </p>
   </div>
-</div>
+</section>
 
+<!-- CONTENT -->
 <section class="section">
-  <h2>Nuestro Compromiso</h2>
-  <p>
-    En Hotel Suministros apostamos por productos de larga vida útil,
-    reduciendo la rotación y el desperdicio en operaciones hoteleras.
+
+  <p class="intro">
+    En <strong>Hotel Suministros</strong> entendemos que la sostenibilidad
+    no es una moda, sino una responsabilidad. Apostamos por productos
+    diseñados para larga vida útil, reducción de reemplazos y un uso
+    más eficiente de los recursos.
   </p>
 
-  <p>
-    Seleccionamos materiales resistentes al lavado intensivo,
-    ayudando a disminuir el consumo de recursos y el reemplazo frecuente.
-  </p>
+  <div class="grid">
 
-  <h2>Visión Responsable</h2>
-  <p>
-    Creemos que la sostenibilidad comienza con decisiones prácticas:
-    calidad consistente, procesos eficientes y proveedores responsables.
-  </p>
+    <div class="card">
+      <h3>Durabilidad del Producto</h3>
+      <p>
+        Seleccionamos materiales resistentes al uso intensivo,
+        reduciendo la necesidad de reposiciones frecuentes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Uso Responsable</h3>
+      <p>
+        Productos pensados para facilitar el lavado, secado y mantenimiento,
+        optimizando consumo de agua y energía.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Proveedores Confiables</h3>
+      <p>
+        Trabajamos con fábricas y socios que siguen procesos controlados
+        y estándares de producción responsables.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Visión a Largo Plazo</h3>
+      <p>
+        Creemos que una operación hotelera sostenible empieza
+        por decisiones inteligentes en cada compra.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 </body>
