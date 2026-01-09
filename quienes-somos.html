@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiénes Somos | Hotel Suministros</title>
-  <meta name="description" content="Conozca Hotel Suministros, proveedor de ropa de cama y suministros hoteleros en Costa Rica." />
+  <meta name="description" content="Proveedor profesional de suministros hoteleros en Costa Rica. Calidad, confiabilidad y soluciones para hoteles y Airbnb." />
 
   <style>
     body {
@@ -14,6 +14,7 @@
       color: #333;
     }
 
+    /* Header */
     header {
       background: #1f2937;
       padding: 20px 40px;
@@ -26,57 +27,94 @@
       font-size: 14px;
     }
 
-    /* HERO */
+    /* Hero */
     .hero {
-      height: 340px;
-      background-image: url("images/hero-quienes-somos.jpg");
-      background-size: cover;
-      background-position: center;
+      background: url("images/hero-quienes-somos.jpg") center/cover no-repeat;
+      padding: 100px 30px;
+      text-align: center;
+      color: white;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.45);
     }
 
-    .hero-text {
+    .hero-content {
       position: relative;
-      color: #fff;
-      text-align: center;
+      z-index: 1;
       max-width: 900px;
-      padding: 0 20px;
+      margin: auto;
     }
 
-    .hero-text h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
-    .hero-text p {
-      font-size: 16px;
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    /* CONTENT */
+    /* Section */
     .section {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 60px 40px;
     }
 
-    .section h2 {
-      margin-bottom: 15px;
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      color: #555;
+      font-size: 16px;
     }
 
-    .section p {
-      line-height: 1.7;
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #1f2937;
+    }
+
+    .card p {
+      font-size: 14px;
       color: #555;
-      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
     }
   </style>
 </head>
@@ -93,52 +131,65 @@
   </nav>
 </header>
 
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Quiénes Somos</h1>
+    <p>
+      Somos un proveedor especializado en suministros hoteleros,
+      enfocados en ofrecer soluciones confiables y eficientes
+      para hoteles, resorts y alojamientos Airbnb en Costa Rica.
+    </p>
+  </div>
+</section>
+
+<!-- Content -->
 <section class="section">
 
-  <h1>Quiénes Somos</h1>
-
-  <p>
-    Somos un proveedor especializado en suministros hoteleros en Costa Rica,
-    enfocado en atender hoteles, resorts y alojamientos tipo Airbnb.
+  <p class="intro">
+    Entendemos las necesidades reales del sector hotelero.
+    Nuestro objetivo es simplificar el abastecimiento,
+    manteniendo estándares profesionales de calidad,
+    logística y servicio.
   </p>
-
-  <p>
-    Ofrecemos soluciones prácticas y confiables en ropa de cama, toallas,
-    amenidades y accesorios de habitación, pensadas para uso profesional
-    y reposición constante.
-  </p>
-
-  <h2>Nuestra experiencia</h2>
-  <p>
-    Conocemos las necesidades reales del sector hotelero: durabilidad,
-    facilidad de mantenimiento, consistencia en la calidad y respuesta rápida.
-    Nuestro enfoque está en simplificar el proceso de compra.
-  </p>
-
-  <h2>Por qué elegirnos</h2>
 
   <div class="grid">
-    <div class="box">
-      <strong>✔ Especialización hotelera</strong>
-      <p>Productos diseñados para uso intensivo y estándares profesionales.</p>
-    </div>
-    <div class="box">
-      <strong>✔ Atención directa</strong>
-      <p>Comunicación clara y rápida para cotizaciones y reposiciones.</p>
-    </div>
-    <div class="box">
-      <strong>✔ Suministro estable</strong>
-      <p>Opciones constantes para operación diaria y nuevos proyectos.</p>
-    </div>
-    <div class="box">
-      <strong>✔ Enfoque local</strong>
-      <p>Conocimiento del mercado costarricense y sus necesidades.</p>
-    </div>
-  </div>
 
-  <div class="cta">
-    <p>¿Desea una cotización o más información?</p>
-    <a href="https://wa.me/50685664622">Contactar por WhatsApp</a>
+    <div class="card">
+      <h3>Experiencia en Hospitalidad</h3>
+      <p>
+        Trabajamos con productos diseñados específicamente
+        para el uso intensivo del sector hotelero,
+        priorizando durabilidad y confort.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Soluciones Adaptadas</h3>
+      <p>
+        Ofrecemos opciones estándar y personalizadas
+        para hoteles, resorts y propiedades Airbnb,
+        adaptándonos a distintos niveles de presupuesto.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Respuesta Rápida</h3>
+      <p>
+        Sabemos que el tiempo es clave en la operación hotelera.
+        Respondemos con rapidez y claridad a cada solicitud.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Compromiso con la Calidad</h3>
+      <p>
+        Seleccionamos cuidadosamente cada producto
+        para asegurar una experiencia consistente
+        para el huésped final.
+      </p>
+    </div>
+
   </div>
 
 </section>
