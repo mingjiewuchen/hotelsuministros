@@ -3,118 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <title>Productos | Hotel Suministros</title>
-  <meta name="description" content="Catálogo de productos hoteleros: ropa de cama, toallas, amenidades y accesorios profesionales.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo profesional de suministros hoteleros: ropa de cama, toallas, amenities y accesorios.">
 
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
       color: #333;
     }
 
-    /* ===== Header ===== */
+    /* ===== NAV ===== */
     header {
       background: #1f2937;
-      padding: 20px 40px;
-    }
-
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      gap: 20px;
+      padding: 18px 40px;
     }
 
     nav a {
       color: #e5e7eb;
+      margin-right: 22px;
       text-decoration: none;
       font-size: 14px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
-    /* ===== Layout ===== */
-    .products-page {
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 0 30px;
       display: flex;
       gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-      padding: 50px 20px;
+      align-items: flex-start;
     }
 
-    /* ===== Sidebar ===== */
+    /* ===== SIDEBAR ===== */
     .sidebar {
-      width: 220px;
-      background: #ffffff;
-      border-radius: 10px;
+      width: 260px;
+      background: #fff;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      height: fit-content;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
       font-size: 18px;
+    }
+
+    .category {
       margin-bottom: 15px;
-      color: #1f2937;
     }
 
-    .sidebar ul {
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    .category-btn:hover {
+      background: #f1f5f9;
+    }
+
+    .subcategory {
       list-style: none;
-      padding: 0;
-      margin: 0;
+      padding-left: 15px;
+      margin: 5px 0 0;
+      display: none;
     }
 
-    .sidebar li {
+    .subcategory li a {
+      display: block;
+      padding: 8px 10px;
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .subcategory li a:hover {
+      background: #f3f4f6;
+      color: #2563eb;
+    }
+
+    /* ===== PRODUCT AREA ===== */
+    .products {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .products h1 {
+      margin-top: 0;
       margin-bottom: 10px;
     }
 
-    .sidebar a {
-      text-decoration: none;
-      color: #374151;
-      font-size: 15px;
-    }
-
-    .sidebar a:hover {
-      font-weight: bold;
-      color: #000;
-    }
-
-    /* ===== Product Area ===== */
-    .content {
-      flex: 1;
-    }
-
-    .section-title {
-      font-size: 26px;
+    .products p {
+      color: #555;
       margin-bottom: 30px;
-      color: #1f2937;
-    }
-
-    .category-section {
-      margin-bottom: 60px;
-    }
-
-    .category-section h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
     }
 
     .card {
-      background: #fff;
+      background: #fafafa;
       border-radius: 10px;
-      padding: 18px;
+      padding: 15px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.2s ease;
     }
 
@@ -122,12 +137,13 @@
       transform: translateY(-6px);
     }
 
+    /* 图片缩小为视觉约 1/3 */
     .card img {
-     width: 100%;
-  max-height: 140px;  
-  object-fit: cover;  
-  border-radius: 8px;
-  margin-bottom: 12px;
+      width: 60%;
+      max-width: 160px;
+      margin: 0 auto 12px;
+      display: block;
+      border-radius: 8px;
     }
 
     .card a {
@@ -136,18 +152,13 @@
     }
 
     .card h3 {
-      font-size: 18px;
-      margin-bottom: 6px;
+      font-size: 16px;
+      margin: 0;
     }
 
-    .card p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* ===== Mobile ===== */
+    /* ===== MOBILE ===== */
     @media (max-width: 900px) {
-      .products-page {
+      .container {
         flex-direction: column;
       }
 
@@ -162,91 +173,124 @@
 
 <header>
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-    <a href="quienes-somos.html">Quiénes Somos</a>
-    <a href="sostenibilidad.html">Sostenibilidad</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
   </nav>
 </header>
 
-<section class="products-page">
+<div class="container">
 
-  <!-- ===== Sidebar ===== -->
+  <!-- ===== LEFT SIDEBAR ===== -->
   <aside class="sidebar">
     <h3>Categorías</h3>
-    <ul>
-      <li><a href="#ropa-de-cama">Ropa de Cama</a></li>
-      <li><a href="#toallas">Toallas</a></li>
-      <li><a href="#amenidades">Amenidades</a></li>
-      <li><a href="#accesorios">Accesorios</a></li>
-    </ul>
+
+    <div class="category">
+      <button class="category-btn">
+        Ropa de Cama <span>▾</span>
+      </button>
+      <ul class="subcategory">
+       <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">
+        Toallas <span>▾</span>
+      </button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/bano.html">Baño</a></li>
+        <li><a href="/productos/toallas/mano.html">Mano</a></li>
+        <li><a href="/productos/toallas/playa.html">Playa</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">
+        Amenities <span>▾</span>
+      </button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
+
+    <!-- ✅ NUEVO：Accesorios -->
+    <div class="category">
+      <button class="category-btn">
+        Accesorios <span>▾</span>
+      </button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+
   </aside>
 
-  <!-- ===== Content ===== -->
-  <main class="content">
+  <!-- ===== RIGHT CONTENT ===== -->
+  <main class="products">
+    <h1>Catálogo de Productos</h1>
+    <p>Seleccione una categoría a la izquierda para explorar nuestros suministros hoteleros.</p>
 
-    <h1 class="section-title">Nuestros Productos</h1>
-
-    <!-- Ropa de Cama -->
-    <section id="ropa-de-cama" class="category-section">
-      <h2>Ropa de Cama</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="productos/Ropa-de-Cama.html">
-            <img src="images/productos-ropa-cama.jpg" alt="Ropa de Cama Hotelera">
-            <h3>Ropa de Cama Hotelera</h3>
-            <p>Sábanas, almohadas, fundas y edredones profesionales.</p>
-          </a>
-        </div>
+    <div class="grid">
+      <div class="card">
+        <a href="/productos/Ropa-de-Cama.html">
+          <img src="/images/productos-ropa-cama.jpg" alt="Ropa de Cama">
+          <h3>Ropa de Cama</h3>
+        </a>
       </div>
-    </section>
 
-    <!-- Toallas -->
-    <section id="toallas" class="category-section">
-      <h2>Toallas</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="productos/Toallas.html">
-            <img src="images/productos-toallas.jpg" alt="Toallas Hoteleras">
-            <h3>Toallas Hoteleras</h3>
-            <p>Toallas de baño, mano, rostro y piscina.</p>
-          </a>
-        </div>
+      <div class="card">
+        <a href="#">
+          <img src="/images/productos-toallas.jpg" alt="Toallas">
+          <h3>Toallas</h3>
+        </a>
       </div>
-    </section>
 
-    <!-- Amenidades -->
-    <section id="amenidades" class="category-section">
-      <h2>Amenidades</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="productos/Amenidades.html">
-            <img src="images/productos-amenidades.jpg" alt="Amenidades Hoteleras">
-            <h3>Amenidades</h3>
-            <p>Jabón, shampoo, kits dentales y más.</p>
-          </a>
-        </div>
+      <div class="card">
+        <a href="#">
+          <img src="/images/productos-amenidades.jpg" alt="Amenities">
+          <h3>Amenities</h3>
+        </a>
       </div>
-    </section>
 
-    <!-- Accesorios -->
-    <section id="accesorios" class="category-section">
-      <h2>Accesorios</h2>
-      <div class="grid">
-        <div class="card">
-          <a href="productos/Accesorios.html">
-            <img src="images/productos-accesorios.jpg" alt="Accesorios Hoteleros">
-            <h3>Accesorios de Habitación</h3>
-            <p>Pantuflas, secadores, bolsas y más.</p>
-          </a>
-        </div>
+      <!-- ✅ NUEVO：Accesorios -->
+      <div class="card">
+        <a href="#">
+          <img src="/images/productos-accesorios.jpg" alt="Accesorios Hoteleros">
+          <h3>Accesorios</h3>
+        </a>
       </div>
-    </section>
-
+    </div>
   </main>
 
-</section>
+</div>
+
+<script>
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+      const arrow = btn.querySelector("span");
+      list.style.display = list.style.display === "block" ? "none" : "block";
+      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
+    });
+  });
+</script>
 
 </body>
 </html>
