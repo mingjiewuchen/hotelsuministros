@@ -26,10 +26,70 @@
       font-size: 14px;
     }
 
-    .section {
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: flex;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       padding: 50px 40px;
+      gap: 30px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .category {
+      margin-bottom: 12px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 8px 0;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 12px;
+      margin: 6px 0;
+      display: none;
+    }
+
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #1f2937;
+    }
+
+    .category.active .subcategory {
+      display: block;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
     }
 
     h1 {
@@ -78,101 +138,172 @@
       font-size: 18px;
       margin-bottom: 8px;
     }
+
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
- <nav>
-  <a href="../index.html">Inicio</a>
-  <a href="../productos.html">Productos</a>
-  <a href="Ropa-de-Cama.html">Ropa de Cama</a>
-</nav>
-
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="../productos.html">Productos</a>
+    <a href="Ropa-de-Cama.html">Ropa de Cama</a>
+  </nav>
 </header>
 
-<section class="section">
-  <h1>Ropa de Cama Hotelera</h1>
-  <p class="intro">
-    Soluciones profesionales en ropa de cama para hoteles, resorts y alojamientos Airbnb.
-    Productos diseñados para durabilidad, confort y fácil mantenimiento.
-  </p>
+<div class="layout">
 
-  <div class="grid">
+  <!-- ===== LEFT SIDEBAR ===== -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
 
-    <div class="card">
-      <a href="Ropa-de-Cama/almohadas.html">
-        <img src="almohadas.png" alt="Almohadas hoteleras">
-        <h3>Almohadas</h3>
-      </a>
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
     </div>
 
-    <div class="card">
-      <a href="protectores-almohada.html">
-        <img src="protector-almohada.png" alt="Protectores de Almohada">
-        <h3>Protectores de Almohada</h3>
-      </a>
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/bano.html">Baño</a></li>
+        <li><a href="/productos/toallas/mano.html">Mano</a></li>
+        <li><a href="/productos/toallas/playa.html">Playa</a></li>
+      </ul>
     </div>
 
-    <div class="card">
-      <a href="cubrecamas.html">
-        <img src="cubrecamas.png" alt="Cubrecamas hoteleros">
-        <h3>Cubrecamas</h3>
-      </a>
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
     </div>
 
-    <div class="card">
-      <a href="duvet-cover.html">
-        <img src="duvet-cover.png" alt="Duvet Cover hotelero">
-        <h3>Duvet Cover</h3>
-      </a>
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
     </div>
+  </aside>
 
-    <div class="card">
-      <a href="edredones-insert.html">
-        <img src="edredon-insert.png" alt="Edredones Insert">
-        <h3>Edredones – Insert</h3>
-      </a>
+  <!-- ===== RIGHT CONTENT ===== -->
+  <section class="content">
+    <h1>Ropa de Cama Hotelera</h1>
+    <p class="intro">
+      Soluciones profesionales en ropa de cama para hoteles, resorts y alojamientos Airbnb.
+      Productos diseñados para durabilidad, confort y fácil mantenimiento.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <a href="Ropa-de-Cama/almohadas.html">
+          <img src="almohadas.png" alt="Almohadas hoteleras">
+          <h3>Almohadas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="protectores-almohada.html">
+          <img src="protector-almohada.png" alt="Protectores de Almohada">
+          <h3>Protectores de Almohada</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="cubrecamas.html">
+          <img src="cubrecamas.png" alt="Cubrecamas hoteleros">
+          <h3>Cubrecamas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="duvet-cover.html">
+          <img src="duvet-cover.png" alt="Duvet Cover hotelero">
+          <h3>Duvet Cover</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="edredones-insert.html">
+          <img src="edredon-insert.png" alt="Edredones Insert">
+          <h3>Edredones – Insert</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="fundas.html">
+          <img src="fundas.png" alt="Fundas hoteleras">
+          <h3>Fundas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="protectores-colchon.html">
+          <img src="protector-colchon.png" alt="Protectores de Colchón">
+          <h3>Protectores de Colchón</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="sobrecamas.html">
+          <img src="sobrecamas.png" alt="Sobrecamas hoteleras">
+          <h3>Sobrecamas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="sabanas.html">
+          <img src="sabanas.png" alt="Sábanas hoteleras">
+          <h3>Sábanas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="cobijas.html">
+          <img src="cobijas.png" alt="Cobijas hoteleras">
+          <h3>Cobijas</h3>
+        </a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <a href="fundas.html">
-        <img src="fundas.png" alt="Fundas hoteleras">
-        <h3>Fundas</h3>
-      </a>
-    </div>
+</div>
 
-    <div class="card">
-      <a href="protectores-colchon.html">
-        <img src="protector-colchon.png" alt="Protectores de Colchón">
-        <h3>Protectores de Colchón</h3>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="sobrecamas.html">
-        <img src="sobrecamas.png" alt="Sobrecamas hoteleras">
-        <h3>Sobrecamas</h3>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="sabanas.html">
-        <img src="sabanas.png" alt="Sábanas hoteleras">
-        <h3>Sábanas</h3>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="cobijas.html">
-        <img src="cobijas.png" alt="Cobijas hoteleras">
-        <h3>Cobijas</h3>
-      </a>
-    </div>
-
-  </div>
-</section>
+<script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('active');
+    });
+  });
+</script>
 
 </body>
 </html>
