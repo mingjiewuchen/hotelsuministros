@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Protectores de Almohada | Hotel Suministros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protectores de Almohada | Hotel Suministros</title>
+  <meta name="description" content="Protectores de almohada hoteleros: 250 hilos, bambú e impermeables." />
 
   <style>
     body {
@@ -15,7 +16,7 @@
 
     header {
       background: #1f2937;
-      padding: 18px 40px;
+      padding: 20px 40px;
     }
 
     nav a {
@@ -25,45 +26,96 @@
       font-size: 14px;
     }
 
-    nav a:hover {
-      color: #fff;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: auto;
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 50px 40px;
+      gap: 30px;
     }
 
-    .back {
-      display: inline-block;
-      margin-bottom: 30px;
-      text-decoration: none;
-      color: #2563eb;
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .category {
+      margin-bottom: 12px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 8px 0;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 12px;
+      margin: 6px 0;
+      display: none;
+    }
+
+    .subcategory li a {
+      display: block;
       font-size: 14px;
+      padding: 6px 0;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #1f2937;
+    }
+
+    .category.active .subcategory {
+      display: block;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
     }
 
     h1 {
+      text-align: center;
       margin-bottom: 10px;
     }
 
     .intro {
-      margin-bottom: 40px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
       color: #555;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
     .card {
       background: #fff;
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 18px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       transition: transform 0.2s ease;
     }
 
@@ -72,9 +124,9 @@
     }
 
     .card img {
-      width: 60%;
-      max-width: 180px;
-      margin-bottom: 15px;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
 
     .card a {
@@ -84,12 +136,17 @@
 
     .card h3 {
       font-size: 18px;
-      margin-bottom: 6px;
+      margin: 0;
     }
 
-    .card p {
-      font-size: 14px;
-      color: #555;
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -101,55 +158,102 @@
     <a href="/index.html">Inicio</a>
     <a href="/productos.html">Productos</a>
     <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
-    <a href="/quienes-somos.html">Quiénes Somos</a>
-    <a href="/sostenibilidad.html">Sostenibilidad</a>
-    <a href="/contacto.html">Contacto</a>
   </nav>
 </header>
 
-<section class="section">
+<div class="layout">
 
-  <a class="back" href="/productos/Ropa-de-Cama.html">← Volver a Ropa de Cama</a>
+  <!-- ===== LEFT SIDEBAR ===== -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
 
-  <h1>Protectores de Almohada</h1>
-  <p class="intro">
-    Protección higiénica y duradera para uso hotelero profesional.
-    Diseñados para confort, resistencia y fácil mantenimiento.
-  </p>
-
-  <div class="grid">
-
-    <!-- 250 Hilos -->
-    <div class="card">
-      <a href="Protectores-Almohada/250-hilos.html">
-        <img src="/images/protector-almohada-250hilos.jpg" alt="Protector de Almohada 250 hilos">
-        <h3>Protector de Almohada – 250 Hilos</h3>
-        <p>Percale · Algodón / Poliéster · Zipper</p>
-      </a>
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
     </div>
 
-    <!-- Bambú -->
-    <div class="card">
-      <a href="Protectores-Almohada/bambu.html">
-        <img src="/images/protector-almohada-bambu.jpg" alt="Protector de Almohada Bambú">
-        <h3>Protector de Almohada – Bambú</h3>
-        <p>Antibacteriano · Fresco · Zipper</p>
-      </a>
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/bano.html">Baño</a></li>
+        <li><a href="/productos/toallas/mano.html">Mano</a></li>
+        <li><a href="/productos/toallas/playa.html">Playa</a></li>
+      </ul>
     </div>
 
-    <!-- Impermeable -->
-    <div class="card">
-      <a href="Protectores-Almohada/impermeable.html">
-        <img src="/images/protector-almohada-impermeable.jpg" alt="Protector de Almohada Impermeable">
-        <h3>Protector de Almohada – Impermeable</h3>
-        <p>Poliéster + Poliuretano · Zipper</p>
-      </a>
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
     </div>
 
-  </div>
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
 
-</section>
+  <!-- ===== RIGHT CONTENT ===== -->
+  <section class="content">
+    <h1>Protectores de Almohada</h1>
+    <p class="intro">
+      Protectores hoteleros diseñados para prolongar la vida útil de las almohadas y garantizar higiene y confort.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <a href="protector-almohada-250-hilos.html">
+          <img src="/images/protector-almohada-250.jpg" alt="Protector de Almohada 250 Hilos">
+          <h3>Protector de Almohada – 250 Hilos</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="protector-almohada-bambu.html">
+          <img src="/images/protector-almohada-bambu.jpg" alt="Protector de Almohada Bambú">
+          <h3>Protector de Almohada – Bambú</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="protector-almohada-impermeable.html">
+          <img src="/images/protector-almohada-impermeable.jpg" alt="Protector de Almohada Impermeable">
+          <h3>Protector de Almohada – Impermeable</h3>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('active');
+    });
+  });
+</script>
 
 </body>
 </html>
-
