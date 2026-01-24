@@ -14,7 +14,6 @@
       color: #333;
     }
 
-    /* ===== HEADER ===== */
     header {
       background: #1f2937;
       padding: 20px 40px;
@@ -27,7 +26,6 @@
       font-size: 14px;
     }
 
-    /* ===== LAYOUT ===== */
     .layout {
       display: flex;
       max-width: 1200px;
@@ -37,7 +35,6 @@
       align-items: flex-start;
     }
 
-    /* ===== SIDEBAR ===== */
     .sidebar {
       width: 260px;
       background: #fff;
@@ -87,7 +84,6 @@
       color: #2563eb;
     }
 
-    /* ===== CONTENT ===== */
     .content {
       flex: 1;
       background: #fff;
@@ -128,10 +124,17 @@
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    select, button {
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    select, input[type="number"], button {
       width: 100%;
       padding: 12px;
       font-size: 14px;
@@ -151,16 +154,13 @@
       background: #1ebc5a;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
       }
-
       .sidebar {
         width: 100%;
       }
-
       .product {
         grid-template-columns: 1fr;
       }
@@ -180,7 +180,7 @@
 
 <div class="layout">
 
-  <!-- ===== LEFT SIDEBAR ===== -->
+  <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
     <h3>Categorías</h3>
 
@@ -201,7 +201,7 @@
     </div>
   </aside>
 
-  <!-- ===== PRODUCT ===== -->
+  <!-- PRODUCT -->
   <main class="content">
 
     <a href="/productos/Ropa-de-Cama/protectores-almohada.html" class="back-link">
@@ -223,7 +223,7 @@
         </ul>
 
         <div class="form-group">
-          <label for="medida"><strong>Medida</strong></label>
+          <label for="medida">Medida</label>
           <select id="medida">
             <option value="Estándar">Estándar</option>
             <option value="Queen">Queen</option>
@@ -231,9 +231,12 @@
           </select>
         </div>
 
-        <button onclick="whatsapp()">
-          Solicitar cotización por WhatsApp
-        </button>
+        <div class="form-group">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" min="1" max="1000" value="1">
+        </div>
+
+        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
       </div>
 
     </div>
@@ -245,10 +248,13 @@
 <script>
 function whatsapp() {
   const medida = document.getElementById("medida").value;
+  const cantidad = document.getElementById("cantidad").value;
+
   const texto =
     "Hola, me interesa el siguiente producto:%0A%0A" +
     "🛏️ Producto: Protector de Almohada – 250 Hilos%0A" +
-    "📐 Medida: " + medida + "%0A%0A" +
+    "📐 Medida: " + medida + "%0A" +
+    "📦 Cantidad: " + cantidad + "%0A%0A" +
     "Quedo atento(a) a su cotización.";
 
   window.open(
