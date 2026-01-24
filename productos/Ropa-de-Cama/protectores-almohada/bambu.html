@@ -1,203 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Protector de Almohada Bambú | Hotel Suministros</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protector de Almohada Bambú | Hotel Suministros</title>
+  <meta name="description" content="Protector de almohada de bambú hotelero, suave, transpirable y con cierre zipper.">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
+    }
 
-        /* ===== Layout ===== */
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 20px auto;
-            gap: 20px;
-        }
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-        /* ===== Left Sidebar ===== */
-        .sidebar {
-            width: 260px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 6px;
-        }
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      gap: 30px;
+      align-items: flex-start;
+    }
 
-        .sidebar h3 {
-            margin-top: 0;
-            font-size: 18px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
 
-        .sidebar li {
-            margin: 10px 0;
-        }
+    .category {
+      margin-bottom: 15px;
+    }
 
-        .sidebar li ul {
-            margin-left: 15px;
-            margin-top: 8px;
-        }
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 0;
+      cursor: pointer;
+      text-align: left;
+    }
 
-        /* ===== Main Content ===== */
-        .content {
-            flex: 1;
-            background: #fff;
-            padding: 30px;
-            border-radius: 6px;
-        }
+    .subcategory {
+      list-style: none;
+      padding-left: 14px;
+      margin-top: 6px;
+      display: block;
+    }
 
-        .back-link {
-            margin-bottom: 15px;
-            display: inline-block;
-            font-size: 14px;
-        }
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #374151;
+      text-decoration: none;
+    }
 
-        .product {
-            display: flex;
-            gap: 30px;
-        }
+    .subcategory li a:hover {
+      color: #2563eb;
+    }
 
-        /* ===== Product Image ===== */
-        .product img {
-            width: 33%;
-            max-width: 320px;
-            border-radius: 6px;
-        }
+    .content {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-        /* ===== Product Info ===== */
-        .product-info h1 {
-            margin-top: 0;
-            font-size: 24px;
-        }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      color: #2563eb;
+    }
 
-        .measure {
-            margin-top: 20px;
-        }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
 
-        .measure label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-        .measure select,
-        .measure input[type="number"] {
-            width: 220px;
-            padding: 8px;
-            font-size: 15px;
-        }
+    .product h1 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
 
-        /* ===== Button ===== */
-        .btn {
-            margin-top: 25px;
-            display: inline-block;
-            padding: 12px 25px;
-            background: #000;
-            color: #fff;
-            border-radius: 4px;
-            font-size: 15px;
-        }
+    .product ul {
+      padding-left: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
 
-        .btn:hover {
-            background: #333;
-        }
+    .form-group {
+      margin-bottom: 18px;
+    }
 
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-            .sidebar {
-                width: 100%;
-            }
+    select, input[type="number"], button {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
 
-            .product {
-                flex-direction: column;
-            }
+    button {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-            .product img {
-                width: 100%;
-            }
-        }
-    </style>
+    button:hover {
+      background: #1ebc5a;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+  </nav>
+</header>
 
-    <!-- ===== Left Sidebar ===== -->
-    <aside class="sidebar">
-        <h3>Categorías</h3>
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html"><strong>Protectores de Almohada</strong></a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- PRODUCT -->
+  <main class="content">
+
+    <a href="/productos/Ropa-de-Cama/protectores-almohada.html" class="back-link">
+      ← Volver a Protectores de Almohada
+    </a>
+
+    <div class="product">
+
+      <img src="/images/protector-almohada-bambu.jpg" alt="Protector de Almohada Bambú">
+
+      <div>
+        <h1>Protector de Almohada – Bambú</h1>
+
         <ul>
-            <li><a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
-                <ul>
-                    <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-                    <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-                    <li><a href="#">Almohadas</a></li>
-                    <li><a href="#">Sábanas</a></li>
-                </ul>
-            </li>
+          <li>Fibra de Bambú</li>
+          <li>Suave y transpirable</li>
+          <li>Alta absorción de humedad</li>
+          <li>Cierre con Zipper</li>
         </ul>
-    </aside>
 
-    <!-- ===== Main Content ===== -->
-    <main class="content">
-
-        <a class="back-link" href="/productos/Ropa-de-Cama/protectores-almohada.html">
-            ← Volver a Protectores de Almohada
-        </a>
-
-        <div class="product">
-
-            <!-- Image -->
-            <img src="/images/protector-almohada-bambu.jpg" alt="Protector de Almohada Bambú">
-
-            <!-- Info -->
-            <div class="product-info">
-                <h1>Protector de Almohada – Bambú</h1>
-
-                <!-- Medida -->
-                <div class="measure">
-                    <label for="medida">Medida</label>
-                    <select id="medida" name="medida">
-                        <option value="">Seleccionar medida</option>
-                        <option>Standard</option>
-                        <option>Queen</option>
-                        <option>King</option>
-                    </select>
-                </div>
-
-                <!-- Cantidad -->
-                <div class="measure">
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" name="cantidad" value="1" min="1">
-                </div>
-
-                <a href="#" class="btn">Solicitar cotización</a>
-            </div>
-
+        <div class="form-group">
+          <label for="medida">Medida</label>
+          <select id="medida">
+            <option value="Estándar">Estándar</option>
+            <option value="Queen">Queen</option>
+            <option value="King">King</option>
+          </select>
         </div>
 
-    </main>
+        <div class="form-group">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" min="1" max="1000" value="1">
+        </div>
+
+        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
+      </div>
+
+    </div>
+
+  </main>
 
 </div>
+
+<script>
+function whatsapp() {
+  const medida = document.getElementById("medida").value;
+  const cantidad = document.getElementById("cantidad").value;
+
+  const texto =
+    "Hola, me interesa el siguiente producto:%0A%0A" +
+    "🛏️ Producto: Protector de Almohada – Bambú%0A" +
+    "📐 Medida: " + medida + "%0A" +
+    "📦 Cantidad: " + cantidad + "%0A%0A" +
+    "Quedo atento(a) a su cotización.";
+
+  window.open(
+    "https://wa.me/50685664622?text=" + texto,
+    "_blank"
+  );
+}
+</script>
 
 </body>
 </html>
