@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duvet Cover – 300 Hilos | Hotel Suministros</title>
+  <meta name="description" content="Duvet cover hotelero 300 hilos, tacto suave, apariencia premium y alta durabilidad.">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 0;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 14px;
+      margin-top: 6px;
+    }
+
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #2563eb;
+    }
+
+    .content {
+      flex: 1;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      line-height: 1.7;
+    }
+
+    .size-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .size-btn {
+      padding: 12px;
+      border: 2px solid #d1d5db;
+      background: #f3f4f6;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      color: #2563eb;
+    }
+
+    .size-btn.active {
+      background: #e0ecff;
+      border-color: #2563eb;
+      font-weight: bold;
+    }
+
+    .size-description {
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input[type="number"], button {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #25d366;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1ebc5a;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+    <button class="category-btn">Ropa de Cama</button>
+    <ul class="subcategory">
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+
+    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
+      ← Volver a Duvet Cover
+    </a>
+
+    <div class="product">
+
+      <img src="/images/duvet-300-hilos.jpg" alt="Duvet Cover 300 Hilos">
+
+      <div>
+        <h1>Duvet Cover – 300 Hilos</h1>
+
+        <ul>
+          <li>300 hilos – calidad hotelera premium</li>
+          <li>Tejido fino y apariencia elegante</li>
+          <li>Excelente suavidad y resistencia</li>
+          <li>Uso recomendado en hoteles de alta gama</li>
+        </ul>
+
+        <label>Medida</label>
+        <div class="size-buttons">
+          <button class="size-btn active" onclick="selectSize('Twin','170cm x 234cm',this)">Twin</button>
+          <button class="size-btn" onclick="selectSize('Full','208cm x 234cm',this)">Full</button>
+          <button class="size-btn" onclick="selectSize('Queen','230cm x 240cm',this)">Queen</button>
+          <button class="size-btn" onclick="selectSize('King','277cm x 240cm',this)">King</button>
+        </div>
+
+        <div class="size-description" id="sizeDescription">
+          170cm x 234cm
+        </div>
+
+        <div class="form-group">
+          <label>Cantidad</label>
+          <input type="number" id="cantidad" value="1" min="1">
+        </div>
+
+        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+let selectedSize = "Twin";
+let selectedMeasure = "170cm x 234cm";
+
+function selectSize(size, measure, el) {
+  selectedSize = size;
+  selectedMeasure = measure;
+  document.getElementById("sizeDescription").innerText = measure;
+  document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+  el.classList.add("active");
+}
+
+function whatsapp() {
+  const cantidad = document.getElementById("cantidad").value;
+  const texto =
+    "Hola, me interesa:%0A%0A" +
+    "🛏️ Producto: Duvet Cover – 300 Hilos%0A" +
+    "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
+    "📦 Cantidad: " + cantidad;
+  window.open("https://wa.me/50685664622?text=" + texto, "_blank");
+}
+</script>
+
+</body>
+</html>
