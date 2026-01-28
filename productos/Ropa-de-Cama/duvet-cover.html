@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duvet Cover | Hotel Suministros</title>
-  <meta name="description" content="Duvet Cover hotelero en diferentes materiales y niveles de hilos, ideal para hoteles, Airbnb y proyectos institucionales.">
+  <meta name="description" content="Duvet Cover hotelero en diferentes materiales y niveles de hilos, ideal para hoteles y Airbnb.">
 
   <style>
     body {
@@ -35,7 +35,7 @@
       align-items: flex-start;
     }
 
-    /* ===== SIDEBAR ===== */
+    /* SIDEBAR */
     .sidebar {
       width: 260px;
       background: #fff;
@@ -78,7 +78,7 @@
       color: #2563eb;
     }
 
-    /* ===== CONTENT ===== */
+    /* CONTENT */
     .content {
       flex: 1;
     }
@@ -103,25 +103,31 @@
       flex-direction: column;
     }
 
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .card img {
       width: 100%;
       aspect-ratio: 4 / 3;
       object-fit: cover;
+      display: block;
     }
 
     .card-body {
       padding: 18px;
-      flex: 1;
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
 
     .card-body h3 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       font-size: 16px;
     }
 
-    .card-body a {
+    .btn {
       margin-top: auto;
       text-align: center;
       padding: 10px;
@@ -129,11 +135,10 @@
       background: #2563eb;
       color: #fff;
       font-size: 14px;
-      text-decoration: none;
       font-weight: bold;
     }
 
-    .card-body a:hover {
+    .btn:hover {
       background: #1e40af;
     }
 
@@ -169,10 +174,9 @@
 
 <div class="layout">
 
-  <!-- LEFT SIDEBAR -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h3>Categorías</h3>
-
     <button class="category-btn">Ropa de Cama</button>
     <ul class="subcategory">
       <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
@@ -180,8 +184,6 @@
       <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
       <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
       <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
       <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
       <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
     </ul>
@@ -193,75 +195,102 @@
 
     <div class="grid">
 
+      <!-- 1 -->
       <div class="card">
-        <img src="/images/duvet-100-polyester.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/100-polyester.html">
+          <img src="/images/duvet-100-polyester.jpg" alt="Duvet Cover 100% Polyester">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 100% Polyester</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/100-polyester.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 2 -->
       <div class="card">
-        <img src="/images/duvet-200-hilos.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/200-hilos.html">
+          <img src="/images/duvet-200-hilos.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 200 Hilos</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/200-hilos.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 3 -->
       <div class="card">
-        <img src="/images/duvet-250-hilos.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/250-hilos.html">
+          <img src="/images/duvet-250-hilos.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 250 Hilos, Percale</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/250-hilos.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 4 -->
       <div class="card">
-        <img src="/images/duvet-300-hilos.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/300-hilos.html">
+          <img src="/images/duvet-300-hilos.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 300 Hilos</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/300-hilos.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 5 -->
       <div class="card">
-        <img src="/images/duvet-300-rayado.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/300-rayado.html">
+          <img src="/images/duvet-300-rayado.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 300 Hilos, Rayado</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/300-rayado.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 6 -->
       <div class="card">
-        <img src="/images/duvet-300-tencel.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/300-tencel.html">
+          <img src="/images/duvet-300-tencel.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 300 Hilos, Tencel</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/300-tencel.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 7 -->
       <div class="card">
-        <img src="/images/duvet-400-hilos.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/400-hilos.html">
+          <img src="/images/duvet-400-hilos.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – 400 Hilos</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/400-hilos.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 8 -->
       <div class="card">
-        <img src="/images/duvet-250-arena.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/250-arena.html">
+          <img src="/images/duvet-250-arena.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – Arena, 250 Hilos</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/250-arena.html">Ver opciones</a>
         </div>
       </div>
 
+      <!-- 9 -->
       <div class="card">
-        <img src="/images/duvet-250-gris.jpg">
+        <a href="/productos/Ropa-de-Cama/duvet-cover/250-gris.html">
+          <img src="/images/duvet-250-gris.jpg">
+        </a>
         <div class="card-body">
           <h3>Duvet Cover – Gris, 250 Hilos</h3>
-          <a href="#">Ver opciones</a>
+          <a class="btn" href="/productos/Ropa-de-Cama/duvet-cover/250-gris.html">Ver opciones</a>
         </div>
       </div>
 
