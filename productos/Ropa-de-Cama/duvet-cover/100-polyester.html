@@ -2,102 +2,204 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Duvet Cover – 100% Polyester</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="../../../styles.css">
+  <title>Duvet Cover – 100% Polyester | Hotel Suministros</title>
+  <meta name="description" content="Duvet cover hotelero 100% polyester, resistente y fácil mantenimiento.">
 
   <style>
-    .producto-detalle {
-      display: flex;
-      gap: 30px;
-      padding: 40px;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
     }
 
-    /* 左侧图片 */
-    .producto-imagen {
-      flex: 1;
+    /* ===== HEADER ===== */
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
     }
 
-    .producto-imagen img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 6px;
-    }
-
-    /* 右侧信息 */
-    .producto-info {
-      flex: 1;
-    }
-
-    .producto-info h1 {
-      margin-bottom: 10px;
-    }
-
-    .descripcion {
-      margin-bottom: 20px;
-    }
-
-    /* Medidas */
-    .opciones h3 {
-      margin-bottom: 10px;
-    }
-
-    .medidas {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-    .medidas button {
-      padding: 10px 16px;
-      border: 1px solid #ccc;
-      background-color: #f2f2f2;
-      cursor: pointer;
-      border-radius: 4px;
-      font-weight: bold;
-      color: #007bff; /* 蓝色字体 */
-    }
-
-    .medidas button.activo {
-      background-color: #cfe2ff;
-      border-color: #007bff;
-    }
-
-    .medida-texto {
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    /* Cantidad */
-    .cantidad {
-      margin-bottom: 20px;
-    }
-
-    .cantidad input {
-      width: 80px;
-      padding: 6px;
-    }
-
-    /* WhatsApp */
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 4px;
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
       text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* ===== SIDEBAR（完整分类）===== */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .category {
+      margin-bottom: 18px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 0;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 14px;
+      margin-top: 6px;
+    }
+
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #2563eb;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 18px;
+      line-height: 1.7;
+    }
+
+    /* ===== MEDIDA BOTONES（改进对比度）===== */
+    .size-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .size-btn {
+      padding: 12px;
+      border: 2px solid #d1d5db;
+      background: #f3f4f6;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .size-btn:hover {
+      border-color: #2563eb;
+    }
+
+    .size-btn.active {
+      background: #e0ecff;
+      border-color: #2563eb;
+      color: #1e40af;
       font-weight: bold;
     }
 
-    .btn-whatsapp:hover {
-      background-color: #1ebe5d;
+    .size-description {
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #374151;
     }
 
-    @media (max-width: 768px) {
-      .producto-detalle {
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input[type="number"], button {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #25d366;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1ebc5a;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
         flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .product {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -105,86 +207,105 @@
 
 <body>
 
-  <!-- NAVBAR（使用你之前的版本） -->
-  <header>
-    <nav class="navbar">
-      <a href="../../../index.html" class="logo">Hotel Suministros</a>
-      <ul class="nav-links">
-        <li><a href="../../../productos.html">Productos</a></li>
-        <li><a href="../../../contacto.html">Contacto</a></li>
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <!-- LEFT SIDEBAR（与你之前完全一致） -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <main class="producto-detalle">
-
-    <!-- Imagen -->
-    <div class="producto-imagen">
-      <img src="../../../images/duvet-100-polyester.jpg" alt="Duvet Cover 100% Polyester">
     </div>
+  </aside>
 
-    <!-- Información -->
-    <div class="producto-info">
-      <h1>Duvet Cover – 100% Polyester</h1>
+  <!-- CONTENT -->
+  <main class="content">
 
-      <p class="descripcion">
-        Duvet cover fabricado en 100% polyester, resistente, fácil de lavar y ideal para hoteles y Airbnb.
-      </p>
+    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
+      ← Volver a Duvet Cover
+    </a>
 
-      <!-- Medidas -->
-      <div class="opciones">
-        <h3>Seleccionar medida</h3>
+    <div class="product">
 
-        <div class="medidas">
-          <button onclick="seleccionarMedida('Twin', '170cm Ancho x 234cm Largo', this)">Twin</button>
-          <button onclick="seleccionarMedida('Full', '208cm Ancho x 234cm Largo', this)">Full</button>
-          <button onclick="seleccionarMedida('Queen', '230cm Ancho x 240cm Largo', this)">Queen</button>
-          <button onclick="seleccionarMedida('King', '277cm Ancho x 240cm Largo', this)">King</button>
+      <img src="/images/duvet-100-polyester.jpg" alt="Duvet Cover 100% Polyester">
+
+      <div>
+        <h1>Duvet Cover – 100% Polyester</h1>
+
+        <ul>
+          <li>100% Polyester</li>
+          <li>Alta durabilidad</li>
+          <li>Fácil mantenimiento</li>
+          <li>Uso hotelero</li>
+        </ul>
+
+        <label>Medida</label>
+        <div class="size-buttons">
+          <button class="size-btn active" onclick="selectSize('Twin','170cm Ancho x 234cm Largo',this)">Twin</button>
+          <button class="size-btn" onclick="selectSize('Full','208cm Ancho x 234cm Largo',this)">Full</button>
+          <button class="size-btn" onclick="selectSize('Queen','230cm Ancho x 240cm Largo',this)">Queen</button>
+          <button class="size-btn" onclick="selectSize('King','277cm Ancho x 240cm Largo',this)">King</button>
         </div>
 
-        <div id="medidaTexto" class="medida-texto">
-          Seleccione una medida
+        <div class="size-description" id="sizeDescription">
+          170cm Ancho x 234cm Largo
         </div>
+
+        <div class="form-group">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" value="1" min="1">
+        </div>
+
+        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
       </div>
 
-      <!-- Cantidad -->
-      <div class="cantidad">
-        <h3>Cantidad</h3>
-        <input type="number" id="cantidad" min="1" value="1">
-      </div>
-
-      <!-- WhatsApp -->
-      <a href="#" id="whatsappLink" class="btn-whatsapp" target="_blank">
-        Enviar consulta por WhatsApp
-      </a>
     </div>
-
   </main>
 
-  <script>
-    let medidaSeleccionada = '';
+</div>
 
-    function seleccionarMedida(nombre, texto, boton) {
-      medidaSeleccionada = nombre + ' (' + texto + ')';
-      document.getElementById('medidaTexto').innerText = texto;
+<script>
+let selectedSize = "Twin";
+let selectedMeasure = "170cm Ancho x 234cm Largo";
 
-      document.querySelectorAll('.medidas button').forEach(btn => {
-        btn.classList.remove('activo');
-      });
-      boton.classList.add('activo');
+function selectSize(size, measure, el) {
+  selectedSize = size;
+  selectedMeasure = measure;
+  document.getElementById("sizeDescription").innerText = measure;
+  document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+  el.classList.add("active");
+}
 
-      actualizarWhatsapp();
-    }
-
-    function actualizarWhatsapp() {
-      const cantidad = document.getElementById('cantidad').value;
-      const mensaje = `Hola, me interesa el producto:\n\nDuvet Cover – 100% Polyester\nMedida: ${medidaSeleccionada}\nCantidad: ${cantidad}`;
-      const url = `https://wa.me/506XXXXXXXX?text=${encodeURIComponent(mensaje)}`;
-      document.getElementById('whatsappLink').href = url;
-    }
-
-    document.getElementById('cantidad').addEventListener('change', actualizarWhatsapp);
-  </script>
+function whatsapp() {
+  const cantidad = document.getElementById("cantidad").value;
+  const texto =
+    "Hola, me interesa el siguiente producto:%0A%0A" +
+    "🛏️ Producto: Duvet Cover – 100% Polyester%0A" +
+    "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
+    "📦 Cantidad: " + cantidad;
+  window.open("https://wa.me/50685664622?text=" + texto, "_blank");
+}
+</script>
 
 </body>
 </html>
