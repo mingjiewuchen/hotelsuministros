@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duvet Cover – 100% Polyester | Hotel Suministros</title>
-  <meta name="description" content="Duvet cover hotelero 100% polyester, resistente y fácil mantenimiento, disponible en varias medidas.">
+  <meta name="description" content="Duvet cover hotelero 100% polyester, resistente y fácil mantenimiento.">
 
   <style>
     body {
@@ -14,6 +14,7 @@
       color: #333;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: #1f2937;
       padding: 20px 40px;
@@ -26,6 +27,7 @@
       font-size: 14px;
     }
 
+    /* ===== LAYOUT ===== */
     .layout {
       display: flex;
       max-width: 1200px;
@@ -35,10 +37,10 @@
       align-items: flex-start;
     }
 
-    /* ===== SIDEBAR ===== */
+    /* ===== SIDEBAR（完整分类）===== */
     .sidebar {
       width: 260px;
-      background: #fff;
+      background: #ffffff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -52,7 +54,7 @@
     }
 
     .category {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .category-btn {
@@ -87,7 +89,7 @@
     /* ===== CONTENT ===== */
     .content {
       flex: 1;
-      background: #fff;
+      background: #ffffff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -97,8 +99,8 @@
       display: inline-block;
       margin-bottom: 20px;
       font-size: 14px;
-      text-decoration: none;
       color: #2563eb;
+      text-decoration: none;
     }
 
     .product {
@@ -122,33 +124,40 @@
       line-height: 1.7;
     }
 
-    /* ===== SIZE BUTTONS ===== */
+    /* ===== MEDIDA BOTONES（改进对比度）===== */
     .size-buttons {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .size-btn {
       padding: 12px;
-      border: 1px solid #ccc;
-      background: #f9fafb;
+      border: 2px solid #d1d5db;
+      background: #f3f4f6;
       cursor: pointer;
       border-radius: 6px;
       font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .size-btn:hover {
+      border-color: #2563eb;
     }
 
     .size-btn.active {
+      background: #e0ecff;
       border-color: #2563eb;
-      background: #eef2ff;
+      color: #1e40af;
       font-weight: bold;
     }
 
     .size-description {
       font-size: 14px;
       margin-bottom: 18px;
-      color: #555;
+      color: #374151;
     }
 
     .form-group {
@@ -208,19 +217,28 @@
 
 <div class="layout">
 
-  <!-- SIDEBAR -->
+  <!-- LEFT SIDEBAR（与你之前完全一致） -->
   <aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category">
       <button class="category-btn">Ropa de Cama</button>
       <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
         <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
       </ul>
     </div>
   </aside>
 
-  <!-- PRODUCT CONTENT -->
+  <!-- CONTENT -->
   <main class="content">
 
     <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
@@ -243,10 +261,10 @@
 
         <label>Medida</label>
         <div class="size-buttons">
-          <button class="size-btn active" onclick="selectSize('Twin', '170cm Ancho x 234cm Largo', this)">Twin</button>
-          <button class="size-btn" onclick="selectSize('Full', '208cm Ancho x 234cm Largo', this)">Full</button>
-          <button class="size-btn" onclick="selectSize('Queen', '230cm Ancho x 240cm Largo', this)">Queen</button>
-          <button class="size-btn" onclick="selectSize('King', '277cm Ancho x 240cm Largo', this)">King</button>
+          <button class="size-btn active" onclick="selectSize('Twin','170cm Ancho x 234cm Largo',this)">Twin</button>
+          <button class="size-btn" onclick="selectSize('Full','208cm Ancho x 234cm Largo',this)">Full</button>
+          <button class="size-btn" onclick="selectSize('Queen','230cm Ancho x 240cm Largo',this)">Queen</button>
+          <button class="size-btn" onclick="selectSize('King','277cm Ancho x 240cm Largo',this)">King</button>
         </div>
 
         <div class="size-description" id="sizeDescription">
@@ -255,7 +273,7 @@
 
         <div class="form-group">
           <label for="cantidad">Cantidad</label>
-          <input type="number" id="cantidad" value="1" min="1" max="1000">
+          <input type="number" id="cantidad" value="1" min="1">
         </div>
 
         <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
@@ -270,26 +288,21 @@
 let selectedSize = "Twin";
 let selectedMeasure = "170cm Ancho x 234cm Largo";
 
-function selectSize(size, description, el) {
+function selectSize(size, measure, el) {
   selectedSize = size;
-  selectedMeasure = description;
-
-  document.getElementById("sizeDescription").innerText = description;
-
+  selectedMeasure = measure;
+  document.getElementById("sizeDescription").innerText = measure;
   document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
   el.classList.add("active");
 }
 
 function whatsapp() {
   const cantidad = document.getElementById("cantidad").value;
-
   const texto =
     "Hola, me interesa el siguiente producto:%0A%0A" +
     "🛏️ Producto: Duvet Cover – 100% Polyester%0A" +
     "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
-    "📦 Cantidad: " + cantidad + "%0A%0A" +
-    "Quedo atento(a) a su cotización.";
-
+    "📦 Cantidad: " + cantidad;
   window.open("https://wa.me/50685664622?text=" + texto, "_blank");
 }
 </script>
