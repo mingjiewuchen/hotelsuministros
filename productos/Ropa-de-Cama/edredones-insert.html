@@ -2,174 +2,202 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Edredones Insert | Jun Games</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edredones Insert | Hotel Suministros</title>
+  <meta name="description" content="Edredones Insert hoteleros: Microfibra y Plumas.">
 
   <style>
     body {
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #fafafa;
+      color: #333;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===== Layout ===== */
-    .container {
-      display: flex;
-    }
-
-    /* ===== Sidebar ===== */
-    .sidebar {
-      width: 240px;
+    header {
       background: #1f2937;
-      color: #fff;
-      height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: auto;
+      padding: 20px 40px;
     }
 
-    .sidebar h3 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #374151;
-      padding-bottom: 5px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px 0;
-    }
-
-    .sidebar li {
-      margin: 8px 0;
-    }
-
-    .sidebar a {
+    nav a {
       color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
       font-size: 14px;
     }
 
-    .sidebar a:hover {
-      color: #38bdf8;
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      gap: 30px;
+      align-items: flex-start;
     }
 
-    /* ===== Content ===== */
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .category {
+      margin-bottom: 15px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 0;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 14px;
+      margin-top: 6px;
+      display: block;
+    }
+
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #2563eb;
+    }
+
     .content {
       flex: 1;
+      background: #fff;
       padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .content h1 {
+      margin-top: 0;
       margin-bottom: 20px;
-      color: #111827;
     }
 
-    /* ===== Product Grid ===== */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 25px;
     }
 
     .card {
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
     }
 
     .card img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
 
-    .card-body {
-      padding: 15px;
-      text-align: center;
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
     }
 
-    .card-body h2 {
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: #111827;
+    .card a {
+      text-decoration: none;
+      color: #1f2937;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      background: #2563eb;
-      color: #fff;
-      border-radius: 6px;
-      font-size: 14px;
-    }
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
 
-    .btn:hover {
-      background: #1d4ed8;
+      .sidebar {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+  </nav>
+</header>
 
-  <!-- ===== Sidebar ===== -->
+<div class="layout">
+
+  <!-- ===== LEFT SIDEBAR ===== -->
   <aside class="sidebar">
-    <h3>Ropa de Cama</h3>
-    <ul>
-      <li><a href="duvet-cover.html">Duvet Cover</a></li>
-      <li><a href="edredones-insert.html">Edredones Insert</a></li>
-      <li><a href="sobrecama.html">Sobrecama</a></li>
-      <li><a href="impermeable.html">Impermeable</a></li>
-    </ul>
-
     <h3>Categorías</h3>
-    <ul>
-      <li><a href="#">Hoteles</a></li>
-      <li><a href="#">Airbnb</a></li>
-      <li><a href="#">Hospitalidad</a></li>
-    </ul>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html"><strong>Edredones – Insert</strong></a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
   </aside>
 
-  <!-- ===== Main Content ===== -->
+  <!-- ===== MAIN CONTENT ===== -->
   <main class="content">
-    <h1>Edredones Insert</h1>
+    <h1>Edredones – Insert</h1>
 
     <div class="grid">
 
       <!-- Microfibra -->
       <div class="card">
-        <a href="edredon-microfibra.html">
-          <img src="images/edredon-microfibra.jpg" alt="Edredón Microfibra">
+        <a href="/productos/Ropa-de-Cama/edredones-insert/microfibra.html">
+          <img src="/images/edredon-insert-microfibra.jpg" alt="Edredón Insert Microfibra">
+          <h3>Edredón Insert Microfibra</h3>
         </a>
-        <div class="card-body">
-          <h2>Edredón Insert – Microfibra</h2>
-          <a href="edredon-microfibra.html" class="btn">Ver opciones</a>
-        </div>
       </div>
 
       <!-- Plumas -->
       <div class="card">
-        <a href="edredon-plumas.html">
-          <img src="images/edredon-plumas.jpg" alt="Edredón Plumas">
+        <a href="/productos/Ropa-de-Cama/edredones-insert/plumas.html">
+          <img src="/images/edredon-insert-plumas.jpg" alt="Edredón Insert Plumas">
+          <h3>Edredón Insert Plumas</h3>
         </a>
-        <div class="card-body">
-          <h2>Edredón Insert – Plumas</h2>
-          <a href="edredon-plumas.html" class="btn">Ver opciones</a>
-        </div>
       </div>
 
     </div>
