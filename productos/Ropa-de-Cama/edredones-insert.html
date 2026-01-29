@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Edredones Insert | Jun Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Layout ===== */
+    .container {
+      display: flex;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      width: 240px;
+      background: #1f2937;
+      color: #fff;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #374151;
+      padding-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #e5e7eb;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Content ===== */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .content h1 {
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    /* ===== Product Grid ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-body h2 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
+    <h3>Ropa de Cama</h3>
+    <ul>
+      <li><a href="duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="edredones-insert.html">Edredones Insert</a></li>
+      <li><a href="sobrecama.html">Sobrecama</a></li>
+      <li><a href="impermeable.html">Impermeable</a></li>
+    </ul>
+
+    <h3>Categorías</h3>
+    <ul>
+      <li><a href="#">Hoteles</a></li>
+      <li><a href="#">Airbnb</a></li>
+      <li><a href="#">Hospitalidad</a></li>
+    </ul>
+  </aside>
+
+  <!-- ===== Main Content ===== -->
+  <main class="content">
+    <h1>Edredones Insert</h1>
+
+    <div class="grid">
+
+      <!-- Microfibra -->
+      <div class="card">
+        <a href="edredon-microfibra.html">
+          <img src="images/edredon-microfibra.jpg" alt="Edredón Microfibra">
+        </a>
+        <div class="card-body">
+          <h2>Edredón Insert – Microfibra</h2>
+          <a href="edredon-microfibra.html" class="btn">Ver opciones</a>
+        </div>
+      </div>
+
+      <!-- Plumas -->
+      <div class="card">
+        <a href="edredon-plumas.html">
+          <img src="images/edredon-plumas.jpg" alt="Edredón Plumas">
+        </a>
+        <div class="card-body">
+          <h2>Edredón Insert – Plumas</h2>
+          <a href="edredon-plumas.html" class="btn">Ver opciones</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
