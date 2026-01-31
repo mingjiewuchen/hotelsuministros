@@ -2,173 +2,152 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Alfombras | Toallas | Hotel Suministros</title>
+  <title>Alfombras | Toallas para Hotel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alfombras y bath mats hoteleros de alta absorción y gran durabilidad.">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
       color: #333;
     }
 
-    header {
-      background: #1f2937;
-      padding: 18px 40px;
-    }
-
-    nav a {
-      color: #e5e7eb;
-      margin-right: 22px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
     .container {
-      max-width: 1300px;
-      margin: 40px auto;
-      padding: 0 30px;
       display: flex;
-      gap: 30px;
-      align-items: flex-start;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 20px;
     }
 
-    /* ===== SIDEBAR ===== */
+    /* 左侧导航 */
     .sidebar {
-      width: 260px;
+      width: 240px;
       background: #fff;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 6px;
     }
 
     .sidebar h3 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-
-    .category {
-      margin-bottom: 15px;
-    }
-
-    .category-btn {
-      width: 100%;
-      background: none;
-      border: none;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 10px;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 6px;
-    }
-
-    .category-btn:hover {
-      background: #f1f5f9;
-    }
-
-    .subcategory {
-      list-style: none;
-      padding-left: 15px;
-      margin: 5px 0 0;
-    }
-
-    .subcategory li a {
-      display: block;
-      padding: 8px 10px;
-      font-size: 14px;
-      color: #374151;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    .subcategory li a:hover {
-      background: #f3f4f6;
-      color: #2563eb;
-    }
-
-    /* ===== CONTENT ===== */
-    .products {
-      flex: 1;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .products h1 {
-      margin-top: 0;
+      font-size: 16px;
       margin-bottom: 10px;
     }
 
-    .products p {
-      color: #555;
-      margin-bottom: 30px;
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    /* ===== GRID ===== */
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* 主内容 */
+    .content {
+      flex: 1;
+    }
+
+    .content h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    /* 产品网格 */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 20px;
     }
 
-    /* ===== CARD ===== */
     .card {
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 18px;
-      text-align: center;
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
+      height: 100%;
     }
 
     .img-box {
-      height: 180px;
+      width: 100%;
+      height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 12px;
+      overflow: hidden;
+      background: #fafafa;
     }
 
     .img-box img {
       max-width: 100%;
       max-height: 100%;
-      object-fit: contain;
-      border-radius: 8px;
+      object-fit: cover;
+      cursor: pointer;
     }
 
     .card h3 {
-      font-size: 14px;
-      line-height: 1.5;
-      min-height: 66px;
-      margin: 0 0 10px;
-      color: #1f2937;
+      font-size: 18px;
+      margin: 15px 0 10px;
+      min-height: 48px;
     }
 
     .price {
-      margin-top: auto;
+      font-size: 20px;
       font-weight: bold;
-      color: #2563eb;
-      font-size: 15px;
+      color: #000;
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 900px) {
+    .desc {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .qty {
+      margin-bottom: 12px;
+    }
+
+    .qty input {
+      width: 70px;
+      padding: 6px;
+    }
+
+    .whatsapp {
+      display: block;
+      text-align: center;
+      background: #25d366;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp:hover {
+      background: #1eb857;
+    }
+
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
       .container {
         flex-direction: column;
       }
@@ -178,12 +157,6 @@
       }
 
       .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .grid {
         grid-template-columns: 1fr;
       }
     }
@@ -192,98 +165,129 @@
 
 <body>
 
-<header>
-  <nav>
-    <a href="/index.html">Inicio</a>
-    <a href="/productos.html">Productos</a>
-    <a href="/quienes-somos.html">Quiénes Somos</a>
-    <a href="/sostenibilidad.html">Sostenibilidad</a>
-    <a href="/contacto.html">Contacto</a>
-  </nav>
-</header>
-
 <div class="container">
 
-  <!-- ===== SIDEBAR ===== -->
-  <aside class="sidebar">
-    <h3>Categorías</h3>
+  <!-- 左侧导航 -->
+<aside class="sidebar">
+  <h3>Categorías</h3>
 
-    <div class="category">
-      <button class="category-btn">Ropa de Cama <span>▾</span></button>
-      <ul class="subcategory" style="display:none">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-      </ul>
-    </div>
+  <div class="category">
+    <button class="category-btn">Ropa de Cama <span>▾</span></button>
+    <ul class="subcategory">
+      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+    </ul>
+  </div>
 
-    <div class="category">
-      <button class="category-btn">Toallas <span>▴</span></button>
-      <ul class="subcategory" style="display:block">
-        <li><a href="/productos/toallas/alfombras.html"><strong>Alfombras</strong></a></li>
-        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
-        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-      </ul>
-    </div>
-  </aside>
+  <div class="category">
+    <button class="category-btn">Toallas <span>▴</span></button>
+    <ul class="subcategory" style="display:block">
+      <li><a href="/productos/toallas/alfombras.html"><strong>Alfombras</strong></a></li>
+      <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+      <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+      <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+    </ul>
+  </div>
 
-  <!-- ===== CONTENT ===== -->
-  <main class="products">
+  <div class="category">
+    <button class="category-btn">Amenities <span>▾</span></button>
+    <ul class="subcategory">
+      <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+      <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+      <li><a href="/productos/amenities/kit.html">Kits</a></li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <button class="category-btn">Accesorios <span>▾</span></button>
+    <ul class="subcategory">
+      <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+      <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+      <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+      <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+    </ul>
+  </div>
+</aside>
+
+
+  <!-- 主内容 -->
+  <main class="content">
     <h1>Alfombras de Baño</h1>
-    <p>Bath mats hoteleros de alta absorción, ideales para zonas de alto tránsito y uso profesional.</p>
 
     <div class="grid">
 
-      <!-- Card 1 -->
+      <!-- 产品 1 -->
       <div class="card">
-        <div class="img-box">
-          <img src="/images/alfombra-20x30.jpg" alt="Alfombra 20x30">
+        <a href="/productos/toallas/alfombras/alfombra-blanca-20x30.html" class="img-box">
+          <img src="/images/toalla-alfombra-20x30.jpg" alt="Alfombra Blanca 20x30">
+        </a>
+        <h3>TOALLA ALFOMBRA BLANCA 20×30″</h3>
+        <div class="price">₡2,937</div>
+        <div class="desc">
+          Toalla alfombra 100% algodón peinado, ideal para hoteles y áreas de alto tránsito.
+          Alta absorción y excelente resistencia al lavado.
         </div>
-        <h3>TOALLA ALFOMBRA BLANCA 20×30″ | 50×75cm 650g</h3>
-        <div class="price">₡3,125</div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/506XXXXXXXX" target="_blank">
+          Consultar por WhatsApp
+        </a>
       </div>
 
-      <!-- Card 2 -->
+      <!-- 产品 2 -->
       <div class="card">
-        <div class="img-box">
-          <img src="/images/alfombra-50x70.jpg" alt="Alfombra 50x70">
-        </div>
+        <a href="/productos/toallas/alfombras/alfombra-blanca-50x70.html" class="img-box">
+          <img src="/images/toalla-alfombra-50x70.jpg" alt="Alfombra Blanca 50x70">
+        </a>
         <h3>TOALLA ALFOMBRA BLANCA 50×70cm 300g</h3>
         <div class="price">₡2,937</div>
+        <div class="desc">
+          Alfombra de baño esponjosa y suave, fabricada en algodón peinado.
+          Excelente absorción y durabilidad para uso hotelero.
+        </div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/506XXXXXXXX" target="_blank">
+          Consultar por WhatsApp
+        </a>
       </div>
 
-      <!-- Card 3 -->
+      <!-- 产品 3 -->
       <div class="card">
-        <div class="img-box">
-          <img src="/images/alfombra-beige.jpg" alt="Alfombra Beige">
+        <a href="/productos/toallas/alfombras/alfombra-beige.html" class="img-box">
+          <img src="/images/toalla-alfombra-beige.jpg" alt="Alfombra Beige">
+        </a>
+        <h3>TOALLA ALFOMBRA BEIGE 20×30″</h3>
+        <div class="price">₡2,937</div>
+        <div class="desc">
+          Toalla especial para alto tránsito con gran absorción,
+          muy esponjosa y resistente gracias a su composición textil.
         </div>
-        <h3>TOALLA ALFOMBRA BEIGE 20×30″ | 50×75cm 650g</h3>
-        <div class="price">₡3,437</div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/506XXXXXXXX" target="_blank">
+          Consultar por WhatsApp
+        </a>
       </div>
 
     </div>
   </main>
 
 </div>
-
-<script>
-  document.querySelectorAll(".category-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const list = btn.nextElementSibling;
-      const arrow = btn.querySelector("span");
-      list.style.display = list.style.display === "block" ? "none" : "block";
-      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
-    });
-  });
-</script>
 
 </body>
 </html>
