@@ -199,6 +199,36 @@
         grid-template-columns: 1fr;
       }
     }
+    .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0 20px;
+}
+
+.pagination a {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.pagination a:hover {
+  background: #f0f0f0;
+}
+
+.pagination a.active {
+  background: #0a58ca;
+  color: #fff;
+  border-color: #0a58ca;
+}
+
+.pagination a.next {
+  font-weight: 500;
+}
+
   </style>
 </head>
 
