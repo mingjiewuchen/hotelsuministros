@@ -4,40 +4,47 @@
   <meta charset="UTF-8">
   <title>Toallas | Hotel Suministros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Toallas hoteleras de alta calidad: excelente absorción, durabilidad y precio competitivo.">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f9fafb;
+      background: #f5f7fa;
       color: #333;
     }
 
+    /* ===== NAV ===== */
     header {
       background: #1f2937;
-      padding: 20px 40px;
+      padding: 18px 40px;
     }
 
     nav a {
       color: #e5e7eb;
-      margin-right: 20px;
+      margin-right: 22px;
       text-decoration: none;
       font-size: 14px;
     }
 
-    .layout {
-      max-width: 1200px;
-      margin: 0 auto;
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 0 30px;
       display: flex;
       gap: 30px;
-      padding: 40px;
       align-items: flex-start;
     }
 
     /* ===== SIDEBAR ===== */
     .sidebar {
       width: 260px;
-      background: #ffffff;
+      background: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -46,25 +53,61 @@
 
     .sidebar h3 {
       margin-top: 0;
+      margin-bottom: 20px;
       font-size: 18px;
+    }
+
+    .category {
       margin-bottom: 15px;
     }
 
-    .sidebar a {
-      display: block;
-      padding: 6px 0;
-      font-size: 14px;
-      text-decoration: none;
-      color: #374151;
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
     }
 
-    .sidebar a:hover {
+    .category-btn:hover {
+      background: #f1f5f9;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 15px;
+      margin: 5px 0 0;
+      display: none;
+    }
+
+    .subcategory li a {
+      display: block;
+      padding: 8px 10px;
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .subcategory li a:hover {
+      background: #f3f4f6;
       color: #2563eb;
     }
 
     /* ===== CONTENT ===== */
-    .content {
+    .products {
       flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .banner {
@@ -72,79 +115,74 @@
       height: 260px;
       background: url("/images/toallas-banner.jpg") center/cover no-repeat;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .intro {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .intro h1 {
+    .products h1 {
       margin-top: 0;
-      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    .intro p {
-      font-size: 15px;
-      line-height: 1.7;
+    .products p {
       color: #555;
+      margin-bottom: 30px;
+      line-height: 1.7;
     }
 
-    /* ===== PRODUCT GRID ===== */
-    .product-grid {
+    /* ===== GRID ===== */
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
-    .product-card {
-      background: #ffffff;
+    .card {
+      background: #fafafa;
       border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 18px;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
 
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .card:hover {
+      transform: translateY(-6px);
     }
 
-    .product-info {
-      padding: 15px;
+    .card img {
+      width: 70%;
+      max-width: 170px;
+      margin: 0 auto 12px;
+      display: block;
+      border-radius: 8px;
     }
 
-    .product-info h3 {
+    .card h3 {
       font-size: 14px;
-      margin: 0 0 10px 0;
+      margin: 0 0 8px;
       line-height: 1.5;
     }
 
     .price {
-      font-size: 16px;
       font-weight: bold;
       color: #2563eb;
+      font-size: 15px;
     }
 
-    /* ===== RESPONSIVE ===== */
+    /* ===== MOBILE ===== */
     @media (max-width: 900px) {
-      .layout {
+      .container {
         flex-direction: column;
       }
       .sidebar {
         width: 100%;
       }
-      .product-grid {
+      .grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 500px) {
-      .product-grid {
+      .grid {
         grid-template-columns: 1fr;
       }
     }
@@ -157,102 +195,131 @@
   <nav>
     <a href="/index.html">Inicio</a>
     <a href="/productos.html">Productos</a>
-    <a href="/productos/toallas.html"><strong>Toallas</strong></a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
   </nav>
 </header>
 
-<div class="layout">
+<div class="container">
 
-  <!-- LEFT SIDEBAR -->
+  <!-- ===== SIDEBAR ===== -->
   <aside class="sidebar">
     <h3>Categorías</h3>
-    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
-    <a href="/productos/toallas.html"><strong>Toallas</strong></a>
-    <a href="/productos/amenidades.html">Amenidades</a>
-    <a href="/productos/limpieza.html">Limpieza</a>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas <span>▾</span></button>
+      <ul class="subcategory" style="display:block;">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+
   </aside>
 
-  <!-- CONTENT -->
-  <main class="content">
+  <!-- ===== CONTENT ===== -->
+  <main class="products">
 
-    <!-- Banner -->
     <div class="banner"></div>
 
-    <!-- Intro -->
-    <section class="intro">
-      <h1>Toallas Hoteleras</h1>
-      <p>
-        Nuestras toallas están diseñadas para uso hotelero y Airbnb, ofreciendo una excelente
-        relación entre calidad, durabilidad y precio. Fabricadas en algodón peinado,
-        garantizan suavidad, absorción y larga vida útil incluso con lavados frecuentes.
-      </p>
-    </section>
+    <h1>Toallas Hoteleras</h1>
+    <p>
+      Toallas diseñadas para uso profesional en hoteles, Airbnb y hospedajes.
+      Excelente absorción, resistencia al lavado industrial y una relación calidad-precio muy competitiva.
+    </p>
 
-    <!-- Product Grid -->
-    <section class="product-grid">
+    <div class="grid">
 
-      <!-- PRODUCT 1 -->
-      <div class="product-card">
-        <img src="/images/toalla-cuerpo-600g.jpg" alt="Toalla Cuerpo Blanca 600g">
-        <div class="product-info">
-          <h3>
-            TOALLA CUERPO 100% algodón peinado 28X58″ | 71x147cm  
-            BLANCO 600gr
-          </h3>
-          <div class="price">₡3,937</div>
-        </div>
+      <!-- 1 -->
+      <div class="card">
+        <img src="/images/toalla-cuerpo-600g.jpg">
+        <h3>TOALLA CUERPO 100% algodón peinado 28X58″ | 71x147cm BLANCO 600gr</h3>
+        <div class="price">₡3,937</div>
       </div>
 
-      <!-- PRODUCT 2 -->
-      <div class="product-card">
-        <img src="/images/toalla-mano-120g.jpg" alt="Toalla de Mano Blanca">
-        <div class="product-info">
-          <h3>
-            Toalla de mano 100% algodón peinado  
-            35x70cm blanco 120g
-          </h3>
-          <div class="price">₡1,015</div>
-        </div>
+      <!-- 2 -->
+      <div class="card">
+        <img src="/images/toalla-mano-120g.jpg">
+        <h3>Toalla de mano 100% algodón peinado 35x70cm blanco 120g</h3>
+        <div class="price">₡1,015</div>
       </div>
 
-      <!-- PRODUCT 3 -->
-      <div class="product-card">
-        <img src="/images/toalla-facial-60g.jpg" alt="Toalla Facial Blanca">
-        <div class="product-info">
-          <h3>
-            TOALLA FACIAL 100% algodón peinado  
-            33x33cm blanco 60g
-          </h3>
-          <div class="price">₡500</div>
-        </div>
+      <!-- 3 -->
+      <div class="card">
+        <img src="/images/toalla-facial-60g.jpg">
+        <h3>Toalla facial 100% algodón peinado 33x33cm blanco 60g</h3>
+        <div class="price">₡500</div>
       </div>
 
-      <!-- PRODUCT 4 -->
-      <div class="product-card">
-        <img src="/images/toalla-alfombra-300g.jpg" alt="Toalla Alfombra Blanca">
-        <div class="product-info">
-          <h3>
-            TOALLA ALFOMBRA 100% algodón peinado  
-            50x70cm blanco 300g
-          </h3>
-          <div class="price">₡2,937</div>
-        </div>
+      <!-- 4 -->
+      <div class="card">
+        <img src="/images/toalla-alfombra-300g.jpg">
+        <h3>TOALLA ALFOMBRA 100% algodón peinado 50x70cm blanco 300g</h3>
+        <div class="price">₡2,937</div>
       </div>
 
-      <!-- EMPTY SLOTS (future products) -->
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
-      <div class="product-card"></div>
+      <!-- Vacíos -->
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
 
-    </section>
+    </div>
 
   </main>
 </div>
+
+<script>
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+      const arrow = btn.querySelector("span");
+      list.style.display = list.style.display === "block" ? "none" : "block";
+      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
+    });
+  });
+</script>
 
 </body>
 </html>
