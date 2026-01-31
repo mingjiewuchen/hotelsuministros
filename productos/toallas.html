@@ -1,1 +1,258 @@
-1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Toallas | Hotel Suministros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      padding: 40px;
+      align-items: flex-start;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 6px 0;
+      font-size: 14px;
+      text-decoration: none;
+      color: #374151;
+    }
+
+    .sidebar a:hover {
+      color: #2563eb;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
+    }
+
+    .banner {
+      width: 100%;
+      height: 260px;
+      background: url("/images/toallas-banner.jpg") center/cover no-repeat;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .intro h1 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .intro p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h3 {
+      font-size: 14px;
+      margin: 0 0 10px 0;
+      line-height: 1.5;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/productos/toallas.html"><strong>Toallas</strong></a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+    <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+    <a href="/productos/toallas.html"><strong>Toallas</strong></a>
+    <a href="/productos/amenidades.html">Amenidades</a>
+    <a href="/productos/limpieza.html">Limpieza</a>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Intro -->
+    <section class="intro">
+      <h1>Toallas Hoteleras</h1>
+      <p>
+        Nuestras toallas están diseñadas para uso hotelero y Airbnb, ofreciendo una excelente
+        relación entre calidad, durabilidad y precio. Fabricadas en algodón peinado,
+        garantizan suavidad, absorción y larga vida útil incluso con lavados frecuentes.
+      </p>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <img src="/images/toalla-cuerpo-600g.jpg" alt="Toalla Cuerpo Blanca 600g">
+        <div class="product-info">
+          <h3>
+            TOALLA CUERPO 100% algodón peinado 28X58″ | 71x147cm  
+            BLANCO 600gr
+          </h3>
+          <div class="price">₡3,937</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <img src="/images/toalla-mano-120g.jpg" alt="Toalla de Mano Blanca">
+        <div class="product-info">
+          <h3>
+            Toalla de mano 100% algodón peinado  
+            35x70cm blanco 120g
+          </h3>
+          <div class="price">₡1,015</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <img src="/images/toalla-facial-60g.jpg" alt="Toalla Facial Blanca">
+        <div class="product-info">
+          <h3>
+            TOALLA FACIAL 100% algodón peinado  
+            33x33cm blanco 60g
+          </h3>
+          <div class="price">₡500</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="product-card">
+        <img src="/images/toalla-alfombra-300g.jpg" alt="Toalla Alfombra Blanca">
+        <div class="product-info">
+          <h3>
+            TOALLA ALFOMBRA 100% algodón peinado  
+            50x70cm blanco 300g
+          </h3>
+          <div class="price">₡2,937</div>
+        </div>
+      </div>
+
+      <!-- EMPTY SLOTS (future products) -->
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+      <div class="product-card"></div>
+
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
