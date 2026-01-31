@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alfombras | Toallas para Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* 左侧导航 */
+    .sidebar {
+      width: 240px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* 主内容 */
+    .content {
+      flex: 1;
+    }
+
+    .content h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    /* 产品网格 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .img-box {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #fafafa;
+    }
+
+    .img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 15px 0 10px;
+      min-height: 48px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .qty {
+      margin-bottom: 12px;
+    }
+
+    .qty input {
+      width: 70px;
+      padding: 6px;
+    }
+
+    .whatsapp {
+      display: block;
+      text-align: center;
+      background: #25d366;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp:hover {
+      background: #1eb857;
+    }
+
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 左侧导航 -->
+  <aside class="sidebar">
+    <h3>Productos</h3>
+    <ul>
+      <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+      <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+      <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+      <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+    </ul>
+  </aside>
+
+  <!-- 主内容 -->
+  <main class="content">
+    <h1>Alfombras de Baño</h1>
+
+    <div class="grid">
+
+      <!-- 产品 1 -->
+      <div class="card">
+        <a href="/productos/toallas/alfombras/alfombra-blanca-20x30.html" class="img-box">
+          <img src="/images/toalla-alfombra-20x30.jpg" alt="Alfombra Blanca 20x30">
+        </a>
+        <h3>TOALLA ALFOMBRA BLANCA 20×30″</h3>
+        <div class="price">₡2,937</div>
+        <div class="desc">
+          Toalla alfombra 100% algodón peinado, ideal para hoteles y áreas de alto tránsito.
+          Alta absorción y excelente resistencia al lavado.
+        </div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/506XXXXXXXX" target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <!-- 产品 2 -->
+      <div class="card">
+        <a href="/productos/toallas/alfombras/alfombra-blanca-50x70.html" class="img-box">
+          <img src="/images/toalla-alfombra-50x70.jpg" alt="Alfombra Blanca 50x70">
+        </a>
+        <h3>TOALLA ALFOMBRA BLANCA 50×70cm 300g</h3>
+        <div class="price">₡2,937</div>
+        <div class="desc">
+          Alfombra de baño esponjosa y suave, fabricada en algodón peinado.
+          Excelente absorción y durabilidad para uso hotelero.
+        </div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/506XXXXXXXX" target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <!-- 产品 3 -->
+      <div class="card">
+        <a href="/productos/toallas/alfombras/alfombra-beige.html" class="img-box">
+          <img src="/images/toalla-alfombra-beige.jpg" alt="Alfombra Beige">
+        </a>
+        <h3>TOALLA ALFOMBRA BEIGE 20×30″</h3>
+        <div class="price">₡2,937</div>
+        <div class="desc">
+          Toalla especial para alto tránsito con gran absorción,
+          muy esponjosa y resistente gracias a su composición textil.
+        </div>
+        <div class="qty">
+          Cantidad:
+          <input type="number" min="1" value="1">
+        </div>
+        <a class="whatsapp" href="https://wa.me/50685664622" target="_blank">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
