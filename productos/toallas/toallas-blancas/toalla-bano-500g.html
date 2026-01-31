@@ -57,16 +57,18 @@ nav a:hover {
   width: 100%;
   background: none;
   border: none;
-  padding: 10px;
+  padding: 10px 5px;
   font-weight: bold;
   text-align: left;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .subcategory {
   display: none;
   list-style: none;
   padding-left: 15px;
+  margin: 5px 0 15px;
 }
 
 .subcategory li a {
@@ -74,6 +76,12 @@ nav a:hover {
   padding: 8px;
   text-decoration: none;
   color: #374151;
+  font-size: 14px;
+}
+
+.subcategory li a:hover {
+  background: #f3f4f6;
+  border-radius: 4px;
 }
 
 /* ===== CONTENT ===== */
@@ -188,96 +196,96 @@ nav a:hover {
 
 <!-- ===== SIDEBAR ===== -->
 <aside class="sidebar">
-    <h3>Categorías</h3>
+  <h3>Categorías</h3>
 
-    <div class="category">
-      <button class="category-btn">Ropa de Cama <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
-      <button class="category-btn">Toallas <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
-        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
-        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
-      <button class="category-btn">Amenities <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
-        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
-        <li><a href="/productos/amenities/kit.html">Kits</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
-      <button class="category-btn">Accesorios <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
-        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
-        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
-      </ul>
-    </div>
-  </aside>
-<!-- ===== PRODUCT ===== -->
-<main class="products">
-
-<div class="product-layout">
-
-<div class="product-image">
-  <img src="/images/toalla-bano-500g.jpg" alt="Toalla de baño 500g">
-</div>
-
-<div class="product-info">
-  <h1>TOALLA DE BAÑO 100% algodón peinado 68×137cm BLANCO 500g</h1>
-
-  <div class="price">₡4,890</div>
-
-  <p class="description">
-    Toallas hoteleras de alta absorción y suavidad natural.
-    Fabricadas en 100% algodón peinado, ideales para hoteles,
-    Airbnb y uso institucional.
-  </p>
-
-  <div class="qty-box">
-    <label>Cantidad</label>
-    <div class="qty-controls">
-      <button onclick="changeQty(-1)">−</button>
-      <input id="quantity" type="number" value="10" min="1">
-      <button onclick="changeQty(1)">+</button>
-    </div>
+  <div class="category">
+    <button class="category-btn">Ropa de Cama ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+    </ul>
   </div>
 
-  <a href="#" class="whatsapp-btn" onclick="sendWhatsApp()">
-    📲 Consultar por WhatsApp
-  </a>
-</div>
+  <div class="category">
+    <button class="category-btn">Toallas ▾</button>
+    <ul class="subcategory" style="display:block;">
+      <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+      <li><a href="/productos/toallas/toallas-blancas.html"><strong>Toallas Blancas</strong></a></li>
+      <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+      <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+    </ul>
+  </div>
 
-</div>
+  <div class="category">
+    <button class="category-btn">Amenities ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+      <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+      <li><a href="/productos/amenities/kit.html">Kits</a></li>
+    </ul>
+  </div>
 
+  <div class="category">
+    <button class="category-btn">Accesorios ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+      <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+      <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+      <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+    </ul>
+  </div>
+</aside>
+
+<!-- ===== PRODUCT ===== -->
+<main class="products">
+  <div class="product-layout">
+
+    <div class="product-image">
+      <img src="/images/toalla-bano-500g.jpg" alt="Toalla de baño 500g">
+    </div>
+
+    <div class="product-info">
+      <h1>TOALLA DE BAÑO 100% algodón peinado 68×137cm BLANCO 500g</h1>
+      <div class="price">₡4,890</div>
+
+      <p class="description">
+        Toallas hoteleras de alta absorción y suavidad natural.
+        Fabricadas en 100% algodón peinado, ideales para hoteles,
+        Airbnb y uso institucional.
+      </p>
+
+      <div class="qty-box">
+        <label>Cantidad</label>
+        <div class="qty-controls">
+          <button onclick="changeQty(-1)">−</button>
+          <input id="quantity" type="number" value="10" min="1">
+          <button onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <a href="#" class="whatsapp-btn" onclick="sendWhatsApp()">
+        📲 Consultar por WhatsApp
+      </a>
+    </div>
+
+  </div>
 </main>
 </div>
 
 <script>
-document.querySelector(".category-btn").addEventListener("click", function(){
-  const list = document.querySelector(".subcategory");
-  list.style.display = list.style.display === "block" ? "none" : "block";
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
 });
 
 function changeQty(n) {
@@ -290,19 +298,15 @@ function changeQty(n) {
 
 function sendWhatsApp() {
   const qty = document.getElementById("quantity").value;
-  const phone = "50685664622"; // ← 换成你的 WhatsApp
-
   const msg = `Hola, me gustaría cotizar el siguiente producto:
 
-• Producto: TOALLA DE BAÑO 100% algodón peinado 500g
+• Producto: Toalla de baño 500g
 • Medida: 68×137cm
 • Color: Blanco
 • Cantidad: ${qty} unidades
-• Página: hotelsuministros.com
+• Página: hotelsuministros.com`;
 
-Gracias.`;
-
-  window.open(`https://wa.me/${50685664622}?text=${encodeURIComponent(msg)}`);
+  window.open("https://wa.me/50685664622?text=" + encodeURIComponent(msg));
 }
 </script>
 
