@@ -2,193 +2,98 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Toallas de Color | Suministros Hoteleros</title>
+    <title>Toallas de Color | Suministros para Hoteles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="../../../css/style.css">
 
     <style>
-        /* ===== Layout ===== */
-        .container {
+        .page-container {
             display: flex;
             gap: 30px;
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 40px auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
-        /* ===== Sidebar ===== */
+        /* Sidebar */
         .sidebar {
             width: 260px;
             flex-shrink: 0;
         }
 
         .sidebar h3 {
+            margin-bottom: 10px;
             font-size: 18px;
-            margin-bottom: 12px;
         }
 
         .sidebar ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-bottom: 30px;
         }
 
-        .sidebar li {
+        .sidebar ul li {
             margin-bottom: 8px;
         }
 
-        .sidebar a {
+        .sidebar ul li a {
             text-decoration: none;
             color: #333;
-            display: block;
-            padding: 6px 10px;
-            border-radius: 4px;
         }
 
-        .sidebar a:hover {
-            background-color: #f2f2f2;
-        }
-
-        .sidebar .active {
-            background-color: #000;
-            color: #fff;
+        .sidebar ul li a.active {
             font-weight: bold;
+            color: #000;
         }
 
-        /* ===== Main Content ===== */
+        /* 主内容 */
         .content {
             flex: 1;
         }
 
-        .content h1 {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        /* ===== Product Grid ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 25px;
         }
 
         .product-card {
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            overflow: hidden;
-            background: #fff;
-            display: flex;
-            flex-direction: column;
-            transition: 0.2s;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
+            text-align: center;
         }
 
         .product-card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            background: #f7f7f7;
+            background: #f5f5f5;
         }
 
-        .product-info {
-            padding: 15px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .product-card h4 {
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: normal;
         }
-
-        .product-info h2 {
-            font-size: 16px;
-            margin: 0 0 8px;
-        }
-
-        .product-info p {
-            font-size: 14px;
-            color: #666;
-            margin: 0 0 12px;
-        }
-
-        .product-info a {
-            margin-top: auto;
-            text-align: center;
-            padding: 8px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-
-        .product-info a:hover {
-            background: #333;
-        }
-        /* ===== Sidebar Category ===== */
-.category {
-  margin-bottom: 10px;
-}
-
-.category-btn {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 8px 10px;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.category-btn:hover {
-  background: #f2f2f2;
-}
-
-.subcategory {
-  list-style: none;
-  padding-left: 12px;
-  margin-top: 6px;
-  display: none;
-}
-
-.subcategory li a {
-  font-size: 14px;
-  padding: 6px 10px;
-}
-
-.subcategory li a:hover {
-  background: #eee;
-}
-
-/* 当前高亮（可选） */
-.subcategory li a.active {
-  background: #000;
-  color: #fff;
-  font-weight: bold;
-}
-
     </style>
 </head>
 
 <body>
-    <header>
-  <nav>
-    <a href="/index.html">Inicio</a>
-    <a href="/productos.html">Productos</a>
-    <a href="/quienes-somos.html">Quiénes Somos</a>
-    <a href="/sostenibilidad.html">Sostenibilidad</a>
-    <a href="/contacto.html">Contacto</a>
-  </nav>
+
+<!-- ===== Header ===== -->
+<header>
+    <nav class="main-nav">
+        <a href="/">Inicio</a>
+        <a href="/productos/">Productos</a>
+        <a href="/contacto.html">Contacto</a>
+    </nav>
 </header>
 
+<!-- ===== 页面主体 ===== -->
+<div class="page-container">
 
-<div class="container">
-
-    <!-- ================= Sidebar ================= -->
- <aside class="sidebar">
+    <!-- Sidebar（完整保留） -->
+  <aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category">
@@ -236,66 +141,55 @@
       </ul>
     </div>
   </aside>
-
-    <!-- ================= Main Content ================= -->
+    <!-- 主内容 -->
     <main class="content">
+
         <h1>Toallas de Color</h1>
 
         <div class="product-grid">
 
             <!-- Arena -->
             <div class="product-card">
-                <img src="../../../images/toallas/color/arena.jpg" alt="Toalla Arena">
-                <div class="product-info">
-                    <h2>Toalla – Línea Intermedia</h2>
-                    <p>Color Arena · Uso hotelero y Airbnb</p>
-                    <a href="linea-intermedia-arena.html">Ver productos</a>
-                </div>
+                <a href="toalla-linea-intermedia-arena.html">
+                    <img src="../../../images/toallas/color/arena.jpg" alt="Toalla Arena">
+                    <h4>Toalla – Línea Intermedia, Arena</h4>
+                </a>
             </div>
 
             <!-- Azul Marino -->
             <div class="product-card">
-                <img src="../../../images/toallas/color/azul-marino.jpg" alt="Toalla Azul Marino">
-                <div class="product-info">
-                    <h2>Toalla – Línea Intermedia</h2>
-                    <p>Color Azul Marino · Alta resistencia</p>
-                    <a href="linea-intermedia-azul-marino.html">Ver productos</a>
-                </div>
+                <a href="toalla-linea-intermedia-azul-marino.html">
+                    <img src="../../../images/toallas/color/azul-marino.jpg" alt="Toalla Azul Marino">
+                    <h4>Toalla – Línea Intermedia, Azul Marino</h4>
+                </a>
             </div>
 
             <!-- Gris -->
             <div class="product-card">
-                <img src="../../../images/toallas/color/gris.jpg" alt="Toalla Gris">
-                <div class="product-info">
-                    <h2>Toalla – Línea Intermedia</h2>
-                    <p>Color Gris · Elegante y moderno</p>
-                    <a href="linea-intermedia-gris.html">Ver productos</a>
-                </div>
+                <a href="toalla-linea-intermedia-gris.html">
+                    <img src="../../../images/toallas/color/gris.jpg" alt="Toalla Gris">
+                    <h4>Toalla – Línea Intermedia, Gris</h4>
+                </a>
             </div>
 
             <!-- Chocolate -->
             <div class="product-card">
-                <img src="../../../images/toallas/color/chocolate.jpg" alt="Toalla Chocolate">
-                <div class="product-info">
-                    <h2>Toalla – Línea Intermedia</h2>
-                    <p>Color Chocolate · Uso intensivo</p>
-                    <a href="linea-intermedia-chocolate.html">Ver productos</a>
-                </div>
+                <a href="toalla-linea-intermedia-chocolate.html">
+                    <img src="../../../images/toallas/color/chocolate.jpg" alt="Toalla Chocolate">
+                    <h4>Toalla – Línea Intermedia, Chocolate</h4>
+                </a>
             </div>
 
         </div>
+
     </main>
 
 </div>
-    <script>
-  document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const sub = btn.nextElementSibling;
-      sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-</script>
 
+<!-- ===== Footer ===== -->
+<footer>
+    <p>&copy; 2026 Hotel Suministros</p>
+</footer>
 
 </body>
 </html>
