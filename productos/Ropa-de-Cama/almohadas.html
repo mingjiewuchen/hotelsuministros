@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Almohadas Hoteleras | Hotel Suministros</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almohadas Hoteleras | Hotel Suministros</title>
+  <meta name="description" content="Almohadas hoteleras profesionales: microfibra siliconizada y relleno de plumas para hoteles y resorts." />
 
   <style>
     body {
@@ -26,20 +28,30 @@
     }
 
     .section {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 50px 40px;
     }
 
     h1 {
-      margin-bottom: 10px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #555;
     }
 
     .back {
-      display: inline-block;
       margin-bottom: 30px;
+    }
+
+    .back a {
       text-decoration: none;
-      color: #2563eb;
+      color: #1f2937;
       font-size: 14px;
     }
 
@@ -68,19 +80,20 @@
       margin-bottom: 15px;
     }
 
-    .card a {
-      text-decoration: none;
-      color: #1f2937;
-    }
-
     .card h3 {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      color: #1f2937;
     }
 
     .card p {
       font-size: 14px;
       color: #555;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
@@ -89,42 +102,102 @@
 
 <header>
   <nav>
-    <a href="../../index.html">Inicio</a>
-    <a href="../../productos.html">Productos</a>
-    <a href="../Ropa-de-Cama.html">Ropa de Cama</a>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
   </nav>
 </header>
+  <div class="container">
+     <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
 
 <section class="section">
 
-  <a class="back" href="../Ropa-de-Cama.html">← Volver a Ropa de Cama</a>
+  <div class="back">
+    ← <a href="Ropa-de-Cama.html">Volver a Ropa de Cama</a>
+  </div>
 
   <h1>Almohadas Hoteleras</h1>
-  <p>Seleccione el tipo de relleno para ver los detalles del producto.</p>
+
+  <p class="intro">
+    Almohadas diseñadas para uso hotelero intensivo. Diferentes rellenos y pesos,
+    pensadas para confort, durabilidad y fácil mantenimiento.
+  </p>
 
   <div class="grid">
 
-   <!-- Microfibra -->
-<div class="card">
-  <a href="Almohadas/microfibra.html">
-    <img src="almohada-microfibra.jpg" alt="Almohada Microfibra Siliconizada">
-    <h3>Almohada – Relleno Microfibra Siliconizada</h3>
-    <p>Suave, ligera y de fácil mantenimiento. Ideal para uso hotelero.</p>
-  </a>
-</div>
+    <div class="card">
+      <a href="almohada-microfibra.html">
+        <img src="almohada-microfibra.jpg" alt="Almohada Microfibra Siliconizada">
+        <h3>Almohada – Relleno Microfibra Siliconizada</h3>
+        <p>
+          Sensación suave, hipoalergénica y fácil de lavar. Ideal para uso frecuente
+          en hoteles y Airbnb.
+        </p>
+      </a>
+    </div>
 
-<!-- Plumas -->
-<div class="card">
-  <a href="Almohadas/plumas.html">
-    <img src="almohada-plumas.jpg" alt="Almohada de Plumas">
-    <h3>Almohada – Relleno Plumas</h3>
-    <p>Confort premium con relleno natural. Sensación superior de descanso.</p>
-  </a>
-</div>
-
+    <div class="card">
+      <a href="almohada-plumas.html">
+        <img src="almohada-plumas.jpg" alt="Almohada Relleno de Plumas">
+        <h3>Almohada – Relleno Plumas</h3>
+        <p>
+          Confort premium con mezcla de plumas. Excelente recuperación y experiencia
+          de descanso superior.
+        </p>
+      </a>
+    </div>
 
   </div>
-
 </section>
 
 </body>
