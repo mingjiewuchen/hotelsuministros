@@ -236,6 +236,15 @@
     </main>
 
 </div>
+    <script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = btn.nextElementSibling;
+      sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
 
 </body>
 </html>
