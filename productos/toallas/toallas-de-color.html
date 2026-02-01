@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Toallas de Color | Suministros Hoteleros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <style>
+        /* ===== Layout ===== */
+        .container {
+            display: flex;
+            gap: 30px;
+            max-width: 1280px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        /* ===== Sidebar ===== */
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .sidebar .active {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* ===== Main Content ===== */
+        .content {
+            flex: 1;
+        }
+
+        .content h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== Product Grid ===== */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #f7f7f7;
+        }
+
+        .product-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-info h2 {
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        .product-info p {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 12px;
+        }
+
+        .product-info a {
+            margin-top: auto;
+            text-align: center;
+            padding: 8px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .product-info a:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= Sidebar ================= -->
+ <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
+
+    <!-- ================= Main Content ================= -->
+    <main class="content">
+        <h1>Toallas de Color</h1>
+
+        <div class="product-grid">
+
+            <!-- Arena -->
+            <div class="product-card">
+                <img src="../../../images/toallas/color/arena.jpg" alt="Toalla Arena">
+                <div class="product-info">
+                    <h2>Toalla – Línea Intermedia</h2>
+                    <p>Color Arena · Uso hotelero y Airbnb</p>
+                    <a href="linea-intermedia-arena.html">Ver productos</a>
+                </div>
+            </div>
+
+            <!-- Azul Marino -->
+            <div class="product-card">
+                <img src="../../../images/toallas/color/azul-marino.jpg" alt="Toalla Azul Marino">
+                <div class="product-info">
+                    <h2>Toalla – Línea Intermedia</h2>
+                    <p>Color Azul Marino · Alta resistencia</p>
+                    <a href="linea-intermedia-azul-marino.html">Ver productos</a>
+                </div>
+            </div>
+
+            <!-- Gris -->
+            <div class="product-card">
+                <img src="../../../images/toallas/color/gris.jpg" alt="Toalla Gris">
+                <div class="product-info">
+                    <h2>Toalla – Línea Intermedia</h2>
+                    <p>Color Gris · Elegante y moderno</p>
+                    <a href="linea-intermedia-gris.html">Ver productos</a>
+                </div>
+            </div>
+
+            <!-- Chocolate -->
+            <div class="product-card">
+                <img src="../../../images/toallas/color/chocolate.jpg" alt="Toalla Chocolate">
+                <div class="product-info">
+                    <h2>Toalla – Línea Intermedia</h2>
+                    <p>Color Chocolate · Uso intensivo</p>
+                    <a href="linea-intermedia-chocolate.html">Ver productos</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
