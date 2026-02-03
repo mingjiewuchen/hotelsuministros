@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Toallas Playa & Piscina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #25D366;
+    }
+
+    /* ===== LAYOUT ===== */
+    .page-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 270px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .category {
+      margin-bottom: 15px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+
+    .subcategory {
+      margin-top: 8px;
+      padding-left: 12px;
+      display: none;
+    }
+
+    .subcategory li {
+      margin-bottom: 6px;
+    }
+
+    .subcategory a {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .subcategory a:hover {
+      color: #25D366;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 25px;
+    }
+
+    .content h1 {
+      margin-bottom: 25px;
+    }
+
+    /* ===== PRODUCT GRID ===== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .product-link {
+      display: block;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      background: #fff;
+      height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #f0f0f0;
+      margin-bottom: 12px;
+    }
+
+    .product-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .page-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<div class="page-container">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory" style="display:block;">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html"><strong>Playa & Piscina</strong></a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="content">
+    <h1>Toallas Playa & Piscina</h1>
+
+    <div class="product-grid">
+
+      <a href="toalla-piscina-azul.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-piscina-azul.jpg" alt="Toalla Piscina Azul">
+          <h3>TOALLA PISCINA AZUL</h3>
+          <p>28×58″ | 71×147 cm · 600 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-piscina-beige.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-piscina-beige.jpg" alt="Toalla Piscina Beige">
+          <h3>TOALLA PISCINA BEIGE</h3>
+          <p>28×58″ | 71×147 cm · 600 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-playa-azul-rayas.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-playa-azul-rayas.jpg" alt="Toalla Playa Azul Rayas">
+          <h3>TOALLA PLAYA AZUL RAYAS</h3>
+          <p>90×180 cm · 510 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-playa-beige-rayas.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-playa-beige-rayas.jpg" alt="Toalla Playa Beige Rayas">
+          <h3>TOALLA PLAYA BEIGE RAYAS</h3>
+          <p>85×175 cm · 600 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-playa-rayas-amarillo.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-playa-rayas-amarillo.jpg" alt="Toalla Playa Rayas Amarillo">
+          <h3>TOALLA PLAYA RAYAS AMARILLO</h3>
+          <p>90×180 cm · 510 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-playa-rayas-verde.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-playa-rayas-verde.jpg" alt="Toalla Playa Rayas Verde">
+          <h3>TOALLA PLAYA RAYAS VERDE</h3>
+          <p>90×180 cm · 510 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-turca-beige.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-turca-beige.jpg" alt="Toalla Turca Beige">
+          <h3>TOALLA TURCA BEIGE</h3>
+          <p>90×180 cm · 460 g</p>
+        </div>
+      </a>
+
+      <a href="toalla-turca-celeste.html" class="product-link">
+        <div class="product-card">
+          <img src="/images/toalla-turca-celeste.jpg" alt="Toalla Turca Celeste">
+          <h3>TOALLA TURCA CELESTE</h3>
+          <p>90×180 cm · 460 g</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>&copy; 2026 Hotel Suministros</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = btn.nextElementSibling;
+      sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
