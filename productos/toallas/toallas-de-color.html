@@ -4,207 +4,295 @@
     <meta charset="UTF-8">
     <title>Toallas de Color | Suministros para Hoteles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toallas colores hoteleras: calidad y absorción.">
 
-    <!-- 主样式 -->
-    <link rel="stylesheet" href="../../../css/style.css">
 
-    <style>
-        .page-container {
-            display: flex;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
 
-        /* ===== Sidebar ===== */
-        .sidebar {
-            width: 260px;
-            flex-shrink: 0;
-        }
+    /* ===== NAV ===== */
+    header {
+      background: #1f2937;
+      padding: 18px 40px;
+    }
 
-        .sidebar h3 {
-            margin-bottom: 12px;
-            font-size: 18px;
-        }
+    nav a {
+      color: #e5e7eb;
+      margin-right: 22px;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 10px 0 25px;
-        }
+    nav a:hover {
+      color: #fff;
+    }
 
-        .sidebar ul li {
-            margin-bottom: 8px;
-        }
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 0 30px;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
 
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-        }
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-        .sidebar ul li a.active {
-            font-weight: bold;
-            color: #000;
-        }
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
 
-        .category-btn {
-            background: none;
-            border: none;
-            padding: 6px 0;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: default;
-        }
+    .category {
+      margin-bottom: 15px;
+    }
 
-        /* ===== 主内容 ===== */
-        .content {
-            flex: 1;
-        }
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+    }
 
-        .content h1 {
-            margin-bottom: 25px;
-        }
+    .category-btn:hover {
+      background: #f1f5f9;
+    }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 25px;
-        }
+    .subcategory {
+      list-style: none;
+      padding-left: 15px;
+      margin: 5px 0 0;
+      display: none;
+    }
 
-        .product-card {
-            text-align: center;
-        }
+    .subcategory li a {
+      display: block;
+      padding: 8px 10px;
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+      border-radius: 6px;
+    }
 
-        .product-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: contain; /* 防止图片被裁切 */
-            background: #f5f5f5;
-        }
+    .subcategory li a:hover {
+      background: #f3f4f6;
+      color: #2563eb;
+    }
 
-        .product-card h4 {
-            margin-top: 10px;
-            font-size: 15px;
-            font-weight: normal;
-            color: #333;
-        }
+    /* ===== CONTENT ===== */
+    .products {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-        .product-card a {
-            text-decoration: none;
-            color: inherit;
-        }
-    </style>
+    .products h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .products p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .img-box {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      margin: 0;
+      color: #1f2937;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- ===== Header ===== -->
 <header>
-    <nav class="main-nav">
-        <a href="/">Inicio</a>
-        <a href="/productos/">Productos</a>
-        <a href="/contacto.html">Contacto</a>
-    </nav>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
+  </nav>
 </header>
 
-<!-- ===== 页面主体 ===== -->
-<div class="page-container">
+<div class="container">
 
-    <!-- ===== Sidebar（完整保留） ===== -->
-    <aside class="sidebar">
-        <h3>Categorías</h3>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <h3>Categorías</h3>
 
-        <div class="category">
-            <button class="category-btn">Ropa de Cama</button>
-            <ul class="subcategory">
-                <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-                <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-                <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-                <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-                <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-                <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-                <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-                <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-                <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-                <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-            </ul>
-        </div>
+    <div class="category">
+      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
 
-        <div class="category">
-            <button class="category-btn">Toallas</button>
-            <ul class="subcategory">
-                <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
-                <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-                <li><a href="/productos/toallas/toallas-de-color.html" class="active">Toallas de Color</a></li>
-                <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-            </ul>
-        </div>
+    <div class="category">
+      <button class="category-btn">Toallas <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
 
-        <div class="category">
-            <button class="category-btn">Amenities</button>
-            <ul class="subcategory">
-                <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
-                <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
-                <li><a href="/productos/amenities/kit.html">Kits</a></li>
-            </ul>
-        </div>
+    <div class="category">
+      <button class="category-btn">Amenities <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+      </ul>
+    </div>
 
-        <div class="category">
-            <button class="category-btn">Accesorios</button>
-            <ul class="subcategory">
-                <li><a href="/productos/accesorios/batas.html">Batas</a></li>
-                <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-                <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
-                <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
-            </ul>
-        </div>
-    </aside>
+    <div class="category">
+      <button class="category-btn">Accesorios <span>▾</span></button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="products">
 
-    <!-- ===== 主内容 ===== -->
-    <main class="content">
-        <h1>Toallas de Color</h1>
+    <h1>Toallas Colores</h1>
+    <p>Selección de toallas clores en varias presentaciones: toallas de baño, toallas faciales y toallas de mano.</p>
 
-        <div class="product-grid">
+    <div class="grid">
 
-            <div class="product-card">
-                <a href="toalla-linea-intermedia-arena.html">
-                    <img src="../../../images/toallas/color/arena.jpg" alt="Toalla Arena">
-                    <h4>Toalla – Línea Intermedia, Arena</h4>
-                </a>
-            </div>
 
-            <div class="product-card">
-                <a href="toalla-linea-intermedia-azul-marino.html">
-                    <img src="../../../images/toallas/color/azul-marino.jpg" alt="Toalla Azul Marino">
-                    <h4>Toalla – Línea Intermedia, Azul Marino</h4>
-                </a>
-            </div>
+      <div class="card">
+        <a href="/productos/toallas/toallas-colores/toalla-arena.html">
+          <div class="img-box">
+            <img src="/images/toalla-arena.jpg" alt="Toalla Arena">
+          </div>
+        </a>
+        <h3>Toalla Arena</h3>
+         <div class="price">₡355-₡4500</div>
+      </div>
 
-            <div class="product-card">
-                <a href="toalla-linea-intermedia-gris.html">
-                    <img src="../../../images/toallas/color/gris.jpg" alt="Toalla Gris">
-                    <h4>Toalla – Línea Intermedia, Gris</h4>
-                </a>
-            </div>
+      <div class="card">
+        <a href="/productos/toallas/toallas-colores/toalla-azul-marino.html">
+          <div class="img-box">
+            <img src="/images/toalla-azul-marino.jpg" alt="Toalla Azul Marino">
+          </div>
+        </a>
+        <h3>Toalla Azul Marino</h3>
+          <div class="price">₡355-₡5,775</div>
+      </div>
 
-            <div class="product-card">
-                <a href="toalla-linea-intermedia-chocolate.html">
-                    <img src="../../../images/toallas/color/chocolate.jpg" alt="Toalla Chocolate">
-                    <h4>Toalla – Línea Intermedia, Chocolate</h4>
-                </a>
-            </div>
+    
+      <div class="card">
+        <a href="/productos/toallas/toallas-colores/toalla-gris.html">
+          <div class="img-box">
+            <img src="/images/toalla-gris.jpg" alt="Toalla Gris">
+          </div>
+        </a>
+        <h3>Toalla Gris</h3>
+         <div class="price">₡400-₡6,810</div>
+      </div>
 
-        </div>
-    </main>
+     
+      <div class="card">
+        <a href="/productos/toallas/toallas-colores/toalla-chocolate.html">
+          <div class="img-box">
+            <img src="/images/toalla-chocolate.jpg" alt="Toalla Chocolate">
+          </div>
+        </a>
+        <h3>Toalla Chocolate</h3>
+        <div class="price">₡455-₡7,710</div>
+      </div>
+
+  
+
+    </div>
+
+  </main>
 
 </div>
 
-<!-- ===== Footer ===== -->
-<footer>
-    <p>&copy; 2026 Hotel Suministros</p>
-</footer>
+<script>
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+      const arrow = btn.querySelector("span");
+      list.style.display = list.style.display === "block" ? "none" : "block";
+      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
+    });
+  });
+</script>
 
 </body>
 </html>
