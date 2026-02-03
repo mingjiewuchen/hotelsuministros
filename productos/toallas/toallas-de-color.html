@@ -17,21 +17,21 @@
             padding: 0 20px;
         }
 
-        /* Sidebar */
+        /* ===== Sidebar ===== */
         .sidebar {
             width: 260px;
             flex-shrink: 0;
         }
 
         .sidebar h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 18px;
         }
 
         .sidebar ul {
             list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
+            padding-left: 0;
+            margin: 10px 0 25px;
         }
 
         .sidebar ul li {
@@ -41,6 +41,7 @@
         .sidebar ul li a {
             text-decoration: none;
             color: #333;
+            font-size: 14px;
         }
 
         .sidebar ul li a.active {
@@ -48,9 +49,22 @@
             color: #000;
         }
 
-        /* 主内容 */
+        .category-btn {
+            background: none;
+            border: none;
+            padding: 6px 0;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: default;
+        }
+
+        /* ===== 主内容 ===== */
         .content {
             flex: 1;
+        }
+
+        .content h1 {
+            margin-bottom: 25px;
         }
 
         .product-grid {
@@ -66,7 +80,7 @@
         .product-card img {
             width: 100%;
             height: 220px;
-            object-fit: cover;
+            object-fit: contain; /* 防止图片被裁切 */
             background: #f5f5f5;
         }
 
@@ -74,6 +88,12 @@
             margin-top: 10px;
             font-size: 15px;
             font-weight: normal;
+            color: #333;
+        }
+
+        .product-card a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
@@ -92,63 +112,62 @@
 <!-- ===== 页面主体 ===== -->
 <div class="page-container">
 
-    <!-- Sidebar（完整保留） -->
-  <aside class="sidebar">
-    <h3>Categorías</h3>
+    <!-- ===== Sidebar（完整保留） ===== -->
+    <aside class="sidebar">
+        <h3>Categorías</h3>
 
-    <div class="category">
-      <button class="category-btn">Ropa de Cama <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-      </ul>
-    </div>
+        <div class="category">
+            <button class="category-btn">Ropa de Cama</button>
+            <ul class="subcategory">
+                <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+                <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+                <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+                <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+                <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+                <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+                <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+                <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+                <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+                <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+            </ul>
+        </div>
 
-    <div class="category">
-      <button class="category-btn">Toallas <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
-        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
-        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-      </ul>
-    </div>
+        <div class="category">
+            <button class="category-btn">Toallas</button>
+            <ul class="subcategory">
+                <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+                <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+                <li><a href="/productos/toallas/toallas-de-color.html" class="active">Toallas de Color</a></li>
+                <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+            </ul>
+        </div>
 
-    <div class="category">
-      <button class="category-btn">Amenities <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
-        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
-        <li><a href="/productos/amenities/kit.html">Kits</a></li>
-      </ul>
-    </div>
+        <div class="category">
+            <button class="category-btn">Amenities</button>
+            <ul class="subcategory">
+                <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
+                <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
+                <li><a href="/productos/amenities/kit.html">Kits</a></li>
+            </ul>
+        </div>
 
-    <div class="category">
-      <button class="category-btn">Accesorios <span>▾</span></button>
-      <ul class="subcategory">
-        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
-        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
-        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
-      </ul>
-    </div>
-  </aside>
-    <!-- 主内容 -->
+        <div class="category">
+            <button class="category-btn">Accesorios</button>
+            <ul class="subcategory">
+                <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+                <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+                <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
+                <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- ===== 主内容 ===== -->
     <main class="content">
-
         <h1>Toallas de Color</h1>
 
         <div class="product-grid">
 
-            <!-- Arena -->
             <div class="product-card">
                 <a href="toalla-linea-intermedia-arena.html">
                     <img src="../../../images/toallas/color/arena.jpg" alt="Toalla Arena">
@@ -156,7 +175,6 @@
                 </a>
             </div>
 
-            <!-- Azul Marino -->
             <div class="product-card">
                 <a href="toalla-linea-intermedia-azul-marino.html">
                     <img src="../../../images/toallas/color/azul-marino.jpg" alt="Toalla Azul Marino">
@@ -164,7 +182,6 @@
                 </a>
             </div>
 
-            <!-- Gris -->
             <div class="product-card">
                 <a href="toalla-linea-intermedia-gris.html">
                     <img src="../../../images/toallas/color/gris.jpg" alt="Toalla Gris">
@@ -172,7 +189,6 @@
                 </a>
             </div>
 
-            <!-- Chocolate -->
             <div class="product-card">
                 <a href="toalla-linea-intermedia-chocolate.html">
                     <img src="../../../images/toallas/color/chocolate.jpg" alt="Toalla Chocolate">
@@ -181,7 +197,6 @@
             </div>
 
         </div>
-
     </main>
 
 </div>
