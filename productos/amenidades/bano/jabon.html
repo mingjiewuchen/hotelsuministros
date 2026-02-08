@@ -93,7 +93,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    /* ===== BACK BUTTON ===== */
     .back-link {
       display: inline-block;
       margin-bottom: 25px;
@@ -107,9 +106,7 @@
       text-decoration: none;
     }
 
-    .back-link:hover {
-      background: #f3f4f6;
-    }
+    .back-link:hover { background: #f3f4f6; }
 
     .grid {
       display: grid;
@@ -162,10 +159,57 @@
       font-size: 15px;
     }
 
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1f2937;
+      color: #d1d5db;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 50px 30px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-container h4 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-container p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
     @media (max-width: 900px) {
       .container { flex-direction: column; }
       .sidebar { width: 100%; }
       .grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-container { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 520px) {
@@ -193,7 +237,7 @@
     <h3>Categorías</h3>
 
     <div class="category">
-      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <button class="category-btn">Ropa de Cama ▾</button>
       <ul class="subcategory">
         <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
         <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
@@ -209,7 +253,7 @@
     </div>
 
     <div class="category">
-      <button class="category-btn">Toallas <span>▾</span></button>
+      <button class="category-btn">Toallas ▾</button>
       <ul class="subcategory">
         <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
         <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
@@ -219,7 +263,7 @@
     </div>
 
     <div class="category">
-      <button class="category-btn">Amenidades <span>▾</span></button>
+      <button class="category-btn">Amenidades ▾</button>
       <ul class="subcategory">
         <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
         <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
@@ -232,7 +276,7 @@
     </div>
 
     <div class="category">
-      <button class="category-btn">Accesorios <span>▾</span></button>
+      <button class="category-btn">Accesorios ▾</button>
       <ul class="subcategory">
         <li><a href="/productos/accesorios/batas.html">Batas</a></li>
         <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
@@ -240,13 +284,11 @@
         <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
       </ul>
     </div>
-
   </aside>
 
   <!-- CONTENT -->
   <main class="products">
 
-    <!-- ✅ BACK BUTTON -->
     <a href="/productos/amenidades/bano.html" class="back-link">
       ← Volver a baño
     </a>
@@ -254,14 +296,120 @@
     <h1>Jabón hotelero</h1>
     <p>Jabón hotelero en presentación sólida y líquida, ideal para hoteles, Airbnb y alojamientos turísticos.</p>
 
-    <!-- GRID (unchanged) -->
     <div class="grid">
-      <!-- cards stay exactly the same -->
-      <!-- … -->
-    </div>
 
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-barra-12g.html">
+          <div class="img-box">
+            <img src="/images/jabon-barra-12g.jpg" alt="Jabón 12 g">
+          </div>
+        </a>
+        <h3>Jabón redondo 12 g</h3>
+        <p class="desc">Envuelto individualmente.</p>
+        <div class="price">₡57</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-barra-15g.html">
+          <div class="img-box">
+            <img src="/images/jabon-barra-15g.jpg" alt="Jabón 15 g">
+          </div>
+        </a>
+        <h3>Jabón redondo 15 g</h3>
+        <p class="desc">Ideal para hotelería.</p>
+        <div class="price">₡68</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-barra-20g.html">
+          <div class="img-box">
+            <img src="/images/jabon-barra-20g.jpg" alt="Jabón 20 g">
+          </div>
+        </a>
+        <h3>Jabón redondo 20 g</h3>
+        <p class="desc">Presentación premium.</p>
+        <div class="price">₡78</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-liquido-15ml.html">
+          <div class="img-box">
+            <img src="/images/jabon-liquido-15ml.jpg" alt="Jabón líquido 15 ml">
+          </div>
+        </a>
+        <h3>Jabón líquido 15 ml</h3>
+        <p class="desc">Envase individual.</p>
+        <div class="price">₡73</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-liquido-20ml.html">
+          <div class="img-box">
+            <img src="/images/jabon-liquido-20ml.jpg" alt="Jabón líquido 20 ml">
+          </div>
+        </a>
+        <h3>Jabón líquido 20 ml</h3>
+        <p class="desc">Fragancia suave.</p>
+        <div class="price">₡83</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-liquido-25ml.html">
+          <div class="img-box">
+            <img src="/images/jabon-liquido-25ml.jpg" alt="Jabón líquido 25 ml">
+          </div>
+        </a>
+        <h3>Jabón líquido 25 ml</h3>
+        <p class="desc">Mayor capacidad.</p>
+        <div class="price">₡93</div>
+      </div>
+
+      <div class="card">
+        <a href="/productos/amenidades/bano/jabon/jabon-liquido-galon.html">
+          <div class="img-box">
+            <img src="/images/jabon-liquido-galon.jpg" alt="Jabón galón">
+          </div>
+        </a>
+        <h3>Jabón líquido – Galón</h3>
+        <p class="desc">Uso institucional.</p>
+        <div class="price">₡6,000</div>
+      </div>
+
+    </div>
   </main>
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>
+        Proveedor especializado en amenidades, textiles y accesorios
+        para hoteles, Airbnb y proyectos de hospitalidad en Costa Rica.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/quienes-somos.html">Quiénes Somos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+      <p>📍 Costa Rica</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
+</footer>
 
 </body>
 </html>
