@@ -1,341 +1,379 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Shampoo Galón | Hotel Suministros</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shampoo en galón para hoteles, Airbnbs y uso institucional. Ideal para dispensadores. Cotiza directamente por WhatsApp.">
+<meta charset="UTF-8">
+<title>Shampoo Galón | Hotel Suministros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
-        }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
+/* ===== NAV ===== */
+header {
+  background: #1f2937;
+  padding: 18px 40px;
+}
 
-        .product {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+nav a {
+  color: #e5e7eb;
+  margin-right: 22px;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-        .product-image {
-            flex: 1 1 350px;
-            text-align: center;
-        }
+nav a:hover {
+  color: #fff;
+}
 
-        .product-image img {
-            max-width: 100%;
-            border-radius: 4px;
-        }
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 30px;
+  display: flex;
+  gap: 30px;
+}
 
-        .product-info {
-            flex: 1 1 400px;
-        }
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-        h1 {
-            margin-top: 0;
-            font-size: 26px;
-        }
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
 
-        .price {
-            font-size: 22px;
-            color: #0a7a5e;
-            margin: 15px 0;
-            font-weight: bold;
-        }
+.category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 5px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-        .description {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+.subcategory {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0 15px;
+}
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+.subcategory li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
 
-        select, input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            font-size: 16px;
-        }
+.subcategory li a:hover {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
 
-        .whatsapp-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 20px;
-            background-color: #25D366;
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            text-align: center;
-            width: 100%;
-        }
+/* ===== CONTENT ===== */
+.products {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
-        }
+/* ===== BACK BUTTON ===== */
+.back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+  padding: 10px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
 
-        @media (max-width: 768px) {
-            .product {
-                flex-direction: column;
-            }
-        }
-    </style>
+.back-link:hover {
+  background: #f3f4f6;
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ===== IMAGE ===== */
+.product-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ===== TEXT ===== */
+.products h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.price {
+  font-size: 22px;
+  color: #2563eb;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== QTY ===== */
+.qty-box {
+  margin-top: 25px;
+}
+
+.qty-box label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.qty-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.qty-controls button {
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.qty-controls input {
+  width: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 24px;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #1f2937;
+  color: #d1d5db;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-container h4 {
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .product-layout { grid-template-columns: 1fr; }
+}
+</style>
 </head>
+
 <body>
+
+<header>
+<nav>
+  <a href="/index.html">Inicio</a>
+  <a href="/productos.html">Productos</a>
+  <a href="/quienes-somos.html">Quiénes Somos</a>
+  <a href="/sostenibilidad.html">Sostenibilidad</a>
+  <a href="/contacto.html">Contacto</a>
+</nav>
+</header>
 
 <div class="container">
 
-    <div class="product">
-        <!-- Product Image -->
-        <div class="product-image">
-            <img src="/images/shampoo-galon.jpg" alt="Shampoo Galón para Hotel">
-        </div>
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <h3>Categorías</h3>
 
-        <!-- Product Info -->
-        <div class="product-info">
-            <h1>Shampoo Galón</h1>
+  <div class="category">
+    <button class="category-btn">Ropa de Cama ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+    </ul>
+  </div>
 
-            <div class="price">Precio: Cotizar</div>
+  <div class="category">
+    <button class="category-btn">Amenidades ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+      <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+      <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+      <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+    </ul>
+  </div>
+</aside>
 
-            <div class="description">
-                Shampoo en presentación de galón, ideal para hoteles, Airbnb,
-                spas y uso institucional. Compatible con dispensadores y sistemas
-                de recarga, reduce costos y residuos plásticos.
-                <br><br>
-                ✔ Uso profesional<br>
-                ✔ Aroma suave y agradable<br>
-                ✔ Apto para alto volumen de consumo
-            </div>
+<!-- ===== PRODUCT ===== -->
+<main class="products">
 
-            <!-- Quantity -->
-            <label for="quantity">Cantidad</label>
-            <input type="number" id="quantity" value="1" min="1">
+  <a href="/productos/amenidades/bano/shampoo.html" class="back-link">
+    ← Volver a Shampoo
+  </a>
 
-            <!-- WhatsApp Button -->
-            <a id="whatsappLink"
-               class="whatsapp-btn"
-               href="#"
-               target="_blank">
-                📲 Cotizar por WhatsApp
-            </a>
-        </div>
+  <div class="product-layout">
+
+    <div class="product-image">
+      <img src="/images/shampoo-galon.jpg" alt="Shampoo Galón">
     </div>
 
-</div>
+    <div class="product-info">
+      <h1>Shampoo Galón</h1>
 
-<script>
-    const whatsappLink = document.getElementById("whatsappLink");
-    const quantityInput = document.getElementById("quantity");
+      <div class="price">Precio: ₡6800</div>
 
-    function updateWhatsappLink() {
-        const quantity = quantityInput.value;
+      <p class="description">
+        Shampoo en presentación de galón, ideal para hoteles,
+        Airbnb, spas y proyectos institucionales. Diseñado para
+        dispensadores y uso de alto consumo.
+      </p>
 
-        const message = `
-Hola, me gustaría cotizar el siguiente producto:
-
-• Producto: Shampoo Galón
-• Cantidad: ${quantity}
-
-Gracias.
-        `;
-
-        const phone = "50685664622";
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        whatsappLink.href = url;
-    }
-
-    quantityInput.addEventListener("input", updateWhatsappLink);
-
-    updateWhatsappLink();
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Shampoo Galón | Hotel Suministros</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shampoo en galón para hoteles, Airbnbs y uso institucional. Ideal para dispensadores. Cotiza directamente por WhatsApp.">
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .product {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .product-image {
-            flex: 1 1 350px;
-            text-align: center;
-        }
-
-        .product-image img {
-            max-width: 100%;
-            border-radius: 4px;
-        }
-
-        .product-info {
-            flex: 1 1 400px;
-        }
-
-        h1 {
-            margin-top: 0;
-            font-size: 26px;
-        }
-
-        .price {
-            font-size: 22px;
-            color: #0a7a5e;
-            margin: 15px 0;
-            font-weight: bold;
-        }
-
-        .description {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        select, input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            font-size: 16px;
-        }
-
-        .whatsapp-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 20px;
-            background-color: #25D366;
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
-        }
-
-        @media (max-width: 768px) {
-            .product {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <div class="product">
-        <!-- Product Image -->
-        <div class="product-image">
-            <img src="/images/shampoo-galon.jpg" alt="Shampoo Galón para Hotel">
+      <div class="qty-box">
+        <label>Cantidad</label>
+        <div class="qty-controls">
+          <button onclick="changeQty(-1)">−</button>
+          <input id="quantity" type="number" value="1" min="1">
+          <button onclick="changeQty(1)">+</button>
         </div>
+      </div>
 
-        <!-- Product Info -->
-        <div class="product-info">
-            <h1>Shampoo Galón</h1>
-
-            <div class="price">Precio: ₡6800</div>
-
-            <div class="description">
-                Shampoo en presentación de galón, ideal para hoteles, Airbnb,
-                spas y uso institucional. Compatible con dispensadores y sistemas
-                de recarga, reduce costos y residuos plásticos.
-                <br><br>
-                ✔ Uso profesional<br>
-                ✔ Aroma suave y agradable<br>
-                ✔ Apto para alto volumen de consumo
-            </div>
-
-            <!-- Quantity -->
-            <label for="quantity">Cantidad</label>
-            <input type="number" id="quantity" value="1" min="1">
-
-            <!-- WhatsApp Button -->
-            <a id="whatsappLink"
-               class="whatsapp-btn"
-               href="#"
-               target="_blank">
-                📲 Cotizar por WhatsApp
-            </a>
-        </div>
+      <a href="#" class="whatsapp-btn" onclick="sendWhatsApp()">
+        📲 Consultar por WhatsApp
+      </a>
     </div>
 
+  </div>
+</main>
 </div>
 
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor de amenidades y suministros hoteleros en Costa Rica.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
+</footer>
+
 <script>
-    const whatsappLink = document.getElementById("whatsappLink");
-    const quantityInput = document.getElementById("quantity");
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
 
-    function updateWhatsappLink() {
-        const quantity = quantityInput.value;
+function changeQty(n) {
+  const q = document.getElementById("quantity");
+  let v = parseInt(q.value) || 1;
+  v += n;
+  if (v < 1) v = 1;
+  q.value = v;
+}
 
-        const message = `
-Hola, me gustaría cotizar el siguiente producto:
+function sendWhatsApp() {
+  const qty = document.getElementById("quantity").value;
+  const msg = `Hola, me gustaría cotizar el siguiente producto:
 
 • Producto: Shampoo Galón
-• Cantidad: ${quantity}
+• Uso: Amenidades hoteleras / dispensador
+• Cantidad: ${qty}
+• Página: hotelsuministros.com`;
 
-Gracias.
-        `;
-
-        const phone = "50685664622";
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        whatsappLink.href = url;
-    }
-
-    quantityInput.addEventListener("input", updateWhatsappLink);
-
-    updateWhatsappLink();
+  window.open("https://wa.me/50685664622?text=" + encodeURIComponent(msg));
+}
 </script>
 
 </body>
