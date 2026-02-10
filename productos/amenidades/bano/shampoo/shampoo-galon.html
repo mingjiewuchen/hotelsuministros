@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Shampoo Galón | Hotel Suministros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shampoo en galón para hoteles, Airbnbs y uso institucional. Ideal para dispensadores. Cotiza directamente por WhatsApp.">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            flex: 1 1 350px;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            flex: 1 1 400px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .price {
+            font-size: 22px;
+            color: #0a7a5e;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 20px;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="product">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="/images/shampoo-galon.jpg" alt="Shampoo Galón para Hotel">
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1>Shampoo Galón</h1>
+
+            <div class="price">Precio: Cotizar</div>
+
+            <div class="description">
+                Shampoo en presentación de galón, ideal para hoteles, Airbnb,
+                spas y uso institucional. Compatible con dispensadores y sistemas
+                de recarga, reduce costos y residuos plásticos.
+                <br><br>
+                ✔ Uso profesional<br>
+                ✔ Aroma suave y agradable<br>
+                ✔ Apto para alto volumen de consumo
+            </div>
+
+            <!-- Quantity -->
+            <label for="quantity">Cantidad</label>
+            <input type="number" id="quantity" value="1" min="1">
+
+            <!-- WhatsApp Button -->
+            <a id="whatsappLink"
+               class="whatsapp-btn"
+               href="#"
+               target="_blank">
+                📲 Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const whatsappLink = document.getElementById("whatsappLink");
+    const quantityInput = document.getElementById("quantity");
+
+    function updateWhatsappLink() {
+        const quantity = quantityInput.value;
+
+        const message = `
+Hola, me gustaría cotizar el siguiente producto:
+
+• Producto: Shampoo Galón
+• Cantidad: ${quantity}
+
+Gracias.
+        `;
+
+        const phone = "50685664622";
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        whatsappLink.href = url;
+    }
+
+    quantityInput.addEventListener("input", updateWhatsappLink);
+
+    updateWhatsappLink();
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Shampoo Galón | Hotel Suministros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shampoo en galón para hoteles, Airbnbs y uso institucional. Ideal para dispensadores. Cotiza directamente por WhatsApp.">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            flex: 1 1 350px;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            flex: 1 1 400px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .price {
+            font-size: 22px;
+            color: #0a7a5e;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 20px;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="product">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="/images/shampoo-galon.jpg" alt="Shampoo Galón para Hotel">
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1>Shampoo Galón</h1>
+
+            <div class="price">Precio: ₡6800</div>
+
+            <div class="description">
+                Shampoo en presentación de galón, ideal para hoteles, Airbnb,
+                spas y uso institucional. Compatible con dispensadores y sistemas
+                de recarga, reduce costos y residuos plásticos.
+                <br><br>
+                ✔ Uso profesional<br>
+                ✔ Aroma suave y agradable<br>
+                ✔ Apto para alto volumen de consumo
+            </div>
+
+            <!-- Quantity -->
+            <label for="quantity">Cantidad</label>
+            <input type="number" id="quantity" value="1" min="1">
+
+            <!-- WhatsApp Button -->
+            <a id="whatsappLink"
+               class="whatsapp-btn"
+               href="#"
+               target="_blank">
+                📲 Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const whatsappLink = document.getElementById("whatsappLink");
+    const quantityInput = document.getElementById("quantity");
+
+    function updateWhatsappLink() {
+        const quantity = quantityInput.value;
+
+        const message = `
+Hola, me gustaría cotizar el siguiente producto:
+
+• Producto: Shampoo Galón
+• Cantidad: ${quantity}
+
+Gracias.
+        `;
+
+        const phone = "50685664622";
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        whatsappLink.href = url;
+    }
+
+    quantityInput.addEventListener("input", updateWhatsappLink);
+
+    updateWhatsappLink();
+</script>
+
+</body>
+</html>
