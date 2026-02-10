@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Shampoo 45ml | Hotel Suministros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ===== NAV ===== */
+header {
+  background: #1f2937;
+  padding: 18px 40px;
+}
+
+nav a {
+  color: #e5e7eb;
+  margin-right: 22px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 30px;
+  display: flex;
+  gap: 30px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 5px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subcategory {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0 15px;
+}
+
+.subcategory li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
+
+.subcategory li a:hover {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+/* ===== CONTENT ===== */
+.products {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== BACK BUTTON ===== */
+.back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+  padding: 10px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: #f3f4f6;
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ===== IMAGE ===== */
+.product-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ===== TEXT ===== */
+.products h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.price {
+  font-size: 22px;
+  color: #2563eb;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== QTY ===== */
+.qty-box {
+  margin-top: 25px;
+}
+
+.qty-box label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.qty-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.qty-controls button {
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.qty-controls input {
+  width: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 24px;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #1f2937;
+  color: #d1d5db;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-container h4 {
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .product-layout { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <a href="/index.html">Inicio</a>
+  <a href="/productos.html">Productos</a>
+  <a href="/quienes-somos.html">Quiénes Somos</a>
+  <a href="/sostenibilidad.html">Sostenibilidad</a>
+  <a href="/contacto.html">Contacto</a>
+</nav>
+</header>
+
+<div class="container">
+
+<aside class="sidebar">
+  <h3>Categorías</h3>
+
+  <div class="category">
+    <button class="category-btn">Ropa de Cama ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+    </ul>
+  </div>
+
+  <div class="category">
+    <button class="category-btn">Amenidades ▾</button>
+    <ul class="subcategory">
+      <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+      <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+      <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+      <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+      <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+      <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+      <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
+    </ul>
+  </div>
+</aside>
+
+<main class="products">
+
+  <a href="/productos/amenidades/bano/shampoo.html" class="back-link">
+    ← Volver a Shampoo
+  </a>
+
+  <div class="product-layout">
+
+    <div class="product-image">
+      <img src="/images/shampoo-45ml.jpg" alt="Shampoo 45ml">
+    </div>
+
+    <div class="product-info">
+      <h1>Shampoo 45 ml para Hoteles</h1>
+
+      <div class="price">Precio: consultar por volumen</div>
+
+      <p class="description">
+        Shampoo líquido en presentación de 45 ml, ideal para hoteles,
+        resorts y alojamientos premium. Formato cómodo que brinda
+        mayor duración y mejor experiencia al huésped.
+      </p>
+
+      <div class="qty-box">
+        <label>Cantidad</label>
+        <div class="qty-controls">
+          <button onclick="changeQty(-1)">−</button>
+          <input id="quantity" type="number" value="100" min="1">
+          <button onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <a href="#" class="whatsapp-btn" onclick="sendWhatsApp()">
+        📲 Consultar por WhatsApp
+      </a>
+    </div>
+
+  </div>
+</main>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor de amenidades y suministros hoteleros en Costa Rica.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
+
+function changeQty(n) {
+  const q = document.getElementById("quantity");
+  let v = parseInt(q.value) || 1;
+  v += n;
+  if (v < 1) v = 1;
+  q.value = v;
+}
+
+function sendWhatsApp() {
+  const qty = document.getElementById("quantity").value;
+  const msg = `Hola, me gustaría cotizar el siguiente producto:
+
+• Producto: Shampoo 45 ml
+• Presentación: Individual
+• Uso: Amenidades hoteleras
+• Cantidad: ${qty} unidades
+• Página: hotelsuministros.com`;
+
+  window.open("https://wa.me/50685664622?text=" + encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
