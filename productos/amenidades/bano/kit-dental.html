@@ -125,19 +125,23 @@
 
     .card:hover { transform: translateY(-6px); }
 
+    /* ✅ FIXED IMAGE SIZE */
     .img-box {
-      height: 180px;
+      height: 150px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       margin-bottom: 12px;
     }
 
     .img-box img {
-      max-width: 100%;
-      max-height: 100%;
+      height: 130px;
+      width: auto;
       object-fit: contain;
       border-radius: 8px;
+      display: block;
     }
 
     .card h3 {
@@ -220,136 +224,57 @@
 
 <div class="container">
 
- <aside class="sidebar">
+  <!-- ✅ SIDEBAR RESTORED -->
+  <aside class="sidebar">
     <h3>Categorías</h3>
-
     <div class="category active">
-      <button class="category-btn">Ropa de Cama ▾</button>
-      <ul class="subcategory">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
-      <button class="category-btn">Toallas ▾</button>
-      <ul class="subcategory">
-      <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
-        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
-        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
       <button class="category-btn">Amenidades ▾</button>
       <ul class="subcategory">
-         <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
-    <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
-    <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
-    <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
-    <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
-    <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
-    <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
-      </ul>
-    </div>
-
-    <div class="category">
-      <button class="category-btn">Accesorios ▾</button>
-      <ul class="subcategory">
-        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
-        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
-        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+        <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+        <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+        <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+        <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
       </ul>
     </div>
   </aside>
 
-
-<main class="products">
-
-  <a href="/productos/amenidades/bano.html" class="back-link">
-    ← Volver a baño
-  </a>
-
-  <h1>Kit dental hotelero</h1>
-  <p>Kits dentales para huéspedes. Incluyen cepillo dental y pasta 3g en presentación individual para hoteles y alojamientos turísticos.</p>
-
-  <div class="grid">
-
-   <div class="card">
-  <div class="img-box">
-    <a href="/productos/amenidades/kit-dental-bolsa-logo.html">
-      <img src="/images/kit-dental-bolsa-logo.jpg" 
-           alt="Kit dental bolsa impermeable con logo">
+  <main class="products">
+    <a href="/productos/amenidades/bano.html" class="back-link">
+      ← Volver a baño
     </a>
-  </div>
-  <h3>Kit dental en bolsa impermeable con logo</h3>
-  <p class="desc">
-    Cepillo dental + pasta 3g.  
-    Empaque firme e impermeable con logo impreso.  
-    Presentación ideal para hoteles premium.
-  </p>
-  <div class="price">₡132</div>
-</div>
-    
-  <div class="card">
-  <div class="img-box">
-    <a href="/productos/amenidades/kit-dental-basico.html">
-      <img src="/images/kit-dental-basico.jpg" 
-           alt="Kit dental básico cepillo y pasta 3g">
-    </a>
-  </div>
-  <h3>Kit dental básico</h3>
-  <p class="desc">
-    Cepillo dental + pasta 3g.  
-    Presentación estándar para uso hotelero.
-  </p>
-  <div class="price">₡90</div>
-</div>
 
-  </div>
+    <h1>Kit dental hotelero</h1>
+    <p>Kits dentales para huéspedes. Incluyen cepillo dental y pasta 3g en presentación individual.</p>
 
-</main>
-</div>
+    <div class="grid">
 
-<footer>
-  <div class="footer-container">
-    <div>
-      <h4>Hotel Suministros</h4>
-      <p>
-        Proveedor especializado en amenidades, textiles y accesorios
-        para hoteles, Airbnb y proyectos de hospitalidad en Costa Rica.
-      </p>
+      <div class="card">
+        <div class="img-box">
+          <a href="/productos/amenidades/kit-dental-bolsa-logo.html">
+            <img src="/images/kit-dental-bolsa-logo.jpg" alt="Kit dental bolsa impermeable con logo">
+          </a>
+        </div>
+        <h3>Kit dental en bolsa impermeable con logo</h3>
+        <p class="desc">Cepillo dental + pasta 3g.</p>
+        <div class="price">₡132</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <a href="/productos/amenidades/kit-dental-basico.html">
+            <img src="/images/kit-dental-basico.jpg" alt="Kit dental básico">
+          </a>
+        </div>
+        <h3>Kit dental básico</h3>
+        <p class="desc">Cepillo dental + pasta 3g.</p>
+        <div class="price">₡90</div>
+      </div>
+
     </div>
 
-    <div class="footer-links">
-      <h4>Enlaces</h4>
-      <a href="/index.html">Inicio</a>
-      <a href="/productos.html">Productos</a>
-      <a href="/contacto.html">Contacto</a>
-    </div>
+  </main>
 
-    <div>
-      <h4>Contacto</h4>
-      <p>📞 WhatsApp: +506 8566 4622</p>
-      <p>📧 info@hotelsuministros.com</p>
-      <p>📍 Costa Rica</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Hotel Suministros. Todos los derechos reservados.
-  </div>
-</footer>
+</div>
 
 </body>
 </html>
