@@ -1,1 +1,378 @@
-1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesorios Hoteleros | Hotel Suministros</title>
+  <meta name="description" content="Accesorios hoteleros profesionales: soporte para equipaje, secadores, espejos, papeleras, planchas y más." />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background: #1f2937;
+      padding: 20px 40px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 40px;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .category {
+      margin-bottom: 12px;
+    }
+
+    .category-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 8px 0;
+      text-align: left;
+    }
+
+    .subcategory {
+      list-style: none;
+      padding-left: 12px;
+      margin: 6px 0;
+      display: none;
+    }
+
+    .subcategory li a {
+      display: block;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .subcategory li a:hover {
+      color: #1f2937;
+    }
+
+    .category.active .subcategory {
+      display: block;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #1f2937;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #1f2937;
+      color: #d1d5db;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 50px 30px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-container h4 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/index.html">Inicio</a>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/sostenibilidad.html">Sostenibilidad</a>
+    <a href="/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+ <aside class="sidebar">
+    <h3>Categorías</h3>
+
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+      <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenidades ▾</button>
+      <ul class="subcategory">
+         <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+    <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+    <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+    <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+    <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+    <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+    <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+        
+         <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+    <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
+    <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
+    <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
+    <li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
+    <li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
+    <li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
+  <!-- CONTENT -->
+  <section class="content">
+    <h1>Accesorios Hoteleros</h1>
+    <p class="intro">
+      Equipamiento esencial para habitaciones de hotel, Airbnb y alojamientos turísticos.
+      Productos funcionales, duraderos y diseñados para uso profesional.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <a href="/productos/accesorios/soporte-para-equipaje.html">
+          <img src="soporte-equipaje.jpg" alt="Soporte para equipaje hotelero">
+          <h3>Soporte para equipaje</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/espejo-de-tocador.html">
+          <img src="espejo-tocador.jpg" alt="Espejo de tocador hotelero">
+          <h3>Espejo de tocador</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/secador-de-cabello.html">
+          <img src="secador.jpg" alt="Secador de cabello hotelero">
+          <h3>Secador de cabello</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/papelera.html">
+          <img src="papelera.jpg" alt="Papelera hotelera">
+          <h3>Papelera</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/hervidor-de-agua.html">
+          <img src="hervidor.jpg" alt="Hervidor de agua hotelero">
+          <h3>Hervidor de agua</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/tabla-de-planchar.html">
+          <img src="tabla-planchar.jpg" alt="Tabla de planchar hotelera">
+          <h3>Tabla de planchar</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/plancha.html">
+          <img src="plancha.jpg" alt="Plancha hotelera">
+          <h3>Plancha</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/perchas.html">
+          <img src="perchas.jpg" alt="Perchas hoteleras">
+          <h3>Perchas</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="/productos/accesorios/cortinas.html">
+          <img src="cortinas.jpg" alt="Cortinas hoteleras">
+          <h3>Cortinas</h3>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor especializado en amenidades, textiles y accesorios para hoteles y Airbnb en Costa Rica.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/quienes-somos.html">Quiénes Somos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+      <p>📍 Costa Rica</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
