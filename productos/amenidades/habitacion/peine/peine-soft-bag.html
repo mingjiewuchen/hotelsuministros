@@ -371,6 +371,17 @@ footer {
 </footer>
 
 <script>
+  document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+
+    if (sub.style.display === "block") {
+      sub.style.display = "none";
+    } else {
+      sub.style.display = "block";
+    }
+  });
+});
 function changeQty(n) {
   const q = document.getElementById("quantity");
   let v = parseInt(q.value) || 1;
