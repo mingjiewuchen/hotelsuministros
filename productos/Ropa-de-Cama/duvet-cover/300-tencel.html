@@ -38,7 +38,7 @@
     /* ===== SIDEBAR ===== */
     .sidebar {
       width: 260px;
-      background: #ffffff;
+      background: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -47,24 +47,38 @@
 
     .sidebar h3 {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 18px;
+    }
+
+    .category {
+      margin-bottom: 15px;
     }
 
     .category-btn {
       width: 100%;
-      background: none;
+      background: #f3f4f6;
       border: none;
       font-size: 15px;
       font-weight: bold;
-      padding: 6px 0;
+      padding: 10px;
+      cursor: pointer;
       text-align: left;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-btn:hover {
+      background: #e5e7eb;
     }
 
     .subcategory {
       list-style: none;
       padding-left: 14px;
-      margin-top: 6px;
+      margin-top: 8px;
+      display: none;
     }
 
     .subcategory li a {
@@ -79,10 +93,14 @@
       color: #2563eb;
     }
 
+    .category.active .subcategory {
+      display: block;
+    }
+
     /* ===== CONTENT ===== */
     .content {
       flex: 1;
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -108,12 +126,16 @@
       border-radius: 10px;
     }
 
+    h1 {
+      margin-top: 0;
+    }
+
     ul {
       padding-left: 18px;
       line-height: 1.7;
     }
 
-    /* ===== SIZE BUTTONS ===== */
+    /* SIZE BUTTONS */
     .size-buttons {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -157,7 +179,7 @@
       font-size: 14px;
     }
 
-    input[type="number"], button {
+    input[type="number"], button.main-btn {
       width: 100%;
       padding: 12px;
       font-size: 14px;
@@ -165,7 +187,7 @@
       border: 1px solid #ccc;
     }
 
-    button {
+    button.main-btn {
       background: #25d366;
       border: none;
       color: #fff;
@@ -173,10 +195,54 @@
       cursor: pointer;
     }
 
-    button:hover {
+    button.main-btn:hover {
       background: #1ebc5a;
     }
 
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 40px 40px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 30px;
+      border-top: 1px solid #374151;
+      padding-top: 15px;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
@@ -198,41 +264,78 @@
     <a href="/index.html">Inicio</a>
     <a href="/productos.html">Productos</a>
     <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+    <a href="/contacto.html">Contacto</a>
   </nav>
 </header>
 
 <div class="layout">
 
-  <!-- LEFT SIDEBAR -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h3>Categorías</h3>
 
-    <button class="category-btn">Ropa de Cama</button>
-    <ul class="subcategory">
-      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
-      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-    </ul>
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+        <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+        <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+        <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+        <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+        <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+        <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+        <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
+        <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
+        <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
+        <li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
+        <li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
+        <li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+
   </aside>
 
   <!-- CONTENT -->
   <main class="content">
-
-    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
-      ← Volver a Duvet Cover
-    </a>
+    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">← Volver a Duvet Cover</a>
 
     <div class="product">
-
       <img src="/images/duvet-300-tencel.jpg" alt="Duvet Cover 300 Hilos Tencel">
-
       <div>
         <h1>Duvet Cover – 300 Hilos, Tencel</h1>
 
@@ -251,43 +354,72 @@
           <button class="size-btn" onclick="selectSize('King','277cm x 240cm',this)">King</button>
         </div>
 
-        <div class="size-description" id="sizeDescription">
-          170cm x 234cm
-        </div>
+        <div class="size-description" id="sizeDescription">170cm x 234cm</div>
 
         <div class="form-group">
           <label>Cantidad</label>
           <input type="number" id="cantidad" value="1" min="1">
         </div>
 
-        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
+        <button class="main-btn" onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
       </div>
-
     </div>
   </main>
 </div>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor especializado en suministros hoteleros de alta calidad.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Enlaces</h4>
+      <a href="/productos.html">Productos</a>
+      <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
+      <a href="mailto:info@hotelsuministros.com">info@hotelsuministros.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Hotel Suministros. Todos los derechos reservados.</div>
+</footer>
+
 <script>
-let selectedSize = "Twin";
-let selectedMeasure = "170cm x 234cm";
+  // Sidebar accordion
+  document.querySelectorAll(".category-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      button.parentElement.classList.toggle("active");
+    });
+  });
 
-function selectSize(size, measure, el) {
-  selectedSize = size;
-  selectedMeasure = measure;
-  document.getElementById("sizeDescription").innerText = measure;
-  document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
-  el.classList.add("active");
-}
+  // Size selection
+  let selectedSize = "Twin";
+  let selectedMeasure = "170cm x 234cm";
 
-function whatsapp() {
-  const cantidad = document.getElementById("cantidad").value;
-  const texto =
-    "Hola, me interesa:%0A%0A" +
-    "🛏️ Producto: Duvet Cover – 300 Hilos, Tencel%0A" +
-    "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
-    "📦 Cantidad: " + cantidad;
-  window.open("https://wa.me/50685664622?text=" + texto, "_blank");
-}
+  function selectSize(size, measure, el) {
+    selectedSize = size;
+    selectedMeasure = measure;
+    document.getElementById("sizeDescription").innerText = measure;
+    document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+    el.classList.add("active");
+  }
+
+  // WhatsApp function
+  function whatsapp() {
+    const cantidad = document.getElementById("cantidad").value;
+    const texto = encodeURIComponent(
+      "Hola, me interesa:\n\n" +
+      "🛏️ Producto: Duvet Cover – 300 Hilos, Tencel\n" +
+      "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")\n" +
+      "📦 Cantidad: " + cantidad
+    );
+    window.open("https://wa.me/50685664622?text=" + texto, "_blank");
+  }
 </script>
 
 </body>
