@@ -52,7 +52,6 @@ nav a {
   font-size: 18px;
 }
 
-/* CATEGORY */
 .category {
   margin-bottom: 15px;
 }
@@ -76,7 +75,6 @@ nav a {
   background: #e5e7eb;
 }
 
-/* SUBCATEGORY */
 .subcategory {
   list-style: none;
   padding-left: 14px;
@@ -96,7 +94,6 @@ nav a {
   color: #2563eb;
 }
 
-/* ACTIVE CATEGORY */
 .category.active .subcategory {
   display: block;
 }
@@ -167,6 +164,49 @@ button.main-btn:hover {
   background: #1ebc5a;
 }
 
+/* FOOTER */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 40px 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-column a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+  border-top: 1px solid #374151;
+  padding-top: 15px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .layout {
@@ -178,6 +218,10 @@ button.main-btn:hover {
   }
 
   .product {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
     grid-template-columns: 1fr;
   }
 }
@@ -198,7 +242,6 @@ button.main-btn:hover {
 
 <div class="layout">
 
-<!-- SIDEBAR -->
  <aside class="sidebar">
     <h3>Categorías</h3>
 
@@ -258,13 +301,10 @@ button.main-btn:hover {
     </div>
   </aside>
 
-<!-- PRODUCT -->
 <main class="content">
-
-<a href="#" class="back-link">← Volver a Protectores de Almohada</a>
+<a href="/productos/Ropa-de-Cama/protectores-almohada.html" class="back-link">← Volver a Protectores de Almohada</a>
 
 <div class="product">
-
 <img src="/images/protector-almohada-250.jpg" alt="Protector de Almohada 250 Hilos">
 
 <div>
@@ -280,26 +320,50 @@ button.main-btn:hover {
 <div class="form-group">
 <label for="medida">Medida</label>
 <select id="medida">
-<option value="Estándar">Estándar</option>
-<option value="Queen">Queen</option>
-<option value="King">King</option>
+<option>Estándar</option>
+<option>Queen</option>
+<option>King</option>
 </select>
 </div>
 
 <div class="form-group">
 <label for="cantidad">Cantidad</label>
-<input type="number" id="cantidad" min="1" max="1000" value="1">
+<input type="number" id="cantidad" min="1" value="1">
 </div>
 
 <button class="main-btn" onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
 </div>
-
 </div>
 </main>
 </div>
 
+<footer>
+<div class="footer-container">
+  <div class="footer-column">
+    <h4>Hotel Suministros</h4>
+    <p>Proveedor especializado en suministros hoteleros de alta calidad.</p>
+  </div>
+
+  <div class="footer-column">
+    <h4>Enlaces</h4>
+    <a href="/productos.html">Productos</a>
+    <a href="/quienes-somos.html">Quiénes Somos</a>
+    <a href="/contacto.html">Contacto</a>
+  </div>
+
+  <div class="footer-column">
+    <h4>Contacto</h4>
+    <a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
+    <a href="mailto:info@hotelsuministros.com">info@hotelsuministros.com</a>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  © 2026 Hotel Suministros. Todos los derechos reservados.
+</div>
+</footer>
+
 <script>
-// Accordion behavior
 document.querySelectorAll(".category-btn").forEach(button => {
   button.addEventListener("click", () => {
     button.parentElement.classList.toggle("active");
@@ -314,8 +378,7 @@ function whatsapp() {
     "Hola, me interesa el siguiente producto:\n\n" +
     "🛏️ Producto: Protector de Almohada – 250 Hilos\n" +
     "📐 Medida: " + medida + "\n" +
-    "📦 Cantidad: " + cantidad + "\n\n" +
-    "Quedo atento(a) a su cotización."
+    "📦 Cantidad: " + cantidad
   );
 
   window.open("https://wa.me/50685664622?text=" + texto, "_blank");
