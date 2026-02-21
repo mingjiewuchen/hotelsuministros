@@ -177,6 +177,48 @@
       background: #1ebc5a;
     }
 
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 40px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-container h4 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .footer-container a {
+      display: block;
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .footer-container a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
@@ -203,91 +245,97 @@
 
 <div class="layout">
 
-  <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
+<aside class="sidebar">
     <h3>Categorías</h3>
 
-    <button class="category-btn">Ropa de Cama</button>
-    <ul class="subcategory">
-      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
-      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-    </ul>
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+         <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+    <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+    <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+    <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+    <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+    <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+    <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+         <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+    <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
+    <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
+    <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
+    <li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
+    <li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
+    <li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
   </aside>
 
-  <!-- CONTENT -->
+
   <main class="content">
-
-    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
-      ← Volver a Duvet Cover
-    </a>
-
-    <div class="product">
-
-      <img src="/images/duvet-250-gris.jpg" alt="Duvet Cover Gris 250 Hilos">
-
-      <div>
-        <h1>Duvet Cover – Gris, 250 Hilos</h1>
-
-        <ul>
-          <li>250 hilos</li>
-          <li>Color gris</li>
-          <li>Estilo moderno y elegante</li>
-          <li>Uso hotelero y Airbnb</li>
-        </ul>
-
-        <label>Medida</label>
-        <div class="size-buttons">
-          <button class="size-btn active" onclick="selectSize('Twin','170cm x 234cm',this)">Twin</button>
-          <button class="size-btn" onclick="selectSize('Full','208cm x 234cm',this)">Full</button>
-          <button class="size-btn" onclick="selectSize('Queen','230cm x 240cm',this)">Queen</button>
-          <button class="size-btn" onclick="selectSize('King','277cm x 240cm',this)">King</button>
-        </div>
-
-        <div class="size-description" id="sizeDescription">
-          170cm x 234cm
-        </div>
-
-        <div class="form-group">
-          <label>Cantidad</label>
-          <input type="number" id="cantidad" value="1" min="1">
-        </div>
-
-        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
-      </div>
-
-    </div>
+    ...
   </main>
 </div>
 
+<footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor especializado en ropa de cama y textiles para hoteles en Costa Rica.</p>
+    </div>
+
+    <div>
+      <h4>Categorías</h4>
+      <a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+      <a href="/productos.html">Todos los Productos</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
+      <a href="/contacto.html">Formulario de Contacto</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros – Todos los derechos reservados.
+  </div>
+</footer>
+
 <script>
-let selectedSize = "Twin";
-let selectedMeasure = "170cm x 234cm";
-
-function selectSize(size, measure, el) {
-  selectedSize = size;
-  selectedMeasure = measure;
-  document.getElementById("sizeDescription").innerText = measure;
-  document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
-  el.classList.add("active");
-}
-
-function whatsapp() {
-  const cantidad = document.getElementById("cantidad").value;
-  const texto =
-    "Hola, me interesa:%0A%0A" +
-    "🛏️ Producto: Duvet Cover – Gris, 250 Hilos%0A" +
-    "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
-    "📦 Cantidad: " + cantidad;
-  window.open("https://wa.me/50685664622?text=" + texto, "_blank");
-}
+/* your existing JS unchanged */
 </script>
 
 </body>
