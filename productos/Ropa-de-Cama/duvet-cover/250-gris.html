@@ -245,7 +245,7 @@
 
 <div class="layout">
 
-<aside class="sidebar">
+  <aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category active">
@@ -305,7 +305,46 @@
 
 
   <main class="content">
-    ...
+
+    <a href="/productos/Ropa-de-Cama/duvet-cover.html" class="back-link">
+      ← Volver a Duvet Cover
+    </a>
+
+    <div class="product">
+
+      <img src="/images/duvet-250-gris.jpg" alt="Duvet Cover Gris 250 Hilos">
+
+      <div>
+        <h1>Duvet Cover – Gris, 250 Hilos</h1>
+
+        <ul>
+          <li>250 hilos</li>
+          <li>Color gris</li>
+          <li>Estilo moderno y elegante</li>
+          <li>Uso hotelero y Airbnb</li>
+        </ul>
+
+        <label>Medida</label>
+        <div class="size-buttons">
+          <button class="size-btn active" onclick="selectSize('Twin','170cm x 234cm',this)">Twin</button>
+          <button class="size-btn" onclick="selectSize('Full','208cm x 234cm',this)">Full</button>
+          <button class="size-btn" onclick="selectSize('Queen','230cm x 240cm',this)">Queen</button>
+          <button class="size-btn" onclick="selectSize('King','277cm x 240cm',this)">King</button>
+        </div>
+
+        <div class="size-description" id="sizeDescription">
+          170cm x 234cm
+        </div>
+
+        <div class="form-group">
+          <label>Cantidad</label>
+          <input type="number" id="cantidad" value="1" min="1">
+        </div>
+
+        <button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
+      </div>
+
+    </div>
   </main>
 </div>
 
@@ -335,7 +374,26 @@
 </footer>
 
 <script>
-/* your existing JS unchanged */
+let selectedSize = "Twin";
+let selectedMeasure = "170cm x 234cm";
+
+function selectSize(size, measure, el) {
+  selectedSize = size;
+  selectedMeasure = measure;
+  document.getElementById("sizeDescription").innerText = measure;
+  document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+  el.classList.add("active");
+}
+
+function whatsapp() {
+  const cantidad = document.getElementById("cantidad").value;
+  const texto =
+    "Hola, me interesa:%0A%0A" +
+    "🛏️ Producto: Duvet Cover – Gris, 250 Hilos%0A" +
+    "📐 Medida: " + selectedSize + " (" + selectedMeasure + ")%0A" +
+    "📦 Cantidad: " + cantidad;
+  window.open("https://wa.me/50685664622?text=" + texto, "_blank");
+}
 </script>
 
 </body>
