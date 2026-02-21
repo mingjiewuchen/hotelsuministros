@@ -376,6 +376,22 @@ footer {
 </footer>
 
 <script>
+// ===== SIDEBAR TOGGLE =====
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+
+    // Close other open menus (optional but cleaner UX)
+    document.querySelectorAll(".subcategory").forEach(menu => {
+      if (menu !== sub) menu.style.display = "none";
+    });
+
+    sub.style.display =
+      sub.style.display === "block" ? "none" : "block";
+  });
+});
+
+// ===== QUANTITY CONTROL =====
 function changeQty(n) {
   const q = document.getElementById("quantity");
   let v = parseInt(q.value) || 1;
@@ -384,6 +400,7 @@ function changeQty(n) {
   q.value = v;
 }
 
+// ===== WHATSAPP =====
 function sendWhatsApp() {
   const qty = document.getElementById("quantity").value;
   const msg = `Hola, me gustaría cotizar el siguiente producto:
