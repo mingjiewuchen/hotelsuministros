@@ -51,6 +51,10 @@
       font-size: 18px;
     }
 
+    .category {
+      margin-bottom: 18px;
+    }
+
     .category-btn {
       width: 100%;
       background: none;
@@ -58,6 +62,7 @@
       font-size: 15px;
       font-weight: bold;
       padding: 6px 0;
+      cursor: pointer;
       text-align: left;
     }
 
@@ -177,6 +182,20 @@
       background: #1ebc5a;
     }
 
+    footer {
+      background: #1f2937;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
     @media (max-width: 900px) {
       .layout {
         flex-direction: column;
@@ -204,24 +223,63 @@
 <div class="layout">
 
   <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
+<aside class="sidebar">
     <h3>Categorías</h3>
 
-    <button class="category-btn">Ropa de Cama</button>
-    <ul class="subcategory">
-      <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html"><strong>Duvet Cover</strong></a></li>
-      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
-    </ul>
-  </aside>
+    <div class="category active">
+      <button class="category-btn">Ropa de Cama ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+      </ul>
+    </div>
 
+    <div class="category">
+      <button class="category-btn">Toallas ▾</button>
+      <ul class="subcategory">
+         <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
+        <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
+        <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Amenities ▾</button>
+      <ul class="subcategory">
+        <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+    <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+    <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+    <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+    <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+    <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+    <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <button class="category-btn">Accesorios ▾</button>
+      <ul class="subcategory">
+         <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+    <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
+    <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
+    <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
+    <li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
+    <li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
+    <li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
+        <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
+        <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
+      </ul>
+    </div>
+  </aside>
   <!-- CONTENT -->
   <main class="content">
 
@@ -266,6 +324,14 @@
     </div>
   </main>
 </div>
+
+<footer>
+  <p>© 2026 Hotel Suministros. Todos los derechos reservados.</p>
+  <p>
+    <a href="/politica-privacidad.html">Política de Privacidad</a>
+    <a href="/terminos.html">Términos y Condiciones</a>
+  </p>
+</footer>
 
 <script>
 let selectedSize = "Twin";
