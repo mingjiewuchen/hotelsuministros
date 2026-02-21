@@ -200,6 +200,48 @@ button.main-btn {
 button.main-btn:hover {
   background: #1ebc5a;
 }
+  /* FOOTER */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  padding: 40px 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-column a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+  border-top: 1px solid #374151;
+  padding-top: 15px;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -331,6 +373,32 @@ button.main-btn:hover {
   </main>
 </div>
 
+  <footer>
+<div class="footer-container">
+<div class="footer-column">
+<h4>Hotel Suministros</h4>
+<p>Proveedor especializado en suministros hoteleros de alta calidad.</p>
+</div>
+
+<div class="footer-column">
+<h4>Enlaces</h4>
+<a href="/productos.html">Productos</a>
+<a href="/productos/Ropa-de-Cama.html">Ropa de Cama</a>
+<a href="/contacto.html">Contacto</a>
+</div>
+
+<div class="footer-column">
+<h4>Contacto</h4>
+<a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
+<a href="mailto:info@hotelsuministros.com">info@hotelsuministros.com</a>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Hotel Suministros. Todos los derechos reservados.
+</div>
+</footer>
+  
 <script>
 // Sidebar accordion
 document.querySelectorAll(".category-btn").forEach(button => {
