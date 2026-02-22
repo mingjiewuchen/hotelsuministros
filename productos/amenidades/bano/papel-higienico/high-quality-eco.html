@@ -360,9 +360,9 @@ document.querySelectorAll(".category-btn").forEach(btn => {
 
 function changeQty(n) {
   const q = document.getElementById("quantity");
-  let v = parseInt(q.value) || 1;
-  v += n;
-  if (v < 1) v = 1;
+  let v = parseInt(q.value) || 10;
+  v += (n * 10);   // multiply by 10
+  if (v < 10) v = 10;
   q.value = v;
 }
 
