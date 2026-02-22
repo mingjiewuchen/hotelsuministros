@@ -132,8 +132,8 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
     }
 
     .card {
@@ -151,13 +151,16 @@
 
     .card img {
       width: 100%;
+      height: 180px;          /* Fixed same height */
+      object-fit: contain;    /* Keeps proportions */
       border-radius: 8px;
       margin-bottom: 15px;
     }
 
     .card h3 {
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 8px;
+      min-height: 48px; /* keeps titles aligned */
     }
 
     .card a {
@@ -233,7 +236,7 @@
 
 <div class="layout">
 
- <aside class="sidebar">
+<aside class="sidebar">
 <h3>Categorías</h3>
 
 <div class="category active">
@@ -252,108 +255,82 @@
 </ul>
 </div>
 
-<div class="category">
-<button class="category-btn">Toallas <span>▾</span></button>
-<ul class="subcategory">
-<li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
-<li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
-<li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
-<li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
-</ul>
-</div>
-
-<div class="category">
-<button class="category-btn">Amenities <span>▾</span></button>
-<ul class="subcategory">
-<li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
-<li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
-<li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
-<li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
-<li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
-<li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
-<li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
-</ul>
-</div>
-
-<div class="category">
-<button class="category-btn">Accesorios <span>▾</span></button>
-<ul class="subcategory">
-<li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
-<li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
-<li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
-<li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
-<li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
-<li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
-<li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
-<li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-<li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
-</ul>
-</div>
-
 </aside>
-  <main class="content">
 
-    <a href="/productos/amenidades/bano.html" class="back-btn">
-      ← Volver a Amenidades de baño
-    </a>
+<main class="content">
 
-    <h1>Enjuague Bucal</h1>
+<a href="/productos/amenidades/bano.html" class="back-btn">
+← Volver a Amenidades de baño
+</a>
 
-    <div class="grid">
+<h1>Enjuague Bucal</h1>
 
-      <!-- Producto 1 -->
-      <div class="card">
-        <a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-30ml.html">
-          <img src="/images/enjuague-bucal-30ml.jpg" alt="Enjuague Bucal 30ml">
-          <h3>Enjuague Bucal 30ml – Botella</h3>
-        </a>
-      </div>
+<div class="grid">
 
-      <!-- Producto 2 -->
-      <div class="card">
-        <a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-12ml.html">
-          <img src="/images/enjuague-bucal-12ml.jpg" alt="Enjuague Bucal 12ml Jelly Cup">
-          <h3>Enjuague Bucal 12ml – Jelly Cup Individual</h3>
-        </a>
-      </div>
+<div class="card">
+<a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-30ml.html">
+<img src="/images/enjuague-bucal-30ml.jpg" alt="Enjuague Bucal 30ml">
+<h3>Enjuague Bucal 30ml – Botella</h3>
+</a>
+</div>
 
-    </div>
+<div class="card">
+<a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-12ml.html">
+<img src="/images/enjuague-bucal-12ml.jpg" alt="Enjuague Bucal 12ml Jelly Cup">
+<h3>Enjuague Bucal 12ml – Jelly Cup Individual</h3>
+</a>
+</div>
 
-  </main>
+<div class="card">
+<a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-12ml-melocoton.html">
+<img src="/images/enjuague-bucal-12ml-melocoton.jpg" alt="Enjuague Bucal 12ml Melocotón">
+<h3>Enjuague Bucal 12ml – Melocotón</h3>
+</a>
+</div>
 
+  <div class="card">
+<a href="/productos/amenidades/bano/enjuague-bucal/enjuague-bucal-12ml-sakura.html">
+<img src="/images/enjuague-bucal-12ml-sakura.jpg" alt="Enjuague Bucal 12ml Sakura">
+<h3>Enjuague Bucal 12ml – Sakura</h3>
+</a>
+</div>
+
+</div>
+
+</main>
 </div>
 
 <footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <h4>Hotel Suministros</h4>
-      <p>Proveedor especializado en suministros hoteleros de alta calidad.</p>
-    </div>
+<div class="footer-container">
+<div class="footer-column">
+<h4>Hotel Suministros</h4>
+<p>Proveedor especializado en suministros hoteleros de alta calidad.</p>
+</div>
 
-    <div class="footer-column">
-      <h4>Enlaces</h4>
-      <a href="/productos.html">Productos</a>
-      <a href="/quienes-somos.html">Quiénes Somos</a>
-      <a href="/contacto.html">Contacto</a>
-    </div>
+<div class="footer-column">
+<h4>Enlaces</h4>
+<a href="/productos.html">Productos</a>
+<a href="/quienes-somos.html">Quiénes Somos</a>
+<a href="/contacto.html">Contacto</a>
+</div>
 
-    <div class="footer-column">
-      <h4>Contacto</h4>
-      <a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
-      <a href="mailto:info@hotelsuministros.com">info@hotelsuministros.com</a>
-    </div>
-  </div>
+<div class="footer-column">
+<h4>Contacto</h4>
+<a href="https://wa.me/50685664622" target="_blank">WhatsApp</a>
+<a href="mailto:info@hotelsuministros.com">info@hotelsuministros.com</a>
+</div>
+</div>
 
-  <div class="footer-bottom">
-    © 2026 Hotel Suministros. Todos los derechos reservados.
-  </div>
+<div class="footer-bottom">
+© 2026 Hotel Suministros. Todos los derechos reservados.
+</div>
 </footer>
 
 <script>
 document.querySelectorAll(".category-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    button.parentElement.classList.toggle("active");
-  });
+button.addEventListener("click", () => {
+button.parentElement.classList.toggle("active");
+});
 });
 </script>
 
