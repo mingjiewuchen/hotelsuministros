@@ -244,18 +244,9 @@
 
 </div>
   <script>
-  document.querySelectorAll(".category-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const list = btn.nextElementSibling;
-      const arrow = btn.querySelector("span");
-
-      if (list.style.display === "block") {
-        list.style.display = "none";
-        arrow.textContent = "▾";
-      } else {
-        list.style.display = "block";
-        arrow.textContent = "▴";
-      }
+ document.querySelectorAll(".category-btn").forEach(button => {
+button.addEventListener("click", () => {
+button.parentElement.classList.toggle("active");
     });
   });
 </script>
