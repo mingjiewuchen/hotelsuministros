@@ -63,6 +63,10 @@ nav a:hover { color: #fff; }
   margin: 5px 0 15px;
 }
 
+  .category.active .subcategory {
+  display: block;
+}
+  
 .subcategory li a {
   display: block;
   padding: 8px;
@@ -84,20 +88,24 @@ nav a:hover { color: #fff; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.back-link {
+.back-btn {
   display: inline-block;
   margin-bottom: 35px;
   padding: 10px 18px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #1f2937;
   border-radius: 8px;
-  background: #f9fafb;
-  color: #111827;
+  background: transparent;
+  color: #1f2937;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
-.back-link:hover { background: #f3f4f6; }
+.back-btn:hover {
+  background: #1f2937;
+  color: #fff;
+}
 
 .product-layout {
   display: grid;
@@ -372,5 +380,12 @@ function sendWhatsApp() {
 }
 </script>
 
+  <script>
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+</script>
 </body>
 </html>
