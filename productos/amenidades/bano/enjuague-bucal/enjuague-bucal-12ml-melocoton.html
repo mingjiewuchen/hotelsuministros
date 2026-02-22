@@ -235,7 +235,7 @@ footer {
 <aside class="sidebar">
 <h3>Categorías</h3>
 
-<div class="category active">
+<div class="category">
 <button class="category-btn">Ropa de Cama <span>▾</span></button>
 <ul class="subcategory">
 <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
@@ -261,7 +261,7 @@ footer {
 </ul>
 </div>
 
-<div class="category">
+<div class="category active">
 <button class="category-btn">Amenities <span>▾</span></button>
 <ul class="subcategory">
 <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
@@ -305,13 +305,12 @@ footer {
 
 <div class="product-info">
 <h1>Enjuague Bucal 12ml – Melocotón</h1>
-
 <div class="price">₡160</div>
 
 <p class="description">
-Enjuague bucal portátil de 12 ml, desechable, con agradable sabor a melocotón, presentado en prácticos envases individuales tipo gelatina. Ideal para hoteles y alojamientos turísticos, ofrece una limpieza rápida y una sensación refrescante.<br><br>
-✔ Presentación individual de 12ml<br>
-✔ Sabor suave a melocotón<br>
+Enjuague bucal portátil de 12 ml con agradable sabor a melocotón, presentado en envase individual desechable tipo gelatina. Ideal para hoteles y alojamientos turísticos.<br><br>
+✔ Presentación individual 12 ml<br>
+✔ Sabor melocotón<br>
 ✔ Práctico y desechable<br><br>
 <strong>Pedido mínimo: 2500 unidades</strong>
 </p>
@@ -328,38 +327,61 @@ Enjuague bucal portátil de 12 ml, desechable, con agradable sabor a melocotón,
 <a href="#" class="whatsapp-btn" onclick="sendWhatsApp()">
 📲 Consultar por WhatsApp
 </a>
-</div>
 
+</div>
 </div>
 </main>
 </div>
 
 <footer>
-<div class="footer-bottom">
-© 2026 Hotel Suministros. Todos los derechos reservados.
-</div>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor de amenidades y suministros hoteleros en Costa Rica.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
 </footer>
 
 <script>
-function changeQty(n) {
-const q = document.getElementById("quantity");
-let v = parseInt(q.value) || 2500;
-v += n;
-if (v < 2500) v = 2500;
-q.value = v;
+function changeQty(n){
+const q=document.getElementById("quantity");
+let v=parseInt(q.value)||2500;
+v+=n;
+if(v<2500)v=2500;
+q.value=v;
 }
 
-function sendWhatsApp() {
-const qty = document.getElementById("quantity").value;
-const msg = `Hola, me gustaría cotizar el siguiente producto:
+function sendWhatsApp(){
+const qty=document.getElementById("quantity").value;
+const msg=`Hola, me gustaría cotizar:
 
 • Producto: Enjuague Bucal 12ml – Melocotón
 • Cantidad: ${qty} unidades
 • Pedido mínimo: 2500
 • Página: hotelsuministros.com`;
 
-window.open("https://wa.me/50685664622?text=" + encodeURIComponent(msg));
+window.open("https://wa.me/50685664622?text="+encodeURIComponent(msg));
 }
+
+document.querySelectorAll(".category-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+btn.parentElement.classList.toggle("active");
+});
+});
 </script>
 
 </body>
