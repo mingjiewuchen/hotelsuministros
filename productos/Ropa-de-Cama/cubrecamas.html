@@ -46,44 +46,55 @@
 
     .sidebar h3 {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 18px;
     }
 
-    .sidebar .category {
-      margin-bottom: 15px;
-    }
+  .category {
+  margin-bottom: 15px;
+}
 
-    .sidebar .category-btn {
-      width: 100%;
-      background: none;
-      border: none;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 6px 0;
-      cursor: pointer;
-      text-align: left;
-    }
+  .category-btn {
+  width: 100%;
+  background: #f3f4f6;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .sidebar .subcategory {
-      list-style: none;
-      padding-left: 14px;
-      margin-top: 6px;
-      display: none;
-    }
+  .category-btn:hover {
+  background: #e5e7eb;
+}
 
-    .sidebar .subcategory li a {
-      display: block;
-      font-size: 14px;
-      padding: 6px 0;
-      color: #374151;
-      text-decoration: none;
-    }
+.subcategory {
+  list-style: none;
+  padding-left: 14px;
+  margin-top: 8px;
+  display: none;
+}
 
-    .sidebar .subcategory li a:hover {
-      color: #2563eb;
-    }
+.subcategory li a {
+  display: block;
+  font-size: 14px;
+  padding: 6px 0;
+  color: #374151;
+  text-decoration: none;
+}
 
+.subcategory li a:hover {
+  color: #2563eb;
+}
+
+.category.active .subcategory {
+  display: block;
+}
     .content {
       flex: 1;
       background: #fff;
