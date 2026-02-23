@@ -35,31 +35,49 @@
     /* ===== SIDEBAR ===== */
     .sidebar {
       width: 260px;
-      background: #ffffff;
+      background: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       flex-shrink: 0;
     }
+
     .sidebar h3 {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 18px;
     }
-    .category-btn {
-      width: 100%;
-      background: none;
-      border: none;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 6px 0;
-      text-align: left;
+
+    .category {
+      margin-bottom: 15px;
     }
+
+   .category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  color: #111; /* ← ADD THIS */
+}
+    .category-btn:hover {
+      background: #e5e7eb;
+    }
+
     .subcategory {
       list-style: none;
       padding-left: 14px;
-      margin-top: 6px;
+      margin-top: 8px;
+      display: none;
     }
+
     .subcategory li a {
       display: block;
       font-size: 14px;
@@ -67,8 +85,13 @@
       color: #374151;
       text-decoration: none;
     }
+
     .subcategory li a:hover {
       color: #2563eb;
+    }
+
+    .category.active .subcategory {
+      display: block;
     }
 
     /* ===== CONTENT ===== */
@@ -155,6 +178,52 @@
     button:hover {
       background: #1ebc5a;
     }
+      footer {
+      background: #1f2937;
+      color: #d1d5db;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 50px 30px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-container h4 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-container p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+
 
     @media (max-width: 900px) {
       .layout {
@@ -184,27 +253,31 @@
 
 <div class="layout">
 
-<aside class="sidebar">
+ <aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category">
-      <button class="category-btn">Ropa de Cama <span>▾</span></button>
+      <button class="category-btn">
+        Ropa de Cama <span>▾</span>
+      </button>
       <ul class="subcategory">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+       <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
       </ul>
     </div>
 
     <div class="category">
-      <button class="category-btn">Toallas <span>▾</span></button>
+      <button class="category-btn">
+        Toallas <span>▾</span>
+      </button>
       <ul class="subcategory">
         <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
         <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
@@ -214,24 +287,40 @@
     </div>
 
     <div class="category">
-      <button class="category-btn">Amenities <span>▾</span></button>
+      <button class="category-btn">
+        Amenidades <span>▾</span>
+      </button>
       <ul class="subcategory">
-        <li><a href="/productos/amenities/jabon.html">Jabón</a></li>
-        <li><a href="/productos/amenities/shampoo.html">Shampoo</a></li>
-        <li><a href="/productos/amenities/kit.html">Kits</a></li>
+       <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+    <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
+    <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
+    <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
+    <li><a href="/productos/amenidades/marcas-lineas.html">Marcas / Líneas</a></li>
+    <li><a href="/productos/amenidades/personalizacion.html">Personalización</a></li>
+    <li><a href="/productos/amenidades/eco.html">Amenidades eco</a></li>
       </ul>
     </div>
 
+    <!-- ✅ NUEVO：Accesorios -->
     <div class="category">
-      <button class="category-btn">Accesorios <span>▾</span></button>
+      <button class="category-btn">
+        Accesorios <span>▾</span>
+      </button>
       <ul class="subcategory">
-        <li><a href="/productos/accesorios/batas.html">Batas</a></li>
+        <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+    <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
+    <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
+    <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
+    <li><a href="/productos/accesorios/hervidor-de-agua.html">Hervidor de agua</a></li>
+    <li><a href="/productos/accesorios/tabla-de-planchar.html">Tabla de planchar</a></li>
+    <li><a href="/productos/accesorios/plancha.html">Plancha</a></li>
         <li><a href="/productos/accesorios/perchas.html">Perchas</a></li>
-        <li><a href="/productos/accesorios/zapatillas.html">Zapatillas</a></li>
         <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
       </ul>
     </div>
+
   </aside>
+
 
   <!-- CONTENT -->
   <main class="content">
@@ -277,8 +366,43 @@
     </div>
   </main>
 </div>
+   <footer>
+  <div class="footer-container">
+    <div>
+      <h4>Hotel Suministros</h4>
+      <p>Proveedor especializado en amenidades, textiles y accesorios para hoteles y Airbnb en Costa Rica.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <a href="/index.html">Inicio</a>
+      <a href="/productos.html">Productos</a>
+      <a href="/quienes-somos.html">Quiénes Somos</a>
+      <a href="/contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp: +506 8566 4622</p>
+      <p>📧 info@hotelsuministros.com</p>
+      <p>📍 Costa Rica</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Hotel Suministros. Todos los derechos reservados.
+  </div>
+</footer>
 
 <script>
+    document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
+
+  
 let selectedSize = "Twin";
 let selectedMeasure = "170cm x 234cm";
 
