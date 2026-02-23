@@ -54,39 +54,45 @@
       margin-bottom: 12px;
     }
 
-    .category-btn {
+ .category-btn {
       width: 100%;
       background: none;
       border: none;
+      font-size: 15px;
       font-weight: bold;
-      cursor: pointer;
-      padding: 8px 0;
+      padding: 10px;
       text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    .category-btn:hover {
+      background: #f1f5f9;
     }
 
     .subcategory {
       list-style: none;
-      padding-left: 12px;
-      margin: 6px 0;
+      padding-left: 15px;
+      margin: 5px 0 0;
       display: none;
     }
 
     .subcategory li a {
       display: block;
+      padding: 8px 10px;
       font-size: 14px;
-      padding: 6px 0;
-      color: #555;
+      color: #374151;
       text-decoration: none;
+      border-radius: 6px;
     }
 
     .subcategory li a:hover {
-      color: #1f2937;
+      background: #f3f4f6;
+      color: #2563eb;
     }
-
-    .category.active .subcategory {
-      display: block;
-    }
-
     /* ===== CONTENT ===== */
     .content {
       flex: 1;
@@ -169,26 +175,30 @@
  <aside class="sidebar">
     <h3>Categorías</h3>
 
-    <div class="category active">
-      <button class="category-btn">Ropa de Cama ▾</button>
+    <div class="category">
+      <button class="category-btn">
+        Ropa de Cama <span>▾</span>
+      </button>
       <ul class="subcategory">
-        <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
-        <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
-        <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
-        <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
+       <li><a href="/productos/Ropa-de-Cama/almohadas.html">Almohadas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-almohada.html">Protectores de Almohada</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cubrecamas.html">Cubrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/duvet-cover.html">Duvet Cover</a></li>
+      <li><a href="/productos/Ropa-de-Cama/edredones-insert.html">Edredones – Insert</a></li>
+      <li><a href="/productos/Ropa-de-Cama/fundas.html">Fundas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/protectores-colchon.html">Protectores de Colchón</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sobrecamas.html">Sobrecamas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/sabanas.html">Sábanas</a></li>
+      <li><a href="/productos/Ropa-de-Cama/cobijas.html">Cobijas</a></li>
       </ul>
     </div>
 
     <div class="category">
-      <button class="category-btn">Toallas ▾</button>
+      <button class="category-btn">
+        Toallas <span>▾</span>
+      </button>
       <ul class="subcategory">
-         <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
+        <li><a href="/productos/toallas/alfombras.html">Alfombras</a></li>
         <li><a href="/productos/toallas/toallas-blancas.html">Toallas Blancas</a></li>
         <li><a href="/productos/toallas/toallas-de-color.html">Toallas de Color</a></li>
         <li><a href="/productos/toallas/playa-piscina.html">Playa & Piscina</a></li>
@@ -196,9 +206,11 @@
     </div>
 
     <div class="category">
-      <button class="category-btn">Amenities ▾</button>
+      <button class="category-btn">
+        Amenidades <span>▾</span>
+      </button>
       <ul class="subcategory">
-        <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
+       <li><a href="/productos/amenidades/bano.html">Amenidades de baño</a></li>
     <li><a href="/productos/amenidades/habitacion.html">Amenidades para habitación</a></li>
     <li><a href="/productos/amenidades/cafe-te.html">Café y té</a></li>
     <li><a href="/productos/amenidades/areas-comunes.html">Áreas comunes</a></li>
@@ -208,10 +220,13 @@
       </ul>
     </div>
 
+    <!-- ✅ NUEVO：Accesorios -->
     <div class="category">
-      <button class="category-btn">Accesorios ▾</button>
+      <button class="category-btn">
+        Accesorios <span>▾</span>
+      </button>
       <ul class="subcategory">
-         <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
+          <li><a href="/productos/accesorios/soporte-para-equipaje.html">Soporte para equipaje</a></li>
     <li><a href="/productos/accesorios/espejo-de-tocador.html">Espejo de tocador</a></li>
     <li><a href="/productos/accesorios/secador-de-cabello.html">Secador de cabello</a></li>
     <li><a href="/productos/accesorios/papelera.html">Papelera</a></li>
@@ -222,7 +237,9 @@
         <li><a href="/productos/accesorios/cortinas.html">Cortinas</a></li>
       </ul>
     </div>
+
   </aside>
+
 
   <!-- ===== RIGHT CONTENT ===== -->
   <section class="content">
@@ -260,11 +277,15 @@
 </div>
 
 <script>
-  document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.parentElement.classList.toggle('active');
-    });
+ document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const list = btn.nextElementSibling;
+    const arrow = btn.querySelector("span");
+
+    list.style.display = list.style.display === "block" ? "none" : "block";
+    arrow.textContent = list.style.display === "block" ? "▴" : "▾";
   });
+});
 </script>
 
 </body>
