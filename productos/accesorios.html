@@ -34,55 +34,62 @@
       gap: 30px;
     }
 
-    .sidebar {
+     .sidebar {
       width: 260px;
-      background: #ffffff;
-      border-radius: 10px;
+      background: #fff;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      flex-shrink: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .sidebar h3 {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-size: 18px;
     }
 
     .category {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
     .category-btn {
       width: 100%;
       background: none;
       border: none;
+      font-size: 15px;
       font-weight: bold;
-      cursor: pointer;
-      padding: 8px 0;
+      padding: 10px;
       text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    .category-btn:hover {
+      background: #f1f5f9;
     }
 
     .subcategory {
       list-style: none;
-      padding-left: 12px;
-      margin: 6px 0;
+      padding-left: 15px;
+      margin: 5px 0 0;
       display: none;
     }
 
     .subcategory li a {
       display: block;
+      padding: 8px 10px;
       font-size: 14px;
-      padding: 6px 0;
-      color: #555;
+      color: #374151;
       text-decoration: none;
+      border-radius: 6px;
     }
 
     .subcategory li a:hover {
-      color: #1f2937;
-    }
-
-    .category.active .subcategory {
-      display: block;
+      background: #f3f4f6;
+      color: #2563eb;
     }
 
     .content {
@@ -367,9 +374,12 @@
 </footer>
 
 <script>
-  document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.parentElement.classList.toggle('active');
+  document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+      const arrow = btn.querySelector("span");
+      list.style.display = list.style.display === "block" ? "none" : "block";
+      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
     });
   });
 </script>
