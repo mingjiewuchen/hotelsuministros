@@ -1,15 +1,17 @@
----
-layout: default
-title: Blog
----
-
-<h1>Blog para Hoteles</h1>
-
-<ul>
+<section class="blog-grid container">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> 
-      - {{ post.date | date: "%d %B %Y" }}
-    </li>
+  <article class="blog-card">
+    {% if post.image %}
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+    {% endif %}
+    <div class="card-content">
+      {% if post.categories %}
+        <span class="blog-tag">{{ post.categories[0] }}</span>
+      {% endif %}
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      <a href="{{ post.url }}" class="read-more">Leer más →</a>
+    </div>
+  </article>
   {% endfor %}
-</ul>
+</section>
