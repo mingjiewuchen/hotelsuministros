@@ -37,53 +37,49 @@
       align-items: flex-start;
     }
 
-    .sidebar {
-      width: 260px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+  .sidebar {
+  width: 260px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-    .sidebar h3 {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
 
-    .category-btn {
-      width: 100%;
-      background: none;
-      border: none;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 10px;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 6px;
-    }
+.category-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 5px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-    .category-btn:hover { background: #f1f5f9; }
+.subcategory {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0 15px;
+}
 
-    .subcategory {
-      list-style: none;
-      padding-left: 15px;
-      margin: 5px 0 0;
-      display: block;
-    }
+.subcategory li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
 
-    .subcategory li a {
-      display: block;
-      padding: 8px 10px;
-      font-size: 14px;
-      color: #2563eb;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.subcategory li a:hover {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
 
     .products {
       flex: 1;
@@ -359,6 +355,13 @@
     © 2026 Hotel Suministros. Todos los derechos reservados.
   </div>
 </footer>
-
+<script>
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sub = btn.nextElementSibling;
+    sub.style.display = sub.style.display === "block" ? "none" : "block";
+  });
+});
+  </script>
 </body>
 </html>
