@@ -1,17 +1,71 @@
-<section class="blog-grid container">
-  {% for post in site.posts %}
-  <article class="blog-card">
-    {% if post.image %}
-      <img src="{{ post.image }}" alt="{{ post.title }}">
-    {% endif %}
-    <div class="card-content">
-      {% if post.categories %}
-        <span class="blog-tag">{{ post.categories[0] }}</span>
-      {% endif %}
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-      <a href="{{ post.url }}" class="read-more">Leer más →</a>
-    </div>
-  </article>
+---
+layout: default
+title: Blog para Hoteles
+---
+
+<!-- HERO SECTION -->
+<section class="blog-hero">
+  <div class="container">
+    <h1>Blog para Hoteles y Hospitalidad</h1>
+    <p>Consejos, tendencias y guías para mejorar la experiencia del huésped.</p>
+    <a href="/contacto" class="btn-primary">Solicitar Cotización</a>
+  </div>
+</section>
+
+
+<!-- CATEGORY FILTER -->
+<div class="blog-filter container">
+  <a href="/blog" class="filter-btn">Todos</a>
+
+  {% for category in site.categories %}
+    <a href="#{{ category[0] }}" class="filter-btn">
+      {{ category[0] }}
+    </a>
   {% endfor %}
+</div>
+
+
+<!-- POSTS GROUPED BY CATEGORY -->
+{% for category in site.categories %}
+
+  <h2 id="{{ category[0] }}" class="category-title container">
+    {{ category[0] }}
+  </h2>
+
+  <section class="blog-grid container">
+    {% for post in category[1] %}
+      <article class="blog-card">
+        
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+
+        <div class="card-content">
+          <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+
+          <p>
+            {{ post.excerpt | strip_html | truncate: 120 }}
+          </p>
+
+          <a href="{{ post.url }}" class="read-more">
+            Leer más →
+          </a>
+        </div>
+
+      </article>
+    {% endfor %}
+  </section>
+
+{% endfor %}
+
+
+<!-- CTA SECTION -->
+<section class="blog-cta">
+  <div class="container">
+    <h2>¿Necesitas suministros para tu hotel?</h2>
+    <p>Solicita una cotización personalizada para tu proyecto.</p>
+    <a href="/contacto" class="btn-primary">Solicitar Cotización</a>
+  </div>
 </section>
