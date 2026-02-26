@@ -356,5 +356,18 @@
   </div>
 </footer>
 
+  <script>
+  // Sidebar toggle (works with your HTML)
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = btn.nextElementSibling;
+      if (sub.style.display === 'block') {
+        sub.style.display = 'none';
+      } else {
+        sub.style.display = 'block';
+      }
+    });
+  });
+    </script>
 </body>
 </html>
