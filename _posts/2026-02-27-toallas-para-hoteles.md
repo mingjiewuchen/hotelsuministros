@@ -4,7 +4,7 @@ title: "Toallas para hoteles: cómo elegir calidad y durabilidad en Costa Rica"
 date: 2026-02-27
 categories: [ropa-de-cama]
 tags: [toallas, hotel, costa-rica, proveedor]
-image: /assets/images/toallas-hoteleras.jpg
+image: /assets/images/blog/toallas-hoteleras.jpg
 ---
 
 Las toallas para hoteles son uno de los elementos más importantes en la experiencia del huésped. Una toalla suave, absorbente y limpia puede generar una sensación inmediata de confort y calidad. En Costa Rica, donde el turismo es altamente competitivo, elegir las toallas adecuadas es una decisión estratégica.
