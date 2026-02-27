@@ -8,7 +8,7 @@ tags: [hotel, costa-rica, proveedor]
 
 <!-- Featured image -->
 <div class="article-hero">
-  <img src="/images/blog/amenidades-hoteleras.jpg" alt="Amenidades hoteleras Costa Rica">
+  <img src="/assets/images/blog/amenidades-hoteleras.jpg" alt="Amenidades hoteleras Costa Rica">
 </div>
 
 <div class="article-content">
