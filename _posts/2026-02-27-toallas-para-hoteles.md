@@ -2,7 +2,7 @@
 layout: post
 title: "Toallas para hoteles: cómo elegir calidad y durabilidad en Costa Rica"
 date: 2026-02-27
-categories: [ropa-de-cama]
+categories: [Toallas]
 tags: [toallas, hotel, costa-rica, proveedor]
 image: /assets/images/blog/toallas-hoteleras.jpg
 ---
