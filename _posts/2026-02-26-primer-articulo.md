@@ -13,7 +13,6 @@ tags: [hotel, costa-rica, proveedor]
 
 <div class="article-content">
 
-<h1>Cómo elegir amenidades hoteleras en Costa Rica</h1>
 
 <p>Las amenidades hoteleras son pequeños detalles que pueden hacer una gran diferencia en la experiencia del huésped. En un país como Costa Rica, donde el turismo y la hospitalidad son pilares claves, seleccionar adecuadamente las amenidades puede elevar considerablemente la percepción de tu hotel.</p>
 
