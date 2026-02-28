@@ -24,11 +24,11 @@ Las toallas de baja calidad pueden endurecerse con el tiempo, perder color o des
 
 En el sector hotelero, las más comunes son:
 
-- Toallas de baño (70x140 cm aprox.)
-- Toallas de mano
-- Toallas faciales
-- Alfombrines de baño
-- Toallas para piscina o playa
+- [Toallas de baño](https://hotelsuministros.com/productos/toallas/toallas-blancas/toalla-bano-500g.html) (70x140 cm aprox.)
+- [Toallas de mano](https://hotelsuministros.com/productos/toallas/toallas-blancas/toalla-mano-120g.html)
+- [Toallas faciales](https://hotelsuministros.com/productos/toallas/toallas-blancas/toalla-facial-80g.html)
+- [Alfombrines de baño](https://hotelsuministros.com/productos/toallas/alfombras.html)
+- [Toallas para piscina o playa](https://hotelsuministros.com/productos/toallas/playa-piscina.html)
 
 El gramaje (GSM) es un factor clave. Generalmente:
 
