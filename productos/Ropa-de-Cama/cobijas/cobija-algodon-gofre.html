@@ -43,6 +43,7 @@ gap:30px;
 }
 
 /* SIDEBAR */
+
 .sidebar{
 width:260px;
 background:#fff;
@@ -133,9 +134,13 @@ gap:40px;
 align-items:center;
 }
 
+/* 图片淡入淡出动画 */
+
 .product img{
 width:100%;
 border-radius:10px;
+transition:opacity 0.6s ease;
+opacity:1;
 }
 
 h1{
@@ -289,7 +294,6 @@ grid-template-columns:1fr;
 
 }
 
-
 </style>
 
 </head>
@@ -310,10 +314,8 @@ grid-template-columns:1fr;
 
 </header>
 
-
 <div class="layout">
-
- <aside class="sidebar">
+<aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category">
@@ -394,18 +396,16 @@ grid-template-columns:1fr;
 
   </aside>
 
-
-
 <section class="content">
 
 <a href="/productos/Ropa-de-Cama/cobijas.html" class="back-btn">
 ← Volver a Cobijas
 </a>
 
-
 <div class="product">
 
 <div>
+
 <img 
 id="productImage"
 src="/images/cobija-algodon-gofre.jpg"
@@ -413,8 +413,8 @@ data-img1="/images/cobija-algodon-gofre.jpg"
 data-img2="/images/cobija-algodon-gofre-2.jpg"
 data-img3="/images/cobija-algodon-gofre-3.jpg"
 alt="Cobija de algodón tejido gofre">
-</div>
 
+</div>
 
 <div>
 
@@ -422,50 +422,25 @@ alt="Cobija de algodón tejido gofre">
 
 <p class="description">
 
-Cobija hotelera fabricada con 100% algodón y tejido tipo gofre / waffle, diseñada para ofrecer comodidad, transpirabilidad y durabilidad en hoteles y alojamientos profesionales.  
-
-Gracias a su estructura ligera y suave, es ideal para uso durante todo el año (All-Season).
+Cobija hotelera fabricada con 100% algodón y tejido tipo gofre / waffle.
 
 </p>
-
-
-<div class="features">
-
-<h3>Especificaciones</h3>
-
-<ul>
-
-<li>Material: 100% algodón</li>
-<li>Tejido: Gofre / Waffle</li>
-<li>Thread Count: 300TC</li>
-<li>Uso: Todo el año (All-Season)</li>
-<li>Alta durabilidad para lavandería hotelera</li>
-<li>Ideal para hoteles y Airbnb</li>
-
-</ul>
-
-</div>
-
 
 <h3>Medida</h3>
 
 <div class="size-buttons">
 
 <button class="size-btn active" onclick="selectSize('Queen','230cm x 230cm',this)">Queen</button>
-
 <button class="size-btn" onclick="selectSize('King','260cm x 230cm',this)">King</button>
-
 <button class="size-btn" onclick="selectSize('Super King','280cm x 240cm',this)">Super King</button>
 
 </div>
 
 <div class="size-description" id="sizeDescription">230cm x 230cm</div>
 
-
 <div class="form-group">
 
 <label>Cantidad</label>
-
 <input type="number" id="cantidad" value="1" min="1">
 
 </div>
@@ -480,79 +455,37 @@ Gracias a su estructura ligera y suave, es ideal para uso durante todo el año (
 
 </div>
 
-
 <footer>
 
 <div class="footer-container">
 
 <div>
-
 <h4>Hotel Suministros</h4>
-
-<p>
-Proveedor especializado en amenidades, textiles y accesorios para hoteles y Airbnb en Costa Rica.
-</p>
-
+<p>Proveedor especializado en textiles y amenidades hoteleras.</p>
 </div>
-
 
 <div class="footer-links">
-
 <h4>Enlaces</h4>
-
 <a href="/index.html">Inicio</a>
 <a href="/productos.html">Productos</a>
-<a href="/blog/">Blog</a>
-<a href="/quienes-somos.html">Quiénes Somos</a>
-<a href="/contacto.html">Contacto</a>
-
 </div>
-
 
 <div>
-
 <h4>Contacto</h4>
-
 <p>📞 WhatsApp: +506 8566 4622</p>
-<p>📧 info@hotelsuministros.com</p>
-<p>📍 Costa Rica</p>
-
 </div>
 
 </div>
-
 
 <div class="footer-bottom">
-
-© 2026 Hotel Suministros. Todos los derechos reservados.
-
+© 2026 Hotel Suministros
 </div>
 
 </footer>
 
-
 <script>
 
-/* sidebar */
-
-document.querySelectorAll(".category-btn").forEach(btn => {
-
-btn.addEventListener("click", () => {
-
-const list = btn.nextElementSibling;
-const arrow = btn.querySelector("span");
-
-list.style.display =
-list.style.display === "block" ? "none" : "block";
-
-arrow.textContent =
-list.style.display === "block" ? "▴" : "▾";
-
-});
-
-});
-
-/* size selector */
+/* SIZE SELECTOR */
 
 let selectedSize="Queen";
 let selectedMeasure="230cm x 230cm";
@@ -570,57 +503,78 @@ el.classList.add("active");
 
 }
 
-/* whatsapp */
+/* WHATSAPP */
 
 function whatsapp(){
 
 const cantidad=document.getElementById("cantidad").value;
 
-const texto="Hola, me interesa:%0A%0A" +
-"🛏️ Producto: Cobija de Algodón Tejido Gofre%0A" +
-"📐 Medida: "+selectedSize+" ("+selectedMeasure+")%0A" +
+const texto="Hola, me interesa:%0A%0A"+
+"🛏️ Producto: Cobija de Algodón Tejido Gofre%0A"+
+"📐 Medida: "+selectedSize+" ("+selectedMeasure+")%0A"+
 "📦 Cantidad: "+cantidad;
 
 window.open("https://wa.me/50685664622?text="+texto,"_blank");
 
 }
- /* image hover slideshow */
 
-const img = document.getElementById("productImage");
+/* IMAGE FADE SLIDESHOW */
 
-let images = [
+const img=document.getElementById("productImage");
+
+let images=[
 img.dataset.img1,
 img.dataset.img2,
 img.dataset.img3
 ];
 
-let index = 0;
+let index=0;
 let interval;
 
-img.addEventListener("mouseenter", () => {
+/* 预加载图片 */
 
-interval = setInterval(() => {
+images.forEach(src=>{
+const preload=new Image();
+preload.src=src;
+});
 
-index = (index + 1) % images.length;
+img.addEventListener("mouseenter",()=>{
 
-img.src = images[index];
+interval=setInterval(()=>{
 
-}, 1500);
+img.style.opacity=0;
+
+setTimeout(()=>{
+
+index=(index+1)%images.length;
+
+img.src=images[index];
+
+img.style.opacity=1;
+
+},300);
+
+},1500);
 
 });
 
-img.addEventListener("mouseleave", () => {
+img.addEventListener("mouseleave",()=>{
 
 clearInterval(interval);
 
-img.src = images[0];
+img.style.opacity=0;
 
-index = 0;
+setTimeout(()=>{
+
+img.src=images[0];
+img.style.opacity=1;
+index=0;
+
+},300);
 
 });
 
 </script>
-
 
 </body>
 </html>
