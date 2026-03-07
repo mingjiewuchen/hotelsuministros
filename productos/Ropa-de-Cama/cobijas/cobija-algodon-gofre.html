@@ -524,6 +524,31 @@ index=0;
 },300);
 
 });
+    const buttons = document.querySelectorAll(".category-btn");
+
+buttons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const sub = button.nextElementSibling;
+
+const isOpen = sub.style.display === "block";
+
+/* 先关闭全部 */
+
+document.querySelectorAll(".subcategory").forEach(menu=>{
+menu.style.display = "none";
+});
+
+/* 如果原来是关闭的就打开 */
+
+if(!isOpen){
+sub.style.display = "block";
+}
+
+});
+
+});
 
 </script>
 
