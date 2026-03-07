@@ -426,6 +426,31 @@ en hoteles, Airbnb y alojamientos turísticos.
 <li>Ideal para hoteles y Airbnb</li>
 </ul>
 
+    <label>Medida</label>
+
+<div class="size-buttons">
+
+<button class="size-btn active" onclick="selectSize('Full','200cm x 230cm',this)">Full</button>
+
+<button class="size-btn" onclick="selectSize('Queen','230cm x 240cm',this)">Queen</button>
+
+<button class="size-btn" onclick="selectSize('King','240cm x 260cm',this)">King</button>
+
+</div>
+
+<div class="size-description" id="sizeDescription">200cm x 230cm</div>
+
+<div class="form-group">
+
+<label>Cantidad</label>
+
+<input type="number" id="cantidad" value="1" min="1">
+
+</div>
+
+<button onclick="whatsapp()">Solicitar cotización por WhatsApp</button>
+
+
 </div>
 
 </div>
