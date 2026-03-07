@@ -575,6 +575,36 @@ sub.style.display = "block";
 
 });
 
+    let selectedSize="Full";
+let selectedMeasure="200cm x 230cm";
+
+function selectSize(size,measure,el){
+
+selectedSize=size;
+selectedMeasure=measure;
+
+document.getElementById("sizeDescription").innerText=measure;
+
+document.querySelectorAll(".size-btn").forEach(btn=>btn.classList.remove("active"));
+
+el.classList.add("active");
+
+}
+
+function whatsapp(){
+
+const cantidad=document.getElementById("cantidad").value;
+
+const texto="Hola, me interesa:%0A%0A" +
+"🛏️ Producto: Cobija de Franela Polar Gris de Lujo%0A" +
+"📐 Medida: "+selectedSize+" ("+selectedMeasure+")%0A" +
+"📦 Cantidad: "+cantidad;
+
+window.open("https://wa.me/50685664622?text="+texto,"_blank");
+
+}
+
+
 </script>
 
 </body>
