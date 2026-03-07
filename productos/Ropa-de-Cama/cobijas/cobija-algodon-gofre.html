@@ -406,7 +406,13 @@ grid-template-columns:1fr;
 <div class="product">
 
 <div>
-<img src="/images/cobija-algodon-gofre.jpg" alt="Cobija de algodón tejido gofre">
+<img 
+id="productImage"
+src="/images/cobija-algodon-gofre.jpg"
+data-img1="/images/cobija-algodon-gofre.jpg"
+data-img2="/images/cobija-algodon-gofre-2.jpg"
+data-img3="/images/cobija-algodon-gofre-3.jpg"
+alt="Cobija de algodón tejido gofre">
 </div>
 
 
@@ -578,6 +584,40 @@ const texto="Hola, me interesa:%0A%0A" +
 window.open("https://wa.me/50685664622?text="+texto,"_blank");
 
 }
+ /* image hover slideshow */
+
+const img = document.getElementById("productImage");
+
+let images = [
+img.dataset.img1,
+img.dataset.img2,
+img.dataset.img3
+];
+
+let index = 0;
+let interval;
+
+img.addEventListener("mouseenter", () => {
+
+interval = setInterval(() => {
+
+index = (index + 1) % images.length;
+
+img.src = images[index];
+
+}, 800);
+
+});
+
+img.addEventListener("mouseleave", () => {
+
+clearInterval(interval);
+
+img.src = images[0];
+
+index = 0;
+
+});
 
 </script>
 
