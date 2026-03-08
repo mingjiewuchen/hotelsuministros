@@ -50,7 +50,7 @@ Sus características principales son:
 A diferencia del duvet, la sobrecama no está pensada como elemento principal de abrigo, sino como complemento decorativo o capa adicional.
 
 Descubre nuestras opciones aquí:  
-**[Sobrecamas y cubrecamas para hotel](https://hotelsuministros.com/productos/Ropa-de-Cama/sobrecamas.html)**
+**[Sobrecamas y cubrecamas para hotel](https://hotelsuministros.com/productos/Ropa-de-Cama/cubrecamas.html)**
 
 ---
 
