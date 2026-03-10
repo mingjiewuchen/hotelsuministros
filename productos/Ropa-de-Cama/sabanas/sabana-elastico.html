@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sábana con Elástico Blanca | Hotel Suministros</title>
 
-<meta name="description" content="Sábana con elástico blanca para hoteles y Airbnb. Fabricada en tela resistente, suave y fácil de lavar. Ajuste perfecto para colchones Full, Queen y King.">
+<meta name="description" content="Sábana con elástico blanca 200TC para hoteles y Airbnb. Fabricada en tela resistente, suave y fácil de lavar. Ajuste perfecto para colchones Full, Queen y King.">
 
 <style>
 body{
@@ -153,9 +153,16 @@ font-weight:bold;
 
 .size-description{
 font-size:14px;
-margin-bottom:18px;
+margin-bottom:8px;
 color:#2563eb;
 font-weight:500;
+}
+
+.price{
+font-size:18px;
+font-weight:bold;
+color:#111;
+margin-bottom:18px;
 }
 
 .form-group{
@@ -265,7 +272,7 @@ grid-template-columns:1fr;
 </header>
 
 <div class="layout">
-   <aside class="sidebar">
+    <aside class="sidebar">
     <h3>Categorías</h3>
 
     <div class="category">
@@ -361,19 +368,13 @@ grid-template-columns:1fr;
 <ul>
 
 <li>Fabricada en <strong>tela resistente y suave</strong> ideal para uso hotelero</li>
-
+<li><strong>200TC</strong> tela de algodón de calidad hotelera</li>
 <li><strong>Elástico completo</strong> que asegura un ajuste firme al colchón</li>
-
 <li>Diseñada para <strong>lavados frecuentes en lavandería industrial</strong></li>
-
 <li>Color blanco clásico utilizado en <strong>hoteles y Airbnb</strong></li>
-
 <li>Material transpirable que proporciona <strong>mayor confort al huésped</strong></li>
-
 <li>Fácil de colocar y retirar del colchón</li>
-
 <li>Alta durabilidad para <strong>uso intensivo en hospitalidad</strong></li>
-
 <li>Compatible con colchones estándar de hotel</li>
 
 </ul>
@@ -382,15 +383,17 @@ grid-template-columns:1fr;
 
 <div class="size-buttons">
 
-<button class="size-btn active" onclick="selectSize('Full','137cm x 190cm x 30cm',this)">Full</button>
+<button class="size-btn active" onclick="selectSize('Full','137cm x 190cm x 30cm','₡10,335',this)">Full</button>
 
-<button class="size-btn" onclick="selectSize('Queen','152cm x 203cm x 35cm',this)">Queen</button>
+<button class="size-btn" onclick="selectSize('Queen','152cm x 203cm x 35cm','₡11,460',this)">Queen</button>
 
-<button class="size-btn" onclick="selectSize('King','193cm x 203cm x 35cm',this)">King</button>
+<button class="size-btn" onclick="selectSize('King','193cm x 203cm x 35cm','₡12,945',this)">King</button>
 
 </div>
 
 <div class="size-description" id="sizeDescription">137cm x 190cm x 30cm</div>
+
+<div class="price" id="priceDescription">₡10,335</div>
 
 <div class="form-group">
 
@@ -445,13 +448,16 @@ grid-template-columns:1fr;
 
 let selectedSize="Full";
 let selectedMeasure="137cm x 190cm x 30cm";
+let selectedPrice="₡10,335";
 
-function selectSize(size,measure,el){
+function selectSize(size,measure,price,el){
 
 selectedSize=size;
 selectedMeasure=measure;
+selectedPrice=price;
 
 document.getElementById("sizeDescription").innerText=measure;
+document.getElementById("priceDescription").innerText=price;
 
 document.querySelectorAll(".size-btn").forEach(btn=>btn.classList.remove("active"));
 
@@ -464,21 +470,14 @@ function whatsapp(){
 const cantidad=document.getElementById("cantidad").value;
 
 const texto="Hola, me interesa:%0A%0A" +
-"🛏️ Producto: Sábana con Elástico Blanca%0A" +
+"🛏️ Producto: Sábana con Elástico Blanca (200TC)%0A" +
 "📐 Medida: "+selectedSize+" ("+selectedMeasure+")%0A" +
+"💰 Precio: "+selectedPrice+"%0A" +
 "📦 Cantidad: "+cantidad;
 
 window.open("https://wa.me/50685664622?text="+texto,"_blank");
 
 }
-     document.querySelectorAll(".category-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const list = btn.nextElementSibling;
-      const arrow = btn.querySelector("span");
-      list.style.display = list.style.display === "block" ? "none" : "block";
-      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
-    });
-  });
 
 </script>
 
