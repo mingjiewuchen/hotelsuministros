@@ -478,6 +478,14 @@ const texto="Hola, me interesa:%0A%0A" +
 window.open("https://wa.me/50685664622?text="+texto,"_blank");
 
 }
+     document.querySelectorAll(".category-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+      const arrow = btn.querySelector("span");
+      list.style.display = list.style.display === "block" ? "none" : "block";
+      arrow.textContent = list.style.display === "block" ? "▴" : "▾";
+    });
+  });
 
 </script>
 
