@@ -2,7 +2,7 @@
 layout: post
 title: "Ropa de cama sostenible para hoteles en Costa Rica"
 date: 2026-03-09
-categories:[Ropa de cama] 
+categories: [Ropa de cama]
 tags: [hoteles, sostenibilidad, ropa de cama, Costa Rica]
 description: "Descubra las tendencias de ropa de cama sostenible para hoteles en Costa Rica: algodón orgánico, bambú, fibras recicladas y certificaciones ecológicas."
 image: /assets/images/blog/sostenibilidad-hotel.jpg
