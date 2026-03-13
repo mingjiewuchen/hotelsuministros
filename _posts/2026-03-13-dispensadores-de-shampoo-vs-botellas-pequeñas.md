@@ -2,7 +2,7 @@
 layout: post
 title: "Dispensadores de shampoo vs botellas pequeñas: ¿qué es mejor para hoteles?"
 date: 2026-03-13
-categories: blog
+categories: Amenidades
 tags: [hoteles, amenidades, sostenibilidad, dispensadores, operación hotelera]
 description: "Compare dispensadores de shampoo y botellas pequeñas de amenidades para hoteles. Conozca ventajas, desventajas, costos y sostenibilidad para elegir la mejor opción."
 image: /assets/images/blog/dispensadores-shampoo-hotel.jpg
