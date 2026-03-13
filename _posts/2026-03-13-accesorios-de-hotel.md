@@ -26,11 +26,11 @@ Estos artículos no forman parte del mobiliario principal, pero cumplen funcione
 
 Entre los accesorios más comunes se encuentran:
 
-- 👣 [Pantuflas para huéspedes](https://hotelsuministros.com/productos/amenidades/habitacion/pantufla.html)  
-- 👞 Limpiacalzado  
-- 🥿 Calzadores  
-- 🧺 Bolsas de lavandería  
-- 💇‍♂️ Secadores de cabello  
+- 🧳 [Soporte para equipaje](https://hotelsuministros.com/productos/accesorios/soporte-para-equipaje.html)  
+- 🪞 [Espejo de tocador](https://hotelsuministros.com/productos/accesorios/espejo-de-tocador.html)    
+- 🗑️ [Papelera](https://hotelsuministros.com/productos/accesorios/papelera.html)    
+- 👔 [Perchas](https://hotelsuministros.com/productos/accesorios/perchas.html)    
+- 💇‍♂️ [Secadores de cabello](https://hotelsuministros.com/productos/accesorios/plancha.html)    
 
 Todos estos productos ayudan a crear una experiencia más cómoda y profesional para quienes se hospedan en el hotel.
 
