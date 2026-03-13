@@ -2,7 +2,7 @@
 layout: post
 title: "¿Cuántas toallas necesita un hotel por habitación?"
 date: 2026-03-13
-categories: blog
+categories: Toallas
 tags: [hoteles, toallas, suministros hoteleros, operación hotelera]
 description: "Descubra cuántas toallas debe tener un hotel por habitación, los tipos de toallas más utilizados y cómo calcular el inventario ideal para hoteles y Airbnb."
 image: /assets/images/blog/cuantas-toallas-hotel.jpg
