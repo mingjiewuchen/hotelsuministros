@@ -26,7 +26,7 @@ Estos artículos no forman parte del mobiliario principal, pero cumplen funcione
 
 Entre los accesorios más comunes se encuentran:
 
-- 👣 [Pantuflas para huéspedes](https://hotelsuministros.com/productos/pantuflas.html)  
+- 👣 [Pantuflas para huéspedes](https://hotelsuministros.com/productos/amenidades/habitacion/pantufla.html)  
 - 👞 Limpiacalzado  
 - 🥿 Calzadores  
 - 🧺 Bolsas de lavandería  
@@ -42,7 +42,7 @@ Existen varios accesorios que se consideran esenciales en muchas habitaciones de
 
 ### 👣 Pantuflas para hotel
 
-Las **[pantuflas hoteleras](https://hotelsuministros.com/productos/pantuflas.html)** brindan comodidad a los huéspedes dentro de la habitación. Son especialmente valoradas en hoteles, spas y resorts donde los visitantes buscan relajarse.
+Las **[pantuflas hoteleras](https://hotelsuministros.com/productos/amenidades/habitacion/pantufla.html)** brindan comodidad a los huéspedes dentro de la habitación. Son especialmente valoradas en hoteles, spas y resorts donde los visitantes buscan relajarse.
 
 Muchos hoteles incluyen este accesorio como parte de sus amenidades para mejorar la percepción de calidad del servicio.
 
@@ -110,7 +110,7 @@ Elegir accesorios adecuados puede mejorar tanto la eficiencia operativa como la 
 
 Los **[accesorios de hotel](https://hotelsuministros.com/productos/accesorios.html)** son elementos pequeños que tienen un gran impacto en la experiencia del huésped.
 
-Productos como [pantuflas hoteleras](https://hotelsuministros.com/productos/pantuflas.html), bolsas de lavandería, limpiacalzado y secadores de cabello ayudan a crear una estancia más cómoda y profesional.
+Productos como [pantuflas hoteleras](https://hotelsuministros.com/productos/amenidades/habitacion/pantufla.html), bolsas de lavandería, limpiacalzado y secadores de cabello ayudan a crear una estancia más cómoda y profesional.
 
 Invertir en accesorios de calidad permite a los hoteles mejorar su servicio, optimizar su operación y destacar en un mercado cada vez más competitivo. 🌟
 
