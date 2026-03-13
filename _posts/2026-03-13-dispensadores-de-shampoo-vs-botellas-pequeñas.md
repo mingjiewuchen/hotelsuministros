@@ -31,7 +31,7 @@ Normalmente incluyen:
 
 Estas amenidades se colocan en el baño antes de la llegada del huésped y se reemplazan después de cada estancia.
 
-Muchos hoteles combinan estas amenidades con otros productos como [pantuflas para hotel](productos/amenidades/habitacion/pantufla.html) o [toallas hoteleras](/productos/toallas.html) para mejorar la experiencia del huésped.
+Muchos hoteles combinan estas amenidades con otros productos como [pantuflas para hotel](/productos/amenidades/habitacion/pantufla.html) o [toallas hoteleras](/productos/toallas.html) para mejorar la experiencia del huésped.
 
 ### Ventajas de las botellas pequeñas
 
