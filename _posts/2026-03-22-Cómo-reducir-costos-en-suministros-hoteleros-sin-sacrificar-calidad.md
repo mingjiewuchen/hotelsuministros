@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo reducir costos en suministros hoteleros sin sacrificar calidad"
 date: 2026-03-22
-categories: Operación Hotelera
+categories:Hotelera
 tags: [suministros hoteleros, costos, hoteles, Costa Rica, proveedores, amenidades]
 description: "Aprenda cómo reducir costos en suministros hoteleros sin afectar la calidad. Estrategias prácticas para hoteles, Airbnb y hostales en Costa Rica."
 image: /assets/images/blog/reducir-costos-hotel.jpg
@@ -25,7 +25,7 @@ Uno de los errores más comunes es comprar productos en pequeñas cantidades. Es
 La mejor estrategia es trabajar con un proveedor confiable y hacer compras planificadas.
 
 👉 Puedes ver opciones de compra al por mayor en nuestro catálogo de  
-[**suministros hoteleros**](https://hotelsuministros.com/productos/)
+[**suministros hoteleros**](https://hotelsuministros.com/productos.html)
 
 ---
 
@@ -42,7 +42,7 @@ Invertir en productos resistentes reduce el costo total.
 
 👉 Descubre nuestras opciones de alta durabilidad en:  
 [**toallas para hotel**](https://hotelsuministros.com/productos/toallas.html)  
-[**sábanas hoteleras**](https://hotelsuministros.com/productos/sabanas.html)
+[**sábanas hoteleras**](https://hotelsuministros.com//productos/Ropa-de-Cama/sabanas.html)
 
 ---
 
@@ -57,7 +57,7 @@ Algunas estrategias efectivas:
 - Elegir productos con mejor rendimiento  
 
 👉 Explora nuestras soluciones en:  
-[**amenidades hoteleras**](https://hotelsuministros.com/productos/amenidades/)
+[**amenidades hoteleras**](https://hotelsuministros.com/productos/amenidades.html)
 
 ---
 
