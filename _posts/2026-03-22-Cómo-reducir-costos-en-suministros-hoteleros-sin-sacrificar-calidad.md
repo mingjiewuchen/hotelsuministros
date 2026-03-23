@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo reducir costos en suministros hoteleros sin sacrificar calidad"
 date: 2026-03-22
-categories:Hotelera
+categories: Hotelera
 tags: [suministros hoteleros, costos, hoteles, Costa Rica, proveedores, amenidades]
 description: "Aprenda cómo reducir costos en suministros hoteleros sin afectar la calidad. Estrategias prácticas para hoteles, Airbnb y hostales en Costa Rica."
 image: /assets/images/blog/reducir-costos-hotel.jpg
