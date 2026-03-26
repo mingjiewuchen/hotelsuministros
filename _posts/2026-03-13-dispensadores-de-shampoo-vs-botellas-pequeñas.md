@@ -130,4 +130,4 @@ Tanto los dispensadores como las botellas pequeñas tienen ventajas dependiendo 
 
 Las botellas individuales ofrecen una experiencia más tradicional y elegante, mientras que los dispensadores permiten reducir costos y mejorar la sostenibilidad.
 
-Muchos hoteles están adoptando soluciones equilibradas, combinando sostenibilidad con comodidad para el huésped mediante productos como [amenidades para hotel](/productos/amenidades.html), [pantuflas hoteleras](/productos/pantuflas.html) y [toallas de hotel](/productos/toallas.html).
+Muchos hoteles están adoptando soluciones equilibradas, combinando sostenibilidad con comodidad para el huésped mediante productos como [amenidades para hotel](/productos/amenidades.html), [pantuflas hoteleras](productos/amenidades/habitacion/pantufla.html) y [toallas de hotel](/productos/toallas.html).
