@@ -16,7 +16,7 @@ En este artículo, te presentamos las principales tendencias hoteleras en Centro
 
 ---
 
-## 1. Crecimiento del sector hotelero
+## 1. Crecimiento del sector hotelero(/assets/images/blog/hotelsuministrosguia1.jpg)(/assets/images/blog/hotelcostarica.jpg)
 
 Centroamérica continúa posicionándose como un destino turístico clave, especialmente países como Costa Rica y Panamá.
 
