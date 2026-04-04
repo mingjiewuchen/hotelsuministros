@@ -8,6 +8,29 @@ description: "Descubra las principales tendencias hoteleras en Centroamérica pa
 image: /assets/images/blog/tendencias-hoteleras-2026.jpg
 ---
 
+<style>
+.blog-images {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.blog-images img {
+  width: 100%;
+  max-width: 280px; /* 👈 控制图片大小 */
+  border-radius: 8px;
+}
+
+/* 手机优化 */
+@media (max-width: 768px) {
+  .blog-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
 El sector hotelero en Centroamérica está evolucionando rápidamente. En 2026, los hoteles, hostales y Airbnb enfrentan nuevos desafíos, pero también grandes oportunidades.
 
 Desde la tecnología hasta la sostenibilidad, entender estas tendencias es clave para mantenerse competitivo y rentable.
@@ -18,9 +41,9 @@ En este artículo, te presentamos las principales tendencias hoteleras en Centro
 
 ## 1. Crecimiento del sector hotelero
 
-<div style="display:flex; gap:10px;">
-  <img src="/assets/images/blog/hotelcostarica.jpg" alt="hotel en Costa Rica" style="width:50%; border-radius:6px;">
-  <img src="/assets/images/blog/hotelsuministrosguia1.jpg" alt="suministros hoteleros" style="width:50%; border-radius:6px;">
+<div class="blog-images">
+  <img src="/assets/images/blog/hotelcostarica.jpg" alt="hotel en Costa Rica">
+  <img src="/assets/images/blog/hotelsuministrosguia1.jpg" alt="suministros hoteleros">
 </div>
 
 Centroamérica continúa posicionándose como un destino turístico clave, especialmente países como Costa Rica y Panamá.
