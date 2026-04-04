@@ -60,6 +60,11 @@ Esto implica:
 
 ## 2. Automatización y tecnología
 
+<div class="blog-images">
+  <img src="/assets/images/blog/selfcheckin.jpg" alt="self checking hotel en Costa Rica">
+  <img src="/assets/images/blog/smarthotelroom.jpg" alt="smart hotel room en costa rica">
+</div>
+
 La tecnología está transformando la industria hotelera:
 
 - Check-in sin contacto  
