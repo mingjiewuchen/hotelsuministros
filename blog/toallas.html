@@ -1,0 +1,19 @@
+---
+layout: default
+title: Toallas para hoteles
+description: Encuentre textiles de baño diseñados para una experiencia superior y una operación hotelera eficiente.
+permalink: /blog/toallas/
+---
+{% assign posts = site.categories['Toallas'] %}
+<section class="topic-page">
+  <section class="topic-hero" style="--topic-image: url('/assets/images/blog/toallas-hoteleras.jpg')">
+    <div class="blog-shell topic-hero__grid">
+      <div class="topic-hero__copy"><p class="eyebrow">TOALLAS</p><h1>Suavidad, absorción y calidad que sus huéspedes recuerdan</h1><p>Encuentre textiles de baño diseñados para una experiencia superior y una operación hotelera eficiente.</p><a href="/contacto.html" class="button button--primary">Solicitar cotización <span aria-hidden="true">→</span></a><ul><li>Calidad para profesionales</li><li>Atención personalizada</li><li>Soluciones para hoteles</li></ul></div>
+      <div class="topic-hero__visual" role="img" aria-label="Toallas para hoteles"><p>Soluciones<br>que inspiran</p></div>
+    </div>
+  </section>
+  <section class="topic-solutions blog-shell"><div class="section-heading"><div><p class="eyebrow">SOLUCIONES A TU MEDIDA</p><h2>Encuentra la solución ideal</h2></div><a class="text-link" href="/productos.html">Ver productos →</a></div><div class="topic-solutions__grid"><a class="topic-solution-card" href="/productos/toallas/toallas-blancas.html"><span>◈</span><h3>Toallas blancas</h3><p>Clásicas, suaves y resistentes.</p><b>→</b></a><a class="topic-solution-card" href="/productos/toallas/toallas-de-color.html"><span>◉</span><h3>Toallas de color</h3><p>Identidad y estilo para su propiedad.</p><b>→</b></a><a class="topic-solution-card" href="/productos/toallas/alfombras.html"><span>♧</span><h3>Alfombras de baño</h3><p>Seguridad y confort al salir de la ducha.</p><b>→</b></a><a class="topic-solution-card" href="/productos/toallas/playa-piscina.html"><span>✦</span><h3>Playa y piscina</h3><p>Resistencia para espacios exteriores.</p><b>→</b></a></div></section>
+  <section class="topic-articles blog-shell"><div class="section-heading"><div><p class="eyebrow">CONOCIMIENTO PARA LA HOSPITALIDAD</p><h2>Guías y tendencias sobre toallas</h2></div><a class="text-link" href="/blog/">Ver más en el blog →</a></div><div class="topic-articles__grid">{% for post in posts limit: 3 %}<article class="topic-article {% if forloop.first %}topic-article--lead{% endif %}">{% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">{% endif %}<div><p class="category-label">{{ post.categories.first }}</p><h3><a href="{{ post.url }}">{{ post.title }}</a></h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 145 }}</p><a class="text-link" href="{{ post.url }}">Leer artículo →</a></div></article>{% endfor %}{% if posts.size == 0 %}<p class="empty-state">Pronto compartiremos nuevas guías para hoteles.</p>{% endif %}</div></section>
+  <section class="topic-segments blog-shell"><div class="section-heading"><div><p class="eyebrow">PROPUESTAS A TU MEDIDA</p><h2>Soluciones para cada tipo de hotel</h2></div></div><div><a href="/contacto.html">Boutique <span>→</span></a><a href="/contacto.html">Resort <span>→</span></a><a href="/contacto.html">Business hotel <span>→</span></a><a href="/contacto.html">Hospedaje <span>→</span></a></div></section>
+  <section class="blog-cta"><div class="blog-shell blog-cta__grid"><div><p class="eyebrow">ALIADOS EN CADA ESTANCIA</p><h2>¿Busca soluciones para su hotel?</h2></div><p>Hablemos sobre sus necesidades y reciba una cotización personalizada.</p><a href="/contacto.html" class="button button--light">Solicitar una cotización →</a><ul><li>Productos de calidad</li><li>Entrega confiable</li><li>Asesoría especializada</li></ul></div></section>
+</section>
