@@ -9,10 +9,6 @@ description: "Conozca las tendencias hoteleras en Costa Rica para 2026 y cómo h
 image: /assets/images/blog/tendencias-hoteleras-costa-rica-2026.png
 ---
 
-<div class="article-hero">
-  <img src="/assets/images/blog/tendencias-hoteleras-costa-rica-2026.png" alt="Gestión hotelera y suministros para hoteles en Costa Rica">
-</div>
-
 <div class="article-content">
 
 <p>El turismo continúa siendo una oportunidad clave para hoteles, hostales, villas y alojamientos Airbnb en Costa Rica. Según los datos publicados por el Instituto Costarricense de Turismo (ICT), el país registró <strong>1 033 777 llegadas internacionales</strong> durante el primer trimestre de 2026. Para los operadores, el reto no es únicamente atraer reservas: también es mantener una operación eficiente, controlar los costos de suministros y lograr una experiencia que genere buenas reseñas.</p>
