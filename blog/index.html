@@ -51,7 +51,7 @@ title: Blog para Hoteles
 
   <nav class="category-nav blog-shell" aria-label="Categorías del blog">
     {% for category in site.categories %}
-    <a href="#{{ category[0] | slugify }}"><span class="category-nav__icon" aria-hidden="true">{% cycle "◈", "▤", "▱", "⌁", "♧", "▥" %}</span>{{ category[0] }}</a>
+    <a href="{% if category[0] == 'Amenidades' %}/blog/amenidades/{% else %}#{{ category[0] | slugify }}{% endif %}"><span class="category-nav__icon" aria-hidden="true">{% cycle "◈", "▤", "▱", "⌁", "♧", "▥" %}</span>{{ category[0] }}</a>
     {% endfor %}
   </nav>
 
