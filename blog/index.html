@@ -3,69 +3,97 @@ layout: default
 title: Blog para Hoteles
 ---
 
-<!-- HERO SECTION -->
-<section class="blog-hero">
-  <div class="container">
-    <h1>Blog para Hoteles y Hospitalidad</h1>
-    <p>Consejos, tendencias y guías para mejorar la experiencia del huésped.</p>
-    <a href="/contacto" class="btn-primary">Solicitar Cotización</a>
-  </div>
-</section>
+<section class="blog-home">
+  <section class="blog-hero">
+    <div class="blog-shell blog-hero__grid">
+      <div class="blog-hero__copy">
+        <p class="eyebrow">CONOCIMIENTO QUE HACE LA DIFERENCIA</p>
+        <h1>Ideas y soluciones para hoteles que cuidan cada detalle</h1>
+        <p class="blog-hero__lead">Explora guías, tendencias e ideas prácticas para crear experiencias memorables y optimizar la operación de tu hotel.</p>
+        <a href="#ultimos-articulos" class="button button--primary">Explorar artículos <span aria-hidden="true">→</span></a>
+        <ul class="hero-benefits" aria-label="Beneficios del blog">
+          <li><span aria-hidden="true">◫</span> Contenido especializado</li>
+          <li><span aria-hidden="true">◎</span> Pensado para profesionales</li>
+          <li><span aria-hidden="true">⌁</span> Un sector más sostenible</li>
+        </ul>
+      </div>
+      <div class="blog-hero__visual" role="img" aria-label="Habitación de hotel con toallas de calidad">
+        <p>Detalle<br>que deja huella</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="featured-section blog-shell" aria-labelledby="destacados">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">INSPIRACIÓN PARA LA HOSPITALIDAD</p>
+        <h2 id="destacados">Artículos destacados</h2>
+      </div>
+      <a href="#ultimos-articulos" class="text-link">Ver todos los artículos <span aria-hidden="true">→</span></a>
+    </div>
 
-<!-- CATEGORY FILTER -->
-<div class="blog-filter container">
-  <a href="/blog" class="filter-btn">Todos</a>
-
-  {% for category in site.categories %}
-    <a href="#{{ category[0] }}" class="filter-btn">
-      {{ category[0] }}
-    </a>
-  {% endfor %}
-</div>
-
-
-<!-- POSTS GROUPED BY CATEGORY -->
-{% for category in site.categories %}
-
-  <h2 id="{{ category[0] }}" class="category-title container">
-    {{ category[0] }}
-  </h2>
-
-  <section class="blog-grid container">
-    {% for post in category[1] %}
-      <article class="blog-card">
-        
+    <div class="featured-grid">
+      {% for post in site.posts limit: 3 %}
+      <article class="featured-card {% if forloop.first %}featured-card--lead{% endif %}">
         {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}">
+        <img src="{{ post.image }}" alt="{{ post.title }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
         {% endif %}
-
-        <div class="card-content">
-          <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
-
-          <p>
-            {{ post.excerpt | strip_html | truncate: 120 }}
-          </p>
-
-          <a href="{{ post.url }}" class="read-more">
-            Leer más →
-          </a>
+        <div class="featured-card__content">
+          {% if post.categories.first %}<p class="category-label">{{ post.categories.first }}</p>{% endif %}
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 135 }}</p>
+          <div class="post-meta">Por {{ post.author | default: site.title }} <span>•</span> {{ post.date | date: "%d %b %Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</div>
         </div>
-
       </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <nav class="category-nav blog-shell" aria-label="Categorías del blog">
+    {% for category in site.categories %}
+    <a href="#{{ category[0] | slugify }}"><span class="category-nav__icon" aria-hidden="true">{% cycle "◈", "▤", "▱", "⌁", "♧", "▥" %}</span>{{ category[0] }}</a>
+    {% endfor %}
+  </nav>
+
+  <section id="ultimos-articulos" class="latest-section blog-shell" aria-labelledby="ultimos">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">RECURSOS PARA TU HOTEL</p>
+        <h2 id="ultimos">Últimos artículos</h2>
+      </div>
+    </div>
+
+    <div class="latest-grid">
+      {% for post in site.posts offset: 3 limit: 6 %}
+      <article class="latest-card">
+        {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">{% endif %}
+        <div class="latest-card__content">
+          {% if post.categories.first %}<p class="category-label">{{ post.categories.first }}</p>{% endif %}
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="post-meta">{{ post.date | date: "%d %b %Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% for category in site.categories %}
+    <div id="{{ category[0] | slugify }}" class="category-anchor" aria-hidden="true"></div>
     {% endfor %}
   </section>
 
-{% endfor %}
-
-
-<!-- CTA SECTION -->
-<section class="blog-cta">
-  <div class="container">
-    <h2>¿Necesitas suministros para tu hotel?</h2>
-    <p>Solicita una cotización personalizada para tu proyecto.</p>
-    <a href="/contacto" class="btn-primary">Solicitar Cotización</a>
-  </div>
+  <section class="blog-cta">
+    <div class="blog-shell blog-cta__grid">
+      <div>
+        <p class="eyebrow">ALIADOS EN CADA ESTANCIA</p>
+        <h2>¿Necesita abastecer su hotel?</h2>
+      </div>
+      <p>Contamos con un portafolio completo de suministros para hoteles, asesoría personalizada y atención en toda Centroamérica.</p>
+      <a href="/contacto" class="button button--light">Solicitar cotización <span aria-hidden="true">→</span></a>
+      <ul>
+        <li>Productos de calidad</li>
+        <li>Entrega confiable</li>
+        <li>Asesoría especializada</li>
+      </ul>
+    </div>
+  </section>
 </section>
