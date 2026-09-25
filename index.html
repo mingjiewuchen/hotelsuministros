@@ -20,10 +20,8 @@
       color: white;
       padding: 20px 40px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
+    .site-logo { display:block; height:56px; width:auto; max-width:min(620px, 100%); object-fit:contain; object-position:left center; margin-bottom:10px; }
+    header h1 { margin: 0; font-size: 26px; }
     nav {
       margin-top: 10px;
     }
@@ -135,9 +133,8 @@
     text-align: center;
   }
 
-  header h1 {
-    font-size: 22px;
-  }
+  .site-logo { height:44px; margin:0 auto 10px; }
+  header h1 { font-size: 22px; }
 
   nav {
     margin-top: 10px;
@@ -183,10 +180,7 @@
 <body>
 
 <header>
-  <img src="logo-hs.png" alt="HS Logo"
-       style="height:60px;margin-bottom:10px;" />
-
-  <h1>Hotel Suministros de Costa Rica</h1>
+  <img class="site-logo" src="/assets/images/logo-hs-unified.png" alt="Hotel Suministros" />
 
 <nav>
   <a href="index.html">Inicio</a>
