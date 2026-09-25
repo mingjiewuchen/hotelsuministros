@@ -1,358 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suministros Hoteleros en Costa Rica | Amenidades, Toallas y Ropa de Cama para Hoteles</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suministros Hoteleros en Costa Rica | Hotel Suministros</title>
+  <meta name="description" content="Amenidades, toallas, ropa de cama y accesorios para hoteles, resorts y Airbnb en Costa Rica. Solicite una cotización personalizada.">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-<link rel="apple-touch-icon" href="/images/favicon.png">
-  <meta name="description" content="Suministros hoteleros para hoteles, resorts y Airbnb. Ropa de cama, toallas, amenidades y accesorios." />
+  <link rel="apple-touch-icon" href="/images/favicon.png">
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      color: #333;
-      background: #fafafa;
-    }
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 20px 40px;
-    }
-    .site-logo { display:block; height:56px; width:auto; max-width:min(620px, 100%); object-fit:contain; object-position:left center; margin-bottom:10px; }
-    header h1 { margin: 0; font-size: 26px; }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #e5e7eb;
-      margin-right: 20px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .hero {
-      background: #f3f4f6;
-      padding: 60px 40px;
-      text-align: center;
-    }
-    .hero h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #1f2937;
-  text-align: center;
-  line-height: 1.2;
-
-    }
-    .hero p {
-      font-size: 16px;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .section {
-      padding: 50px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .section h3 {
-      font-size: 24px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-      footer {
-      background: #1f2937;
-      color: #d1d5db;
-      margin-top: 60px;
-    }
-
-    .footer-container {
-      max-width: 1300px;
-      margin: auto;
-      padding: 50px 30px;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    .footer-container h4 {
-      color: #fff;
-      margin-bottom: 15px;
-    }
-
-    .footer-container p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .footer-links a {
-      display: block;
-      color: #d1d5db;
-      text-decoration: none;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #374151;
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #9ca3af;
-    }
-
-    /* =========================
-   Mobile Optimization
-   ========================= */
-@media (max-width: 768px) {
-
-  header {
-    padding: 15px 20px;
-    text-align: center;
-  }
-
-  .site-logo { height:44px; margin:0 auto 10px; }
-  header h1 { font-size: 22px; }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 8px 10px;
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: 40px 20px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-
-  .section h3 {
-    font-size: 22px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    padding: 20px;
-    font-size: 13px;
-  }
-}
+    :root{--navy:#092236;--teal:#0b6c70;--gold:#cba86a;--cream:#fbf8f1;--paper:#fffefa;--ink:#142d3c;--muted:#5f7078;--line:#e8e1d5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5}.shell{width:min(1280px,calc(100% - 48px));margin:auto}
+    .site-header{background:var(--navy);color:#fff}.header-row{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}.logo{display:flex;align-items:center}.logo img{display:block;width:auto;height:49px;max-width:330px;object-fit:contain}.nav{display:flex;align-items:center;gap:25px}.nav a{color:#f7f4ee;text-decoration:none;font-size:14px;font-weight:600}.nav a:hover{color:#e2c184}.quote-small{padding:10px 16px;border:1px solid #d5b171;border-radius:22px;color:#fff!important}
+    .hero{min-height:560px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(255,253,248,.99) 0%,rgba(255,253,248,.94) 40%,rgba(255,253,248,.05) 70%),url('/assets/images/home-hotel-supplies-hero.png') center/cover}.hero-copy{max-width:600px;padding:75px 0}.eyebrow{margin:0 0 13px;color:var(--teal);font-size:11px;font-weight:800;letter-spacing:2px}.hero h1,.section-title{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-1.5px;line-height:1.02}.hero h1{margin:0;font-size:clamp(43px,5vw,67px)}.hero p:not(.eyebrow){max-width:530px;margin:21px 0 0;font-size:18px;color:#3e5460}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:29px}.button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:28px;text-decoration:none;font-weight:700;font-size:14px;transition:transform .2s}.button:hover{transform:translateY(-2px)}.button-primary{color:#fff;background:var(--teal)}.button-secondary{color:var(--ink);border:1px solid #b8b5ad;background:#fffdfa}
+    .trust{background:#f2eee4}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0}.trust-item{padding:0 23px;border-right:1px solid #d8d0c1}.trust-item:first-child{padding-left:0}.trust-item:last-child{border:0}.trust-item b{display:block;font-size:15px}.trust-item span{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+    .products{padding:82px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:27px}.section-title{margin:0;font-size:40px}.section-intro{max-width:430px;margin:0;color:var(--muted);font-size:15px}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product-card{display:flex;flex-direction:column;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(13,37,50,.05)}.product-card img{width:100%;height:210px;object-fit:cover}.product-card__body{display:flex;flex:1;flex-direction:column;padding:20px}.product-card h3{margin:0;font:400 24px/1.1 Georgia,serif}.product-card p{min-height:64px;margin:11px 0 17px;color:var(--muted);font-size:14px}.card-link{margin-top:auto;color:var(--teal);font-size:14px;font-weight:700;text-decoration:none}
+    .solutions{padding:64px 0;background:#f0ece2}.solutions-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}.solutions h2{margin:0;font:400 42px/1.08 Georgia,serif}.solutions p{color:#4c606a;font-size:16px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;padding:0;list-style:none}.checklist li:before{content:'✓';color:var(--teal);font-weight:800;margin-right:8px}.contact-panel{padding:31px;background:var(--navy);color:#fff;border-radius:8px}.contact-panel p{color:#d7e3e4}.contact-panel .button{margin-top:10px;background:#1b8888;color:#fff}
+    .blog-strip{padding:78px 0;background:var(--paper)}.blog-strip__box{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;padding:43px;background:linear-gradient(115deg,#092236,#104356);color:#fff}.blog-strip h2{margin:0;font:400 39px/1.05 Georgia,serif}.blog-strip p{margin:10px 0 0;color:#e1ebec}.blog-strip .button{background:#e0bd7f;color:var(--navy)}
+    footer{background:#071b2a;color:#d5e0e2}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:55px 0 35px}footer h3{margin:0 0 12px;color:#fff;font:400 23px Georgia,serif}footer p,footer a{color:#c5d0d2;font-size:14px;text-decoration:none}footer a{display:block;margin:7px 0}.footer-bottom{border-top:1px solid #284654;padding:20px 0;font-size:12px;color:#9eb0b6}
+    .whatsapp{position:fixed;right:22px;bottom:22px;padding:14px 19px;border-radius:28px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 7px 19px rgba(0,0,0,.25);z-index:4}
+    @media(max-width:900px){.nav{gap:14px}.quote-small{display:none}.product-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr);gap:22px}.trust-item{padding-left:0;border:0}.solutions-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.shell{width:min(100% - 32px,1280px)}.header-row{min-height:65px}.logo img{height:37px;max-width:245px}.nav a:nth-child(2),.nav a:nth-child(4){display:none}.nav{gap:16px}.hero{min-height:575px;background:linear-gradient(90deg,rgba(255,253,248,.98),rgba(255,253,248,.74)),url('/assets/images/home-hotel-supplies-hero.png') 62% center/cover}.hero-copy{padding:60px 0}.hero h1{font-size:46px}.hero p:not(.eyebrow){font-size:16px}.trust-grid,.product-grid,.footer-grid{grid-template-columns:1fr}.products,.blog-strip{padding:58px 0}.section-head,.blog-strip__box{grid-template-columns:1fr;display:grid}.section-title{font-size:34px}.product-card img{height:230px}.blog-strip__box{padding:30px}.blog-strip h2{font-size:33px}.whatsapp{right:15px;bottom:15px}}
   </style>
 </head>
 <body>
-
-<header>
-  <img class="site-logo" src="/assets/images/logo-hs-unified.png" alt="Hotel Suministros" />
-
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="productos.html">Productos</a>
-  <a href="quienes-somos.html">Quiénes Somos</a>
-  <a href="sostenibilidad.html">Sostenibilidad</a>
-  <a href="contacto.html">Contacto</a>
-</nav>
-
-
-</header>
-
-
-<section class="hero">
- <h2>Suministros Hoteleros Profesionales</h2>
-<p>
-Proveemos suministros hoteleros confiables para hoteles, resorts y alojamientos Airbnb en Costa Rica.
-Productos estándar y ecológicos, diseñados para durabilidad, comodidad y una excelente experiencia del huésped.
-</p>
-
-  <img src="A_collection_of_six_high-quality_promotional_photo.png" alt="Suministros hoteleros" />
-</section>
-
-<section id="products" class="section">
-  <h3>Categorías de Productos</h3>
-  <div class="grid">
-    <div class="card">
-       <a href="https://hotelsuministros.com/productos/Ropa-de-Cama.html">
-        <img src="hero-bedding.png" alt="Ropa de Cama Hotelera">
-      </a>
-      <h4>Ropa de Cama</h4>
-      <p>Sábanas hoteleras, fundas de almohada, almohadas, protectores de colchón y fundas nórdicas.</p>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="logo" href="/" aria-label="Hotel Suministros - Inicio"><img src="/assets/images/logo-hs-unified.png" alt="Hotel Suministros"></a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a><a href="/productos.html">Productos</a><a href="/blog/">Blog</a><a href="/quienes-somos.html">Quiénes Somos</a><a href="/contacto.html">Contacto</a><a class="quote-small" href="/contacto.html">Solicitar cotización</a>
+      </nav>
     </div>
-    <div class="card">
-      <a href="https://hotelsuministros.com/productos/toallas.html">
-        <img src="hero-towels.png" alt="Toallas para Hotel">
-      </a>
-      <h4>Toallas</h4>
-      <p>Toallas de baño, toallas de mano, toallas faciales, tapetes y toallas para piscina.</p>
-    </div>
-    <div class="card">
-      <a href="https://hotelsuministros.com/productos/amenidades.html">
-        <img src="hero-amenities.png" alt="Amenidades para Hotel">
-      </a>
-      <h4>Amenidades</h4>
-      <p>Kits dentales, kits de vanidad, jabón, shampoo, gel de ducha y bolsas sanitarias.</p>
-    </div>
-    <div class="card">
-      <a href="https://hotelsuministros.com/productos/accesorios.html">
-        <img src="hero-accessories.png" alt="Accesorios de Habitación">
-      </a>
-      <h4>Accesorios de Habitación</h4>
-      <p>Pantuflas hoteleras, limpiacalzado, calzadores, bolsas de lavandería y secadores de cabello.</p>
-    </div>
-      <div class="card">
-      <a href="https://hotelsuministros.com/productos/lenceria-restaurante-eventos.html">
-        <img src="/images/productos-restaurante-eventos.jpg" alt="Lencería de Restaurante y Eventos">
-      </a>
-      <h4>Lencería de Restaurante y Eventos</h4>
-      <p>Mantelería profesional, servilletas, fundas elásticas para silla e individuales para restaurantes y eventos.</p>
-    </div>
-  </div>
-</section>
-
-<section id="eco" class="section">
-  <h3>Sostenibilidad</h3>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Ofrecemos suministros hoteleros ecológicos como cepillos de bambú, empaques biodegradables
-    y sistemas de dispensadores rellenables, ayudando a reducir el uso de plástico sin comprometer
-    la experiencia del huésped.
-  </p>
-</section>
-
-<section id="about" class="section">
-  <h3>Quiénes Somos</h3>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Nos especializamos en el suministro de productos esenciales para hoteles y negocios de hospitalidad.
-    Nuestro enfoque es una respuesta rápida, calidad constante y soluciones prácticas adaptadas
-    al mercado de Costa Rica.
-  </p>
-</section>
-
-<section id="contact" class="section">
-  <h3>Contacto</h3>
-  <p style="text-align:center;">
-    Correo: junting0416@gmail.com<br />
-    WhatsApp: +506 8566 4622
-  </p>
-</section>
-
-<a href="https://wa.me/50685664622"
-   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
-   padding:14px 18px;border-radius:50px;font-size:16px;text-decoration:none;
-   box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999;">
-   💬 WhatsApp
-</a>
-
- <footer>
-  <div class="footer-container">
-    <div>
-      <h4>Hotel Suministros</h4>
-      <p>Proveedor especializado en amenidades, textiles y accesorios para hoteles y Airbnb en Costa Rica.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Enlaces</h4>
-      <a href="/index.html">Inicio</a>
-      <a href="/productos.html">Productos</a>
-       <a href="/blog/">Blog</a>
-      <a href="/quienes-somos.html">Quiénes Somos</a>
-      <a href="/contacto.html">Contacto</a>
-      <a href="/amenidades-hoteleras-costa-rica.html">Amenidades Hoteleras Costa Rica</a>
-      <a href="/proveedor-hotel-costa-rica.html">Proveedor de Suministros Hoteleros Costa Rica</a>
-    </div>
-
-    <div>
-      <h4>Contacto</h4>
-      <p>📞 WhatsApp: +506 8566 4622</p>
-      <p>📧 info@hotelsuministros.com</p>
-      <p>📍 Costa Rica</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Hotel Suministros. Todos los derechos reservados.
-  </div>
-</footer>
-
-<a href="https://wa.me/50685664622"
-   aria-label="Chat on WhatsApp"
-   style="
-   position: fixed;
-   bottom: 20px;
-   left: 20px;
-   width: 60px;
-   height: 60px;
-   background-color: #25D366;
-   color: white;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 32px;
-   text-decoration: none;
-   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-   z-index: 99999;
-   ">
-  <img src="whatsapp.svg"
-       alt="WhatsApp"
-       style="width: 32px; height: 32px;" />
-</a>
-
-
+  </header>
+  <main>
+    <section class="hero">
+      <div class="shell"><div class="hero-copy">
+        <p class="eyebrow">SUMINISTROS HOTELEROS EN COSTA RICA</p>
+        <h1>Todo lo que su hotel necesita, en un solo proveedor</h1>
+        <p>Amenidades, toallas, ropa de cama y accesorios para hoteles, resorts y Airbnb. Productos confiables para una operación impecable y huéspedes más satisfechos.</p>
+        <div class="actions"><a class="button button-primary" href="/contacto.html">Solicitar cotización →</a><a class="button button-secondary" href="/productos.html">Ver productos</a></div>
+      </div></div>
+    </section>
+    <section class="trust"><div class="shell trust-grid">
+      <div class="trust-item"><b>Atención en Costa Rica</b><span>Asesoría cercana para su propiedad.</span></div><div class="trust-item"><b>Para hoteles y Airbnb</b><span>Soluciones para cada tipo de estancia.</span></div><div class="trust-item"><b>Opciones sostenibles</b><span>Alternativas que reducen el impacto.</span></div><div class="trust-item"><b>Cotización personalizada</b><span>Compra según sus necesidades reales.</span></div>
+    </div></section>
+    <section class="products shell">
+      <div class="section-head"><div><p class="eyebrow">EQUIPE SU PROPIEDAD</p><h2 class="section-title">Categorías de productos</h2></div><p class="section-intro">Todo lo esencial para ofrecer comodidad, higiene y una presentación profesional en cada habitación.</p></div>
+      <div class="product-grid">
+        <article class="product-card"><img src="/hero-bedding.png" alt="Ropa de cama hotelera"><div class="product-card__body"><h3>Ropa de cama</h3><p>Sábanas, fundas, almohadas, protectores de colchón y duvet covers.</p><a class="card-link" href="/productos/Ropa-de-Cama.html">Ver ropa de cama →</a></div></article>
+        <article class="product-card"><img src="/hero-towels.png" alt="Toallas para hotel"><div class="product-card__body"><h3>Toallas</h3><p>Toallas de baño, mano, faciales, tapetes y opciones para piscina.</p><a class="card-link" href="/productos/toallas.html">Ver toallas →</a></div></article>
+        <article class="product-card"><img src="/hero-amenities.png" alt="Amenidades para hotel"><div class="product-card__body"><h3>Amenidades</h3><p>Kits de baño, shampoo, gel de ducha, dispensadores y más.</p><a class="card-link" href="/productos/amenidades.html">Ver amenidades →</a></div></article>
+        <article class="product-card"><img src="/hero-accessories.png" alt="Accesorios para habitaciones de hotel"><div class="product-card__body"><h3>Accesorios</h3><p>Pantuflas, bolsas de lavandería, perchas y artículos para habitación.</p><a class="card-link" href="/productos/accesorios.html">Ver accesorios →</a></div></article>
+      </div>
+    </section>
+    <section class="solutions"><div class="shell solutions-grid"><div><p class="eyebrow">UN ALIADO PARA SU OPERACIÓN</p><h2>Calidad en los detalles que sus huéspedes recuerdan</h2><p>Trabajamos con propiedades que necesitan productos confiables, una compra más ordenada y una respuesta ágil.</p><ul class="checklist"><li>Productos de calidad</li><li>Compra recurrente simplificada</li><li>Atención personalizada</li><li>Alternativas ecológicas</li></ul></div><aside class="contact-panel"><p class="eyebrow">HABLEMOS DE SU PROYECTO</p><h3>¿Necesita equipar su hotel?</h3><p>Cuéntenos qué necesita y le ayudamos a encontrar una solución adecuada.</p><a class="button" href="/contacto.html">Solicitar cotización →</a></aside></div></section>
+    <section class="blog-strip"><div class="shell blog-strip__box"><div><p class="eyebrow">BLOG PARA HOTELES</p><h2>Ideas y soluciones para mejores estancias</h2><p>Guías, tendencias y consejos prácticos para hoteles y alojamientos en Costa Rica.</p></div><a class="button" href="/blog/">Explorar el blog →</a></div></section>
+  </main>
+  <footer><div class="shell footer-grid"><div><h3>Hotel Suministros</h3><p>Proveedor especializado en amenidades, textiles y accesorios para hoteles y Airbnb en Costa Rica.</p></div><div><h3>Productos</h3><a href="/productos/amenidades.html">Amenidades</a><a href="/productos/toallas.html">Toallas</a><a href="/productos/Ropa-de-Cama.html">Ropa de cama</a><a href="/productos/accesorios.html">Accesorios</a></div><div><h3>Contacto</h3><p>WhatsApp: +506 8566 4622</p><p>info@hotelsuministros.com</p><p>Costa Rica</p></div></div><div class="shell footer-bottom">© 2026 Hotel Suministros. Todos los derechos reservados.</div></footer>
+  <a class="whatsapp" href="https://wa.me/50685664622" aria-label="Contactar por WhatsApp">WhatsApp</a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
