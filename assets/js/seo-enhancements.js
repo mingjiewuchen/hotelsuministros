@@ -7,7 +7,8 @@
   var meta = document.querySelector('meta[name="description"]');
   var description = meta ? meta.content.trim() : "";
   var isProduct = path.indexOf("/productos/") === 0 && (!!document.querySelector(".product-layout") || !!document.querySelector(".products"));
-  var isBlog = path.indexOf("/blog") === 0 && !!document.querySelector("article");
+  var isBlogPage = path.indexOf("/blog") === 0;
+  var isBlogPost = isBlogPage && !!document.querySelector(".post-container");
   var firstImage = document.querySelector("main img:not(.logo), .products img:not(.logo), .section img:not(.logo)");
   var image = firstImage && firstImage.src ? firstImage.src : base + "/assets/images/logo-hs-unified.png";
 
@@ -40,7 +41,7 @@
   function addFaq() {
     if (document.querySelector(".hs-faq") || path === "/") return;
     var topic = labelForPage();
-    var questions = isBlog ? [
+    var questions = isBlogPage ? [
       ["¿Para quién está pensada esta guía?", "Esta guía está dirigida a hoteles, alojamientos y anfitriones de Airbnb que buscan tomar mejores decisiones para la experiencia de sus huéspedes."],
       ["¿Dónde puedo solicitar ayuda sobre productos?", "Puede revisar las categorías de productos o solicitar una cotización personalizada a Hotel Suministros por WhatsApp o desde la página de contacto."]
     ] : [
@@ -63,6 +64,6 @@
   addJsonLd(organization);
   addBreadcrumb();
   if (isProduct) addJsonLd({"@context":"https://schema.org","@type":"Product","name":title,"description":description || ("Producto para hoteles: "+title),"image":image,"brand":{"@type":"Brand","name":"Hotel Suministros"},"manufacturer":{"@id":base+"/#organization"},"url":base+path});
-  if (isBlog) addJsonLd({"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":image,"mainEntityOfPage":{"@type":"WebPage","@id":base+path},"publisher":{"@id":base+"/#organization"},"inLanguage":"es"});
+  if (isBlogPost) addJsonLd({"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":image,"mainEntityOfPage":{"@type":"WebPage","@id":base+path},"publisher":{"@id":base+"/#organization"},"inLanguage":"es"});
   addFaq();
 }());
