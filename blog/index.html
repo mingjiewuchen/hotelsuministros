@@ -17,8 +17,8 @@ title: Blog para Hoteles
           <li><span aria-hidden="true">⌁</span> Un sector más sostenible</li>
         </ul>
       </div>
-      <div class="blog-hero__visual" role="img" aria-label="Habitación de hotel con toallas de calidad">
-        <p>Detalle<br>que deja huella</p>
+      <div class="blog-hero__visual" role="img" aria-label="Habitación de hotel preparada para recibir huéspedes">
+        <p>Hospitalidad<br>bien pensada</p>
       </div>
     </div>
   </section>
@@ -42,7 +42,7 @@ title: Blog para Hoteles
           {% if post.categories.first %}<p class="category-label">{{ post.categories.first }}</p>{% endif %}
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <p>{{ post.description | default: post.excerpt | strip_html | truncate: 135 }}</p>
-          <div class="post-meta">Por {{ post.author | default: site.title }} <span>•</span> {{ post.date | date: "%d %b %Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</div>
+          <div class="post-meta">Por {{ post.author | default: site.title }} <span>•</span> {{ post.date | date: "%d/%m/%Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</div>
         </div>
       </article>
       {% endfor %}
@@ -70,7 +70,7 @@ title: Blog para Hoteles
         <div class="latest-card__content">
           {% if post.categories.first %}<p class="category-label">{{ post.categories.first }}</p>{% endif %}
           <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%d %b %Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</p>
+          <p class="post-meta">{{ post.date | date: "%d/%m/%Y" }} <span>•</span> {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</p>
         </div>
       </article>
       {% endfor %}
@@ -87,8 +87,8 @@ title: Blog para Hoteles
         <p class="eyebrow">ALIADOS EN CADA ESTANCIA</p>
         <h2>¿Necesita abastecer su hotel?</h2>
       </div>
-      <p>Contamos con un portafolio completo de suministros para hoteles, asesoría personalizada y atención en toda Centroamérica.</p>
-      <a href="/contacto" class="button button--light">Solicitar cotización <span aria-hidden="true">→</span></a>
+      <p>Contamos con un portafolio completo de suministros para hoteles, asesoría personalizada y atención personalizada en Costa Rica.</p>
+      <a href="/contacto.html" class="button button--light">Solicitar cotización <span aria-hidden="true">→</span></a>
       <ul>
         <li>Productos de calidad</li>
         <li>Entrega confiable</li>
