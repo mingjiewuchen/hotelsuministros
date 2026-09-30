@@ -2,21 +2,65 @@
 layout: default
 ---
 
-<article class="post-container">
+{% assign category = page.categories | first %}
+{% assign month_number = page.date | date: "%m" %}
+{% case month_number %}
+  {% when "01" %}{% assign month_name = "enero" %}
+  {% when "02" %}{% assign month_name = "febrero" %}
+  {% when "03" %}{% assign month_name = "marzo" %}
+  {% when "04" %}{% assign month_name = "abril" %}
+  {% when "05" %}{% assign month_name = "mayo" %}
+  {% when "06" %}{% assign month_name = "junio" %}
+  {% when "07" %}{% assign month_name = "julio" %}
+  {% when "08" %}{% assign month_name = "agosto" %}
+  {% when "09" %}{% assign month_name = "septiembre" %}
+  {% when "10" %}{% assign month_name = "octubre" %}
+  {% when "11" %}{% assign month_name = "noviembre" %}
+  {% when "12" %}{% assign month_name = "diciembre" %}
+{% endcase %}
+{% case category %}
+  {% when "Amenidades" %}{% assign product_url = "/productos/amenidades.html" %}{% assign product_name = "Amenidades para hotel y Airbnb" %}
+  {% when "Toallas" %}{% assign product_url = "/productos/toallas.html" %}{% assign product_name = "Toallas para hotel y alojamientos" %}
+  {% when "Ropa de cama" %}{% assign product_url = "/productos/Ropa-de-Cama.html" %}{% assign product_name = "Ropa de cama hotelera" %}
+  {% when "Accesorios" %}{% assign product_url = "/productos/accesorios.html" %}{% assign product_name = "Accesorios para habitación" %}
+  {% else %}{% assign product_url = "/productos.html" %}{% assign product_name = "Productos para hoteles" %}
+{% endcase %}
 
+<article class="post-container">
   <header class="post-header">
+    <p class="eyebrow">{{ category | default: "HOSPITALIDAD" }}</p>
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%d %B %Y" }}</p>
+    <p class="post-meta">{{ page.date | date: "%-d" }} de {{ month_name }} de {{ page.date | date: "%Y" }} <span>•</span> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</p>
   </header>
 
   {% if page.image %}
   <div class="post-featured-image">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
+    <img src="{{ page.image }}" alt="{{ page.title }}" loading="eager">
   </div>
   {% endif %}
+
+  <aside class="post-quick-cta" aria-label="Consulta de productos">
+    <p><strong>¿Está equipando un hotel o Airbnb?</strong>Encuentre opciones pensadas para su operación en Costa Rica.</p>
+    <a class="button button--primary" href="{{ product_url }}">Ver productos →</a>
+  </aside>
 
   <div class="post-content">
     {{ content }}
   </div>
 
+  <section class="post-conversion">
+    <h2>¿Necesita una recomendación para su propiedad?</h2>
+    <p>Cuéntenos el número de habitaciones o huéspedes y le ayudamos a elegir productos adecuados.</p>
+    <a class="button button--light" href="/contacto.html">Solicitar cotización →</a>
+  </section>
+
+  <section class="post-related" aria-labelledby="post-related-title">
+    <h2 id="post-related-title" class="post-related__heading">Siga explorando</h2>
+    <div class="post-related__grid">
+      <a class="post-related__card post-related__card--product" href="{{ product_url }}"><span>PRODUCTOS</span><strong>{{ product_name }}</strong></a>
+      {% for related in site.related_posts limit: 2 %}
+      <a class="post-related__card" href="{{ related.url }}"><span>{{ related.categories.first | default: "BLOG" }}</span><strong>{{ related.title }}</strong></a>
+      {% endfor %}
+    </div>
+  </section>
 </article>
